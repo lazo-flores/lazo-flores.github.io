@@ -1,0 +1,706 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jose Lazo-Flores, Ph.D. | Data Scientist & AI Engineer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Navigation Bar */
+			#nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(47, 53, 56, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 10000;
+				padding: 1em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+
+			#nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2em;
+			}
+
+			#nav .nav-links {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 2em;
+			}
+
+			#nav .nav-links li {
+				margin: 0;
+			}
+
+			#nav .nav-links a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 0.9em;
+				transition: color 0.2s ease;
+				border-bottom: 2px solid transparent;
+				padding-bottom: 0.2em;
+			}
+
+			#nav .nav-links a:hover {
+				color: #f5a623;
+				border-bottom-color: #f5a623;
+			}
+
+			#nav .nav-name {
+				color: #fff;
+				font-weight: 400;
+				font-size: 0.9em;
+			}
+
+			/* Add padding to body to account for fixed nav */
+			body {
+				padding-top: 4em;
+			}
+
+			/* Responsive design */
+			@media screen and (max-width: 736px) {
+				#nav .container {
+					flex-direction: column;
+					gap: 1em;
+					padding: 0 1em;
+				}
+
+				#nav .nav-links {
+					gap: 1em;
+					font-size: 0.85em;
+				}
+
+				#nav .nav-name {
+					font-size: 0.85em;
+				}
+
+				body {
+					padding-top: 6em;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				#nav .nav-links {
+					flex-wrap: wrap;
+					justify-content: center;
+					gap: 0.75em;
+				}
+			}
+
+			/* Project Images Styling */
+			.project-image {
+				width: 100%;
+				height: 300px;
+				object-fit: cover;
+				object-position: center;
+				border-radius: 8px;
+				margin-bottom: 1.5em;
+			}
+
+			@media screen and (max-width: 736px) {
+				.project-image {
+					height: 250px;
+				}
+			}
+
+			/* Technology Tags Styling */
+			.tech-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em;
+				margin-top: 1em;
+			}
+
+			.tech-tag {
+				display: inline-block;
+				background: rgba(245, 166, 35, 0.15);
+				color: #f5a623;
+				padding: 0.4em 0.8em;
+				border-radius: 5px;
+				font-size: 0.8em;
+				font-weight: 400;
+				border: 1px solid rgba(245, 166, 35, 0.3);
+				white-space: nowrap;
+			}
+
+			/* Project Section Spacing */
+			#projects .col-6 {
+				margin-bottom: 3em;
+			}
+
+			@media screen and (max-width: 736px) {
+				#projects .col-6 {
+					margin-bottom: 2em;
+				}
+			}
+
+			/* Projects Footer Button Styling */
+			#projects footer {
+				text-align: center;
+				margin-top: 2em;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			/* Disabled Button Styling */
+			.button.disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+				pointer-events: none;
+				background-color: #555 !important;
+			}
+
+			/* AI Twin iframe styling */
+			.ai-twin-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 2em 0;
+			}
+
+			.ai-twin-container iframe {
+				max-width: 100%;
+				border-radius: 10px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+			}
+
+			@media screen and (max-width: 980px) {
+				.ai-twin-container iframe {
+					width: 100% !important;
+					height: 500px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Navigation Bar -->
+		<nav id="nav">
+			<div class="container">
+				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
+				<ul class="nav-links">
+					<li><a href="#header" class="scrolly">Home</a></li>
+					<li><a href="#about" class="scrolly">About Me</a></li>
+					<li><a href="#experience" class="scrolly">Experience</a></li>
+					<li><a href="#projects" class="scrolly">Projects</a></li>
+					<li><a href="#ai-twin" class="scrolly">AI Twin</a></li>
+					<li><a href="#contact" class="scrolly">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Header -->
+			<section id="header" class="dark">
+				<div class="container">
+					<div class="row" style="align-items: center;">
+						<div class="col-8 col-12-narrow">
+							<header>
+								<h1>Jose Lazo-Flores, Ph.D.</h1>
+								<p>Data Scientist, Analyst & Agentic AI Enthusiast</p>
+							</header>
+							<footer>
+								<a href="#about" class="button scrolly">Learn More About Me</a>
+							</footer>
+						</div>
+						<div class="col-4 col-12-narrow">
+							<span class="image fit"><img src="images/OfficeBackgroundMe.png" alt="Jose Lazo-Flores" style="border-radius: 10px;" /></span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- About -->
+			<section id="about" class="main">
+				<header>
+					<div class="container">
+						<h2>About Me</h2>
+						<p>Data Scientist and Analytics Engineer with a passion for uncovering insights in complex datasets</p>
+					</div>
+				</header>
+				<div class="content dark style1 featured">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<p>I'm a passionate Data Scientist and Analytics Engineer with a deep curiosity for uncovering patterns and insights hidden within complex datasets. My background in physics has shaped a rigorous analytical mindset and a strong foundation in quantitative modelling, enabling me to approach problems from first principles and to understand systems at both theoretical and empirical levels.</p>
+								<p>I specialise in building data-driven applications and analytical tools that solve complex problems. My work combines technical expertise with curiosity and creative problem-solving to deliver meaningful solutions in data science and analytics.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon"><span class="icon solid fa-brain"></span></span>
+									<header>
+										<h3>Data Science & AI</h3>
+									</header>
+									<p>Expert in Machine Learning, Deep Learning, and Agentic AI. Proficient with Python, PyCharm, Cursor, PySpark, SKLearn, and cutting-edge AI frameworks including OpenAI, LangGraph, and multiple LLM platforms.</p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon"><span class="icon solid fa-database"></span></span>
+									<header>
+										<h3>Data Engineering</h3>
+									</header>
+									<p>Extensive experience building ETL pipelines, working with SQL, PostgreSQL, MongoDB, GraphDB, and Neo4j. Skilled in cloud computing with AWS and data visualization using Tableau and Plotly.</p>
+								</section>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<section>
+									<span class="feature-icon"><span class="icon solid fa-chart-line"></span></span>
+									<header>
+										<h3>Analytics & Research</h3>
+									</header>
+									<p>Strong foundation in statistical analysis, quantitative modeling, and research. Ph.D. in Physics with extensive experience in particle physics research at CERN, Fermilab, and leading international collaborations.</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<footer>
+									<a href="#experience" class="button scrolly">View My Experience</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Experience -->
+			<section id="experience" class="main">
+				<header>
+					<div class="container">
+						<h2>Professional Experience</h2>
+						<p>A journey spanning data science, analytics, and fundamental physics research</p>
+					</div>
+				</header>
+				<div class="content dark style2">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<section>
+									<h3>Data Scientist | Credit Suisse</h3>
+									<p><em>March 2021 - June 2024</em></p>
+									<p>Developed and implemented advanced analytics solutions to support trade and market surveillance, ensuring compliance with regulatory requirements and internal governance standards. Conducted cybersecurity and internal security analytics to identify anomalies, detect potential threats, and strengthen the organization's security posture. Contributed to the design and enhancement of a holistic risk management framework, integrating data-driven insights to improve monitoring, mitigation, and decision-making processes across business and control functions.</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<section>
+									<h3>Business Analytics | Spring Professional</h3>
+									<p><em>September 2020 - March 2021</em></p>
+									<p>Built and maintained data pipelines, created automated reporting systems, and collaborated with cross-functional teams.</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<section>
+									<h3>Co-Founder and CTO | NJ Applications and Analytics GmbH</h3>
+									<p><em>December 2017 - November 2020 (50%)</em></p>
+									<p>Led the technical development of data visualization tools to transform complex datasets into intuitive and actionable insights. Designed, implemented, and maintained scalable AWS infrastructure to support data-driven applications. Applied machine learning algorithms and business intelligence analytics to enhance decision-making and optimize operational performance. Developed and maintained backend applications, ensuring seamless integration between data pipelines, analytics frameworks, and visualization platforms.</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<section>
+									<h3>Quantitative Data Scientist | Quantum Analytics AG</h3>
+									<p><em>June 2015 - February 2018 and November 2018 - July 2020 (50%)</em></p>
+									<p>Developed and maintained business intelligence analytics and reporting solutions to support data-driven decision-making for our customers. Designed and implemented a scalable data science platform to enable efficient model development and deployment. Built and maintained ETL processes to ensure reliable data extraction, transformation, and loading from multiple sources.</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<section>
+									<h3>Research Experience</h3>
+									<p><strong>Post-Doctorate Fellow</strong> | University of Nebraska at the Paul Scherrer Institute (PSI) | <em>February 2009 - December 2013</em></p>
+									<p>Led commissioning and maintenance of particle detector systems. Conducted Physics analysis with data collected by the Compact Muon Solenoid (CMS) Collaboration detector at CERN.</p>
+									<p><strong>Post-Doctorate Fellow</strong> | University of Tennessee at CERN | <em>January 2007 - January 2009</em></p>
+									<p>Developed and commissioned particle and radiation detector systems.</p>
+									<p><strong>Ph.D. Research Fellow</strong> | Florida State University at Fermilab | <em>June 2003 - June 2006</em></p>
+									<p>Commissioned and maintained particle tracking system for the DØ collaboration.</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<section>
+									<h3>Education</h3>
+									<p><strong>Ph.D. in Physics</strong> | Florida State University | <em>2006</em></p>
+									<p>Thesis: "Search for large extra dimensions in the exclusive photon and missing energy channel in proton-anti proton collisions."</p>
+									<p><strong>B.S. in Engineering Physics</strong> | Embry-Riddle University | <em>1999</em></p>
+									<p>Thesis: "Conceptual Manned Mission to Mars"</p>
+								</section>
+							</div>
+							<div class="col-12">
+								<footer style="display: flex; gap: 1em; justify-content: center; flex-wrap: wrap;">
+									<a href="documents/Lazo-Flores_Jose_CV V10.3.pdf" class="button" download>Download CV</a>
+									<a href="#projects" class="button scrolly">View AI Projects</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Projects -->
+			<section id="projects" class="main">
+				<header>
+					<div class="container">
+						<h2>AI Agent Projects</h2>
+						<p>Innovative solutions leveraging agentic AI and advanced machine learning</p>
+					</div>
+				</header>
+				<div class="content dark style3">
+					<div class="container">
+						<div class="row">
+							<div class="col-6 col-12-narrow">
+								<section>
+									<img src="images/InstructorAssistant.png" alt="AI Instructor Assistant" class="project-image" />
+									<h3>AI Instructor Assistant</h3>
+									<p>Developed an AI Agent designed to assist instructors in the creation and organization of educational materials, enabling faster and more efficient course preparation and delivery. The system intelligently generates lesson plans, course outlines, and exercise programs, adapting its recommendations to the subject matter, target audience, and instructional goals.</p>
+									<p>By analyzing existing content, learning objectives, and educational standards, the agent ensures that every resource it produces is coherent, aligned, and pedagogically sound. The result is a powerful instructional companion that reduces preparation time, enhances the quality of educational content, and empowers educators to focus on student engagement and learning outcomes.</p>
+									<p><strong>Technologies:</strong></p>
+									<div class="tech-tags">
+										<span class="tech-tag">Python</span>
+										<span class="tech-tag">Scikit-learn</span>
+										<span class="tech-tag">OpenAI</span>
+										<span class="tech-tag">GradIO</span>
+										<span class="tech-tag">GPT</span>
+										<span class="tech-tag">Pandas</span>
+										<span class="tech-tag">Dash</span>
+										<span class="tech-tag">Plotly</span>
+										<span class="tech-tag">SQL</span>
+										<span class="tech-tag">Cursor</span>
+									</div>
+									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
+										<a href="https://huggingface.co/spaces/jlazoflores/instructor_assistant" class="button" target="_blank">Live Demo</a>
+										<a href="https://github.com/lazo-flores/instructor_assistant" class="button" target="_blank">View Code</a>
+									</div>
+								</section>
+							</div>
+							<div class="col-6 col-12-narrow">
+								<section>
+									<img src="images/DeepResearch.jpg" alt="Deep Research Agent" class="project-image" />
+									<h3>Deep Research Agent</h3>
+									<p>Developed a team of AI Agents designed to autonomously research user-defined topics and generate comprehensive, well-structured reports in Markdown format. Upon receiving a research request, the agents coordinate to gather and analyze information from trusted sources, synthesize key findings, and produce a concise yet thorough report complete with citations, summaries, and relevant insights.</p>
+									<p>Once the report is generated, the process continues with automated email delivery, sending the finalized Markdown document directly to the user for review or integration into existing workflows. The agents are capable of adapting their research depth and style to different domains — from technical and scientific subjects to market and business intelligence.</p>
+									<p><strong>Technologies:</strong></p>
+									<div class="tech-tags">
+										<span class="tech-tag">Python</span>
+										<span class="tech-tag">OpenAI</span>
+										<span class="tech-tag">GradIO</span>
+										<span class="tech-tag">GPT</span>
+										<span class="tech-tag">DeepSeek</span>
+										<span class="tech-tag">Groq</span>
+										<span class="tech-tag">Claude</span>
+										<span class="tech-tag">Gemini</span>
+										<span class="tech-tag">Cursor</span>
+									</div>
+									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
+										<a href="https://huggingface.co/spaces/jlazoflores/deep_research" class="button" target="_blank">Live Demo</a>
+										<a href="https://github.com/lazo-flores/deep_research" class="button" target="_blank">View Code</a>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 col-12-narrow">
+								<section>
+									<img src="images/FinancialAdvisor.jpg" alt="Financial Advisor and Agent Dashboard" class="project-image" />
+									<h3>Financial Advisor and Agent Dashboard</h3>
+									<p>An autonomous multi-agent trading platform designed to research markets, analyze opportunities, and execute trades intelligently. The system is led by a manager agent that orchestrates operations across a team of specialized AI agents.</p>
+									<p>A dedicated research agent gathers market intelligence through web searches and real-time data collection on companies of interest, while four trader agents independently manage and balance their portfolios based on the research provided. Each trading decision and rebalancing action is logged, with push notifications keeping users informed in real time. All agents operate with decision-making autonomy and adaptive learning capabilities.</p>
+									<p><strong>Technologies:</strong></p>
+									<div class="tech-tags">
+										<span class="tech-tag">Python</span>
+										<span class="tech-tag">OpenAI</span>
+										<span class="tech-tag">GradIO</span>
+										<span class="tech-tag">SQLite</span>
+										<span class="tech-tag">Plotly</span>
+										<span class="tech-tag">Polygon API</span>
+										<span class="tech-tag">MCP</span>
+										<span class="tech-tag">Huggingface</span>
+										<span class="tech-tag">GPT</span>
+										<span class="tech-tag">Gemini</span>
+										<span class="tech-tag">DeepSeek</span>
+										<span class="tech-tag">Groq</span>
+										<span class="tech-tag">MailJet</span>
+										<span class="tech-tag">Pushover</span>
+									</div>
+									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
+										<a href="#" class="button disabled">Live Demo (Coming Soon)</a>
+										<a href="https://github.com/lazo-flores/trading_floor" class="button" target="_blank">View Code</a>
+									</div>
+								</section>
+							</div>
+							<div class="col-6 col-12-narrow">
+								<section>
+									<img src="images/ProofReader.png" alt="Document Proofreader Agent" class="project-image" />
+									<h3>Document Proofreader Agent</h3>
+									<p>AI Agent Team designed to autonomously review and analyze written documents, providing comprehensive and actionable feedback. The system consists of a coordinated group of specialized agents that collaboratively assess a document from multiple perspectives to ensure quality, accuracy, and coherence.</p>
+									<p>Core functions include grammar and spelling verification, factual validation through source tracing, and semantic consistency checks to confirm that the content aligns with the intended subject matter and context. Beyond simple proofreading, the agents evaluate the logical flow, tone, and structural integrity of the text, identifying potential inconsistencies or gaps in reasoning.</p>
+									<p><strong>Technologies:</strong></p>
+									<div class="tech-tags">
+										<span class="tech-tag">Python</span>
+										<span class="tech-tag">OpenAI</span>
+										<span class="tech-tag">GradIO</span>
+										<span class="tech-tag">Agentic AI</span>
+										<span class="tech-tag">MCP</span>
+										<span class="tech-tag">GPT</span>
+										<span class="tech-tag">Groq</span>
+										<span class="tech-tag">Gemini</span>
+										<span class="tech-tag">Huggingface</span>
+									</div>
+									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
+										<a href="https://0758b91d9bab673c2a.gradio.live" class="button" target="_blank">Live Demo</a>
+										<a href="https://github.com/lazo-flores/proof_reader" class="button" target="_blank">View Code</a>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<footer>
+									<a href="#ai-twin" class="button scrolly">Chat with My AI Twin</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Basic Elements -->
+		<!--
+			<section class="main">
+				<header>
+					<div class="container">
+						<h2>A Whole Lotta Elements</h2>
+						<p>General purpose elements for every general purpose. Or something like that.</p>
+					</div>
+				</header>
+				<div class="content style1 dark">
+					<div class="container">
+						<section>
+							<header>
+								<h3>Paragraph</h3>
+								<p>This is a byline</p>
+							</header>
+							<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
+							habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
+							leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
+							amet risus elit.</p>
+						</section>
+						<section>
+							<header>
+								<h3>Blockquote</h3>
+							</header>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
+							tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
+							tempus ante ipsum primis in faucibus orci luctus et ultrices.</blockquote>
+						</section>
+						<section>
+							<header>
+								<h3>Divider</h3>
+							</header>
+							<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
+							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+							posuere cubilia.</p>
+							<hr />
+							<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
+							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+							posuere cubilia.</p>
+						</section>
+						<section>
+							<header>
+								<h3>Unordered List</h3>
+							</header>
+							<ul class="default">
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+							</ul>
+						</section>
+						<section>
+							<header>
+								<h3>Ordered List</h3>
+							</header>
+							<ol class="default">
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+							</ol>
+						</section>
+						<section>
+							<header>
+								<h3>Table</h3>
+							</header>
+							<div class="table-wrapper">
+								<table class="default">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>00001</td>
+											<td>Lorem ipsum dolor</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>00002</td>
+											<td>Sit amet nullam</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>00003</td>
+											<td>Feugiat felis viverra</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>00004</td>
+											<td>Sagittis enim felis</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>00005</td>
+											<td>Nullam sed vestibulum</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+						<section>
+							<header>
+								<h3>Form</h3>
+							</header>
+							<form method="post" action="#">
+								<div class="row gtr-50">
+									<div class="col-6 col-12-narrow">
+										<input type="text" name="name" id="name" value="" placeholder="John Doe" />
+									</div>
+									<div class="col-6 col-12-narrow">
+										<input type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
+									</div>
+									<div class="col-12">
+										<div class="select" tabindex="-1">
+											<select name="department" id="department">
+												<option value="">Choose a department</option>
+												<option value="1">Manufacturing</option>
+												<option value="2">Administration</option>
+												<option value="3">Support</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Enter your message"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" class="button" value="Send Message" /></li>
+											<li><input type="reset" class="button alt" value="Clear Form" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+			</section>
+		-->
+
+		<!-- AI Twin -->
+			<section id="ai-twin" class="main">
+				<header>
+					<div class="container">
+						<h2>Chat with My AI Twin</h2>
+						<p>Have questions about my work, experience, or projects? Ask my AI twin — an intelligent agent trained on my professional background and expertise.</p>
+					</div>
+				</header>
+				<div class="content dark style2">
+					<div class="container">
+						<div class="ai-twin-container">
+							<iframe
+								src="https://jlazoflores-twin-agent.hf.space"
+								frameborder="0"
+								width="850"
+								height="450"
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main">
+				<header>
+					<div class="container">
+						<h2>Get In Touch</h2>
+						<p>Interested in collaborating or discussing data science and AI projects? Let's connect!</p>
+					</div>
+				</header>
+				<div class="content style4 featured">
+					<div class="container medium">
+						<div class="row">
+							<div class="col-12">
+								<p>Feel free to reach out via email or connect with me on LinkedIn and GitHub. I'm always open to discussing new opportunities, collaborations, or interesting challenges in data science, analytics, and AI.</p>
+								<p><strong>Email:</strong> <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/lazo-flores" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<div class="copyright">
+					<ul class="menu">
+						<li>&copy; Jose Lazo-Flores. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
