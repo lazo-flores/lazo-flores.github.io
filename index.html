@@ -102,6 +102,94 @@
 				}
 			}
 
+			/* Header Background */
+			#header {
+				background-image: url('images/homepagebackground-1.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				position: relative;
+			}
+
+			#header::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.6);
+				pointer-events: none;
+			}
+
+			#header .container {
+				position: relative;
+				z-index: 1;
+			}
+
+			/* Header Profile Image Styling */
+			#header img[src="images/OfficeBackgroundMe.png"] {
+				transform: scale(1.265);
+			}
+
+			/* Header Text Styling */
+			#header h1 {
+				color: #ffffff;
+				font-size: 3.5em;
+				text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9),
+				             0 0 20px rgba(0, 0, 0, 0.7);
+				font-weight: 400;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				background: transparent;
+				padding: 0.3em 0.5em;
+				border-radius: 10px;
+				display: inline-block;
+			}
+
+			#header p {
+				color: #ffffff;
+				font-size: 1.7em;
+				text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.95),
+				             0 0 20px rgba(0, 0, 0, 0.8);
+				font-weight: 900;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				background: transparent;
+				padding: 0.4em 0.7em;
+				border-radius: 8px;
+				display: inline-block;
+				margin-top: 0.5em;
+			}
+
+			#header footer {
+				margin-top: 1em;
+			}
+
+			#header .button {
+				background: transparent;
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 1.1em;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+				border: 2px solid rgba(255, 255, 255, 0.3);
+			}
+
+			#header .button:hover {
+				background: rgba(0, 0, 0, 0.3);
+				border-color: rgba(255, 255, 255, 0.5);
+			}
+
+			@media screen and (max-width: 736px) {
+				#header h1 {
+					font-size: 2.2em;
+				}
+
+				#header p {
+					font-size: 1.2em;
+				}
+			}
+
 			/* Project Images Styling */
 			.project-image {
 				width: 100%;
@@ -421,6 +509,7 @@
 										<span class="tech-tag">GradIO</span>
 										<span class="tech-tag">SQLite</span>
 										<span class="tech-tag">Plotly</span>
+										<span class="tech-tag">Yahoo Finance API</span>
 										<span class="tech-tag">Polygon API</span>
 										<span class="tech-tag">MCP</span>
 										<span class="tech-tag">Huggingface</span>
@@ -440,8 +529,8 @@
 								<section>
 									<img src="images/ProofReader.png" alt="Document Proofreader Agent" class="project-image" />
 									<h3>Document Proofreader Agent</h3>
-									<p>AI Agent Team designed to autonomously review and analyze written documents, providing comprehensive and actionable feedback. The system consists of a coordinated group of specialized agents that collaboratively assess a document from multiple perspectives to ensure quality, accuracy, and coherence.</p>
-									<p>Core functions include grammar and spelling verification, factual validation through source tracing, and semantic consistency checks to confirm that the content aligns with the intended subject matter and context. Beyond simple proofreading, the agents evaluate the logical flow, tone, and structural integrity of the text, identifying potential inconsistencies or gaps in reasoning.</p>
+									<p>AI Agent Team designed to autonomously review and analyze written documents, providing comprehensive and actionable feedback. The system consists of a coordinated group of specialized agents that collaboratively assess a document from multiple perspectives to ensure quality, accuracy, and coherence with the subject matter.</p>
+									<p>Core functions include grammar and spelling verification, factual validation through source tracing, and semantic consistency checks to confirm that the content aligns with the intended subject matter and context. Beyond simple proofreading, the agents evaluate the logical flow, tone, and structural integrity of the text, identifying potential inconsistencies or gaps in reasoning. It produces a report itemizing it's findings and making recommendations.</p>
 									<p><strong>Technologies:</strong></p>
 									<div class="tech-tags">
 										<span class="tech-tag">Python</span>
@@ -456,6 +545,30 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="https://0758b91d9bab673c2a.gradio.live" class="button" target="_blank">Live Demo</a>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 col-12-narrow" style="margin: 0 auto; float: none;">
+								<section>
+									<img src="images/LanguageTutor.png" alt="Language Tutor" class="project-image" />
+									<h3>Language Tutor</h3>
+									<p>Language Tutor is an AI-powered application designed to help users practice and improve any of more than 30 languages. It creates a personalised learning journey that adapts to each learner's goals, pace, and interests. Users can speak naturally, as voice input is automatically transcribed and processed in real time. The agent responds with clear voice output using native-like pronunciation, making conversation practice feel intuitive and engaging.</p>
+									<p>Beyond simple dialogue, Language Tutor provides translations, corrections, and helpful cultural context to deepen understanding. Learners can toggle native-language hints on or off to switch between guided support and fully immersive practice. These features combine to deliver a flexible, dynamic, and supportive language-learning companion that grows with every interaction.</p>
+									<p><strong>Technologies:</strong></p>
+									<div class="tech-tags">
+										<span class="tech-tag">Python</span>
+										<span class="tech-tag">OpenAI</span>
+										<span class="tech-tag">Apertus</span>
+										<span class="tech-tag">Agentic AI</span>
+										<span class="tech-tag">GradIO</span>
+										<span class="tech-tag">Huggingface</span>
+										<span class="tech-tag">Edge-TTS</span>
+										<span class="tech-tag">gTTS</span>
+									</div>
+									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
+										<a href="https://huggingface.co/spaces/jlazoflores/Language_Tutor" class="button" target="_blank">Live Demo</a>
 									</div>
 								</section>
 							</div>
