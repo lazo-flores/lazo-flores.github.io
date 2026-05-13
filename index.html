@@ -12,6 +12,30 @@
 		<link rel="icon" type="image/png" href="images/Avatar.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
+			/* Brand palette — teal primary, indigo secondary */
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+				--accent-secondary-hover: #17328a;
+			}
+
+			/* Section header accent underline */
+			.main > header h2 {
+				position: relative;
+				padding-bottom: 0.4em;
+			}
+
+			.main > header h2::after {
+				content: '';
+				display: block;
+				width: 3.5em;
+				height: 3px;
+				background: var(--accent-primary);
+				margin: 0.5em auto 0 auto;
+				border-radius: 2px;
+			}
+
 			/* Navigation Bar */
 			#nav {
 				position: fixed;
@@ -56,9 +80,10 @@
 				padding-bottom: 0.2em;
 			}
 
-			#nav .nav-links a:hover {
-				color: #f5a623;
-				border-bottom-color: #f5a623;
+			#nav .nav-links a:hover,
+			#nav .nav-links a.active {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
 			}
 
 			#nav .nav-name {
@@ -193,15 +218,15 @@
 			}
 
 			#header .button.primary-cta {
-				background: #0F766E;
+				background: var(--accent-primary);
 				color: #ffffff;
-				border: 2px solid #0F766E;
+				border: 2px solid var(--accent-primary);
 				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 			}
 
 			#header .button.primary-cta:hover {
-				background: #0b5e58;
-				border-color: #0b5e58;
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
 			}
 
 			#header .button.secondary-cta {
@@ -348,7 +373,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				background: linear-gradient(135deg, #0F766E 0%, #1E40AF 100%);
+				background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
 				color: rgba(255, 255, 255, 0.95);
 				font-size: 6em;
 			}
@@ -386,7 +411,7 @@
 			}
 
 			.method-list strong {
-				color: #0F766E;
+				color: var(--accent-primary);
 				display: inline-block;
 				min-width: 9em;
 			}
@@ -406,7 +431,7 @@
 			}
 
 			.quadrant h4 {
-				color: #0F766E;
+				color: var(--accent-primary);
 				margin-bottom: 0.3em;
 				font-size: 1.1em;
 			}
@@ -417,15 +442,15 @@
 			}
 
 			.quadrant.quadrant-q1 {
-				border-left: 3px solid #0F766E;
+				border-left: 3px solid var(--accent-primary);
 			}
 
 			.quadrant.quadrant-q2 {
-				border-left: 3px solid #1E40AF;
+				border-left: 3px solid var(--accent-secondary);
 			}
 
 			.quadrant.quadrant-q3 {
-				border-left: 3px solid #1E40AF;
+				border-left: 3px solid var(--accent-secondary);
 			}
 
 			.quadrant.quadrant-q4 {

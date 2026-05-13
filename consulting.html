@@ -13,6 +13,30 @@
 		<link rel="icon" type="image/png" href="images/Avatar.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
+			/* Brand palette — teal primary, indigo secondary */
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+				--accent-secondary-hover: #17328a;
+			}
+
+			/* Section header accent underline */
+			.main > header h2 {
+				position: relative;
+				padding-bottom: 0.4em;
+			}
+
+			.main > header h2::after {
+				content: '';
+				display: block;
+				width: 3.5em;
+				height: 3px;
+				background: var(--accent-primary);
+				margin: 0.5em auto 0 auto;
+				border-radius: 2px;
+			}
+
 			/* Navigation Bar */
 			#nav {
 				position: fixed;
@@ -58,13 +82,13 @@
 			}
 
 			#nav .nav-links a:hover {
-				color: #0F766E;
-				border-bottom-color: #0F766E;
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
 			}
 
 			#nav .nav-links a.active {
-				color: #0F766E;
-				border-bottom-color: #0F766E;
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
 			}
 
 			#nav .nav-name {
@@ -170,7 +194,7 @@
 				margin-top: 1em;
 				padding-top: 1em;
 				border-top: 1px solid rgba(15, 118, 110, 0.4);
-				color: #0F766E;
+				color: var(--accent-primary);
 				font-style: italic;
 				font-size: 0.95em;
 			}
@@ -192,7 +216,7 @@
 			}
 
 			.method-list strong {
-				color: #0F766E;
+				color: var(--accent-primary);
 				display: inline-block;
 				min-width: 8em;
 			}
@@ -212,7 +236,7 @@
 
 			.why-list li::before {
 				content: '\2713';
-				color: #0F766E;
+				color: var(--accent-primary);
 				font-weight: bold;
 				position: absolute;
 				left: 0;
@@ -235,7 +259,7 @@
 			/* Audit highlight box */
 			.audit-box {
 				background: rgba(15, 118, 110, 0.08);
-				border-left: 4px solid #0F766E;
+				border-left: 4px solid var(--accent-primary);
 				padding: 1.5em 2em;
 				border-radius: 4px;
 				margin: 1em 0;
@@ -244,20 +268,20 @@
 			.audit-box .price {
 				display: block;
 				margin-top: 1em;
-				color: #0F766E;
+				color: var(--accent-primary);
 				font-style: italic;
 			}
 
 			/* CTA buttons (teal primary) */
 			.button.primary-cta {
-				background: #0F766E;
+				background: var(--accent-primary);
 				color: #ffffff;
-				border: 2px solid #0F766E;
+				border: 2px solid var(--accent-primary);
 			}
 
 			.button.primary-cta:hover {
-				background: #0b5e58;
-				border-color: #0b5e58;
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
 			}
 
 			.button.secondary-cta {
