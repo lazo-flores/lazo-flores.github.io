@@ -386,6 +386,98 @@
 				top: 0 !important;
 				left: 0 !important;
 			}
+
+			/* ------------------------------------------------------------------
+			   Light-background overrides for content-dense consulting sections.
+			   The HTML5 UP "Tessellate" template paints .content.style1/.style2
+			   with dark gradients (main.css lines 2251–2257); those make our
+			   dense copy unreadable. Force white for the IDed sections below
+			   and recolor the dark-mode-tuned helper styles inside them.
+			   ------------------------------------------------------------------ */
+			#consulting-services .content,
+			#consulting-audit .content,
+			#consulting-methodology .content,
+			#consulting-why .content,
+			#consulting-presence .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#consulting-services > header,
+			#consulting-audit > header,
+			#consulting-methodology > header,
+			#consulting-why > header,
+			#consulting-presence > header,
+			#consulting-cta > header {
+				background: #ffffff;
+			}
+
+			#consulting-services h2,
+			#consulting-audit h2,
+			#consulting-methodology h2,
+			#consulting-why h2,
+			#consulting-presence h2,
+			#consulting-cta h2 {
+				color: #1f2937;
+			}
+
+			#consulting-services h3,
+			#consulting-audit h3,
+			#consulting-methodology h3,
+			#consulting-why h3 {
+				color: #1f2937;
+			}
+
+			#consulting-services p,
+			#consulting-audit p,
+			#consulting-methodology p,
+			#consulting-why p,
+			#consulting-presence p,
+			#consulting-cta p {
+				color: #4b5563;
+			}
+
+			#consulting-services .content a:not(.button),
+			#consulting-audit .content a:not(.button),
+			#consulting-methodology .content a:not(.button),
+			#consulting-why .content a:not(.button),
+			#consulting-presence .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			/* Audit highlight box on a white surface */
+			#consulting-audit .audit-box {
+				background: #f9fafb;
+				border-left: 4px solid var(--accent-primary);
+				color: #1f2937;
+			}
+
+			#consulting-audit .audit-box p {
+				color: #4b5563;
+			}
+
+			#consulting-audit .audit-box .price {
+				color: var(--accent-primary);
+				border-top: none;
+			}
+
+			/* 5 P's list dividers — flip from white-on-dark to gray-on-white */
+			#consulting-methodology .method-list li {
+				border-bottom: 1px solid #e5e7eb;
+			}
+
+			#consulting-methodology .method-list li:last-child {
+				border-bottom: none;
+			}
+
+			#consulting-methodology .method-list strong {
+				color: var(--accent-primary);
+			}
+
+			/* Why-list — strong was white-on-dark, swap to dark-on-white */
+			#consulting-why .why-list strong {
+				color: #1f2937;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -418,7 +510,7 @@
 		</section>
 
 		<!-- Three Services -->
-		<section class="main">
+		<section id="consulting-services" class="main">
 			<header>
 				<div class="container">
 					<h2>Three services</h2>
@@ -455,7 +547,7 @@
 		</section>
 
 		<!-- Audit Funnel -->
-		<section class="main">
+		<section id="consulting-audit" class="main">
 			<header>
 				<div class="container">
 					<h2>The audit &mdash; where to start if you&rsquo;re not sure</h2>
@@ -475,7 +567,7 @@
 		</section>
 
 		<!-- 5 P's of Prompting -->
-		<section class="main">
+		<section id="consulting-methodology" class="main">
 			<header>
 				<div class="container">
 					<h2>The 5 P&rsquo;s of Prompting</h2>
@@ -498,7 +590,7 @@
 		</section>
 
 		<!-- Why work with me -->
-		<section class="main">
+		<section id="consulting-why" class="main">
 			<header>
 				<div class="container">
 					<h2>Why work with me</h2>
@@ -519,7 +611,7 @@
 		</section>
 
 		<!-- External Presence -->
-		<section class="main">
+		<section id="consulting-presence" class="main">
 			<header>
 				<div class="container">
 					<h2>Also available on</h2>
@@ -538,7 +630,7 @@
 		</section>
 
 		<!-- Final CTA -->
-		<section class="main">
+		<section id="consulting-cta" class="main">
 			<header>
 				<div class="container">
 					<h2>Let&rsquo;s talk</h2>
