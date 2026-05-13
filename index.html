@@ -339,6 +339,27 @@
 				}
 			}
 
+			/* Workshop card icon banner (stand-in for project image) */
+			.workshop-banner {
+				width: 100%;
+				height: 300px;
+				border-radius: 8px;
+				margin-bottom: 1.5em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(135deg, #0F766E 0%, #1E40AF 100%);
+				color: rgba(255, 255, 255, 0.95);
+				font-size: 6em;
+			}
+
+			@media screen and (max-width: 736px) {
+				.workshop-banner {
+					height: 250px;
+					font-size: 4.5em;
+				}
+			}
+
 			/* Methodology section */
 			.method-block {
 				margin-bottom: 2em;
@@ -715,7 +736,7 @@
 								</section>
 							</div>
 						</div>
-						<div class="row" style="justify-content: center; margin-top: 2em;">
+						<div class="row" style="margin-top: 2em;">
 							<div class="col-6 col-12-narrow">
 								<section>
 									<img src="images/Swing_Trader.png" alt="AI Swing Trading Platform" class="project-image" />
@@ -738,6 +759,27 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="#" class="button disabled">Coming Soon</a>
+									</div>
+								</section>
+							</div>
+							<div class="col-6 col-12-narrow">
+								<section>
+									<div class="workshop-banner" aria-hidden="true"><span class="icon solid fa-chalkboard-teacher"></span></div>
+									<h3>Corporate AI Workshop Curriculum</h3>
+									<p><strong>Role:</strong> Designer &amp; Facilitator</p>
+									<p>A five-module training program for non-technical business teams. Built around the 5 P&rsquo;s of Prompting framework, with hands-on exercises grounded in participants&rsquo; real workflows. Module 3 is rebuilt for each engagement around the client&rsquo;s specific functions (marketing, ops, HR, sales).</p>
+									<p>Delivered virtual-first, with in-person available across Europe. Curriculum materials are auto-generated for each cohort from a Python toolchain so engagement turnaround stays fast.</p>
+									<p><strong>Status:</strong> Active. Available for corporate engagements.</p>
+									<p><strong>Stack:</strong></p>
+									<div class="tech-tags">
+										<span class="tech-tag">Curriculum Design</span>
+										<span class="tech-tag">5 P&rsquo;s Framework</span>
+										<span class="tech-tag">python-docx</span>
+										<span class="tech-tag">python-pptx</span>
+										<span class="tech-tag">Virtual + In-Person</span>
+									</div>
+									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
+										<a href="consulting.html" class="button">See Workshop Details</a>
 									</div>
 								</section>
 							</div>
