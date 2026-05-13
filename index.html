@@ -63,7 +63,10 @@
 				list-style: none;
 				margin: 0;
 				padding: 0;
-				gap: 2em;
+				gap: 1.5em;
+				flex: 1 1 auto;
+				justify-content: flex-end;
+				flex-wrap: nowrap;
 			}
 
 			#nav .nav-links li {
@@ -74,7 +77,8 @@
 				color: #fff;
 				text-decoration: none;
 				font-weight: 300;
-				font-size: 0.9em;
+				font-size: 0.85em;
+				white-space: nowrap;
 				transition: color 0.2s ease;
 				border-bottom: 2px solid transparent;
 				padding-bottom: 0.2em;
@@ -88,8 +92,10 @@
 
 			#nav .nav-name {
 				color: #fff;
-				font-weight: 400;
-				font-size: 0.9em;
+				font-weight: 600;
+				font-size: 1em;
+				white-space: nowrap;
+				flex: 0 0 auto;
 			}
 
 			/* Add padding to body to account for fixed nav */
@@ -564,7 +570,7 @@
 				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
 				<ul class="nav-links">
 					<li><a href="#header" class="scrolly">Home</a></li>
-					<li><a href="#about" class="scrolly">About Me</a></li>
+					<li><a href="#about" class="scrolly">About</a></li>
 					<li><a href="#experience" class="scrolly">Experience</a></li>
 					<li><a href="consulting.html">Consulting</a></li>
 					<li><a href="#platforms" class="scrolly">Platforms</a></li>
