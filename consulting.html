@@ -593,6 +593,30 @@
 			.section-intro {
 				text-align: center;
 			}
+
+			/* Round 5 — Inline Calendly embed on Let's-talk section */
+			#consulting-cta .calendly-inline-widget {
+				max-width: 900px;
+				margin: 0 auto;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+			}
+
+			#consulting-cta .contact-alt {
+				color: #6b7280;
+				font-size: 0.9em;
+				margin-top: 2em;
+				text-align: center;
+			}
+
+			#consulting-cta .contact-alt a {
+				color: var(--accent-primary);
+			}
+
+			#consulting-cta .contact-alt a:hover {
+				color: var(--accent-primary-hover);
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -749,16 +773,16 @@
 			<header>
 				<div class="container">
 					<h2>Let&rsquo;s talk</h2>
-					<p>The first conversation is always free.</p>
+					<p>The first conversation is always free. A 45-minute discovery call to understand your context and decide whether we&rsquo;re a fit. Pick a time below &mdash; no obligation, no pitch deck.</p>
 				</div>
 			</header>
 			<div class="content style4 featured">
 				<div class="container medium">
-					<div class="final-cta">
-						<p>A 45-minute discovery call to understand your context and decide whether we&rsquo;re a fit. No obligation, no pitch deck.</p>
-						<a href="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" class="button primary-cta" target="_blank" rel="noopener">Book a discovery call</a>
-						<span class="email-fallback">Or email directly at <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a>.</span>
-					</div>
+					<!-- Calendly inline widget begin -->
+					<div class="calendly-inline-widget" data-url="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" style="min-width:320px;height:700px;"></div>
+					<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+					<!-- Calendly inline widget end -->
+					<p class="contact-alt">Prefer email? Reach me at <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a>.</p>
 				</div>
 			</div>
 		</section>
