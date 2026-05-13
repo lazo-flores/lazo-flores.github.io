@@ -827,6 +827,41 @@
 				color: #1f2937;
 			}
 
+			/* Round 4 — Methodology vertical rhythm.
+			   Each subsection lives in its own <section class="method-block">
+			   wrapper, so :first-of-type on h3 doesn't work (each is the
+			   first-of-type within its own parent). Target the wrapper
+			   instead: gap + hairline divider above every block after the
+			   first, breathing room above the first one. */
+			#methodology .method-block {
+				margin-bottom: 0;
+				padding-top: 3em;
+				margin-top: 3em;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#methodology .method-block:first-of-type {
+				padding-top: 1em;
+				margin-top: 1em;
+				border-top: none;
+			}
+
+			#methodology .method-block h3 {
+				margin-top: 0;
+				margin-bottom: 0.6em;
+				font-size: 1.4em;
+				font-weight: 600;
+			}
+
+			#methodology .method-block h3 + p {
+				margin-top: 0;
+			}
+
+			#methodology .method-block p {
+				margin-bottom: 1em;
+				line-height: 1.6;
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
