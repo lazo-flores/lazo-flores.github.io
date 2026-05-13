@@ -382,20 +382,29 @@
 				border-color: var(--accent-primary-hover);
 			}
 
-			/* Contact CTA layout */
+			/* Contact CTA — focused conversion block */
 			.contact-cta {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.75em;
-				justify-content: center;
-				margin: 1.5em 0 0.5em 0;
+				text-align: center;
+				max-width: 640px;
+				margin: 0 auto;
+				padding: 1em 0;
 			}
 
-			.contact-meta {
-				text-align: center;
-				font-size: 0.95em;
-				opacity: 0.85;
-				margin-top: 1em;
+			.contact-cta h3 {
+				font-size: 1.6em;
+				font-weight: 600;
+				margin: 0 0 0.4em 0;
+			}
+
+			.contact-cta > p {
+				margin: 0 0 1.5em 0;
+				line-height: 1.5;
+			}
+
+			.contact-cta .contact-alt {
+				font-size: 0.9em;
+				margin-top: 1.5em;
+				margin-bottom: 0;
 			}
 
 			/* Insights cards */
@@ -727,6 +736,10 @@
 
 			#contact a:not(.button):hover {
 				color: #ffffff;
+			}
+
+			#contact .contact-cta .contact-alt {
+				color: #9ca3af;
 			}
 
 			#contact .button {
@@ -1657,12 +1670,12 @@
 					<div class="container medium">
 						<div class="row">
 							<div class="col-12">
-								<p>Whether you&rsquo;re exploring AI strategy, need a feasibility assessment, or want to build a production system &mdash; the first conversation is always free. A 45-minute discovery call to understand your context and decide whether we&rsquo;re a fit.</p>
 								<div class="contact-cta">
+									<h3>Ready to talk?</h3>
+									<p>The first conversation is always free. A 45-minute discovery call to understand your context and see if there&rsquo;s a fit.</p>
 									<a href="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" class="button primary-cta" target="_blank" rel="noopener">Book a discovery call</a>
-									<a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="button">Email me</a>
+									<p class="contact-alt">Or email me directly at <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a></p>
 								</div>
-								<p class="contact-meta">Or reach me directly at <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a>.</p>
 							</div>
 						</div>
 					</div>
