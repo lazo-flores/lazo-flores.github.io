@@ -502,6 +502,64 @@
 				color: #1f2937;
 			}
 
+			/* Round 5 — Also available on: platform-link cards */
+			.platform-cards {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5em;
+				max-width: 700px;
+				margin: 2em auto 0;
+			}
+
+			@media (max-width: 768px) {
+				.platform-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.platform-card {
+				display: block;
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-radius: 10px;
+				padding: 1.8em 1.5em;
+				text-align: left;
+				text-decoration: none;
+				color: inherit;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+				transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+			}
+
+			.platform-card:hover {
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+				transform: translateY(-2px);
+				border-color: var(--accent-primary);
+			}
+
+			.platform-card h3 {
+				color: #1f2937;
+				font-size: 1.3em;
+				margin: 0 0 0.5em 0;
+				font-weight: 600;
+			}
+
+			.platform-card p {
+				color: #4b5563;
+				margin: 0 0 1em 0;
+				line-height: 1.5;
+				font-size: 0.95em;
+			}
+
+			.platform-card .platform-link {
+				color: var(--accent-primary);
+				font-weight: 600;
+				font-size: 0.95em;
+			}
+
+			.platform-card:hover .platform-link {
+				color: var(--accent-primary-hover);
+			}
+
 			/* Round 2 — Footer: light gray strip, matches home page */
 			#footer {
 				background: #f9fafb !important;
@@ -649,15 +707,21 @@
 			<header>
 				<div class="container">
 					<h2>Also available on</h2>
-					<p>Same services, different platforms.</p>
 				</div>
 			</header>
 			<div class="content dark style2">
 				<div class="container medium">
-					<div class="external-links">
-						<a href="https://en.malt.ch/profile/joselazoflores" class="button" target="_blank" rel="noopener">Malt profile</a>
-						<a href="https://www.upwork.com/services/product/development-it-an-ai-strategy-consultation-with-a-prioritised-implementation-roadmap-2051343532840256618?ref=project_share" class="button" target="_blank" rel="noopener">Upwork: AI Strategy Consultation</a>
-						<a href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" class="button" target="_blank" rel="noopener">LinkedIn</a>
+					<div class="platform-cards">
+						<a class="platform-card" href="https://en.malt.ch/profile/joselazoflores" target="_blank" rel="noopener">
+							<h3>Malt</h3>
+							<p>Senior AI consulting and workshop facilitation through Europe&rsquo;s leading freelance marketplace for senior professionals.</p>
+							<span class="platform-link">View Malt profile &rarr;</span>
+						</a>
+						<a class="platform-card" href="https://www.upwork.com/services/product/development-it-an-ai-strategy-consultation-with-a-prioritised-implementation-roadmap-2051343532840256618?ref=project_share" target="_blank" rel="noopener">
+							<h3>Upwork</h3>
+							<p>AI Strategy Consultation with a prioritised implementation roadmap &mdash; a fixed-scope engagement for organisations exploring where AI fits in their business.</p>
+							<span class="platform-link">View this Upwork offering &rarr;</span>
+						</a>
 					</div>
 				</div>
 			</div>
