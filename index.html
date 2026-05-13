@@ -613,9 +613,27 @@
 				color: var(--accent-primary-hover);
 			}
 
-			/* Feature icons in About — make them brand teal on the new white bg */
-			#about .feature-icon {
+			/* Feature icons on light sections.
+			   The template's .dark .feature-icon .icon rule (main.css ~line 2134)
+			   paints the inner FA glyph white with a white-glass disc, designed
+			   for the original gradient bgs. On our new white surfaces those
+			   render white-on-white. Flip to teal disc + teal glyph, plus
+			   recolor the decorative dot/line tail beneath each icon. */
+			#about .feature-icon .icon,
+			#experience .feature-icon .icon,
+			#projects .feature-icon .icon {
+				background: rgba(15, 118, 110, 0.08);
+				box-shadow: inset 0 0 0 1px var(--accent-primary);
 				color: var(--accent-primary);
+			}
+
+			#about .feature-icon::before,
+			#about .feature-icon::after,
+			#experience .feature-icon::before,
+			#experience .feature-icon::after,
+			#projects .feature-icon::before,
+			#projects .feature-icon::after {
+				background: rgba(15, 118, 110, 0.4);
 			}
 
 			/* Round 2 — Platforms showcase: solid navy with teal accents.
