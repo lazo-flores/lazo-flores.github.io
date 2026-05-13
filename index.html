@@ -560,6 +560,64 @@
 				left: 0 !important;
 			}
 
+			/* ------------------------------------------------------------------
+			   Round 2 — propagate the consulting page's visual pattern to the
+			   home page. HTML5 UP "Tessellate" gradients on .content.style1/2/3
+			   clash with the brand palette; force white surfaces for the
+			   content-dense sections (About, Experience, Projects) and recolor
+			   text. Same approach used on consulting.html.
+			   ------------------------------------------------------------------ */
+			#about .content,
+			#experience .content,
+			#projects .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#about h2,
+			#experience h2,
+			#projects h2,
+			#about h3,
+			#experience h3,
+			#projects h3 {
+				color: #1f2937;
+			}
+
+			#about p,
+			#experience p,
+			#projects p {
+				color: #4b5563;
+			}
+
+			#about p strong,
+			#experience p strong,
+			#projects p strong {
+				color: #1f2937;
+			}
+
+			#about .content em,
+			#experience .content em,
+			#projects .content em {
+				color: #6b7280;
+			}
+
+			#about .content a:not(.button),
+			#experience .content a:not(.button),
+			#projects .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			#about .content a:not(.button):hover,
+			#experience .content a:not(.button):hover,
+			#projects .content a:not(.button):hover {
+				color: var(--accent-primary-hover);
+			}
+
+			/* Feature icons in About — make them brand teal on the new white bg */
+			#about .feature-icon {
+				color: var(--accent-primary);
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
