@@ -576,6 +576,23 @@
 			#footer .icons a:hover {
 				color: var(--accent-primary);
 			}
+
+			/* Round 5 — Override template's `p { text-align: justify }`
+			   (main.css:214) to remove word-river gaps. Keep centered any
+			   element where centering is the explicit design (section
+			   header intros, final-CTA copy). */
+			body p,
+			body li,
+			.service-card p,
+			.platform-card p {
+				text-align: left;
+			}
+
+			.final-cta p,
+			header p,
+			.section-intro {
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body class="is-preload">

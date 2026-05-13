@@ -913,6 +913,25 @@
 				}
 			}
 
+			/* Round 5 — Override template's `p { text-align: justify }`
+			   (main.css:214) to remove word-river gaps. Keep centered any
+			   element where centering is the explicit design (section
+			   header intros, the Contact CTA copy, final-CTA copy). */
+			body p,
+			body li,
+			.quadrant p,
+			.service-card p,
+			.platform-card p,
+			.insight-card p {
+				text-align: left;
+			}
+
+			.contact-cta p,
+			.final-cta p,
+			header p,
+			.section-intro {
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
