@@ -618,6 +618,65 @@
 				color: var(--accent-primary);
 			}
 
+			/* Round 2 — Platforms showcase: solid navy with teal accents.
+			   This is the "exhibit" section punctuating the page between the
+			   light About/Experience and the light Projects below. */
+			#platforms {
+				border-top: 3px solid var(--accent-primary);
+				border-bottom: 3px solid var(--accent-primary);
+			}
+
+			#platforms,
+			#platforms > header,
+			#platforms .content {
+				background: #0f172a !important;
+				color: #d1d5db;
+			}
+
+			#platforms h2 {
+				color: #ffffff;
+			}
+
+			#platforms p {
+				color: #d1d5db;
+			}
+
+			#platforms .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			#platforms .content a:not(.button):hover {
+				color: #ffffff;
+			}
+
+			/* Platform cards (the <section> wrappers inside each col-6) */
+			#platforms .content > .container > .row > .col-6-col-12-narrow,
+			#platforms .content > .container > .row > .col-6 {
+				display: flex;
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(15, 118, 110, 0.35);
+				border-radius: 10px;
+				padding: 1.8em 1.5em;
+				transition: border-color 0.2s ease, transform 0.2s ease;
+				width: 100%;
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section:hover {
+				border-color: rgba(15, 118, 110, 0.7);
+				transform: translateY(-2px);
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section h3 {
+				color: #ffffff;
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section p strong {
+				color: #ffffff;
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
