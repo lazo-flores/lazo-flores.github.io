@@ -875,6 +875,47 @@
 				line-height: 1.6;
 			}
 
+			/* Round 4 — Standardize section padding for consistent vertical
+			   rhythm. The template applies .main > .content { padding: 6em 0 }
+			   but special-cases .style4 to padding-top: 0 (main.css:2264),
+			   which was making the Contact section feel tight compared to the
+			   rest of the page. Normalize every section's content padding
+			   to 5em and tighten on mobile. */
+			#about > .content,
+			#experience > .content,
+			#platforms > .content,
+			#projects > .content,
+			#methodology > .content,
+			#insights > .content,
+			#contact > .content {
+				padding-top: 5em;
+				padding-bottom: 5em;
+			}
+
+			@media screen and (max-width: 768px) {
+				#about > .content,
+				#experience > .content,
+				#platforms > .content,
+				#projects > .content,
+				#methodology > .content,
+				#insights > .content,
+				#contact > .content {
+					padding-top: 3em;
+					padding-bottom: 3em;
+				}
+
+				#about > header,
+				#experience > header,
+				#platforms > header,
+				#projects > header,
+				#methodology > header,
+				#insights > header,
+				#contact > header {
+					padding-top: 3em;
+					padding-bottom: 2em;
+				}
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
