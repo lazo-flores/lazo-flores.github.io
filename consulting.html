@@ -1,0 +1,822 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Consulting | Jose Lazo-Flores, Ph.D.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Senior AI Consultant for SMBs and financial services. Strategic Advisory, AI Workshops & Training, and AI Implementation. Zurich-based." />
+		<link rel="icon" type="image/png" href="images/Avatar.png" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Brand palette — teal primary, indigo secondary */
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+				--accent-secondary-hover: #17328a;
+			}
+
+			/* Section header accent underline */
+			.main > header h2 {
+				position: relative;
+				padding-bottom: 0.4em;
+			}
+
+			.main > header h2::after {
+				content: '';
+				display: block;
+				width: 3.5em;
+				height: 3px;
+				background: var(--accent-primary);
+				margin: 0.5em auto 0 auto;
+				border-radius: 2px;
+			}
+
+			/* Navigation Bar */
+			#nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(47, 53, 56, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 10000;
+				padding: 1em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+
+			#nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2em;
+			}
+
+			#nav .nav-links {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 1.5em;
+				flex: 1 1 auto;
+				justify-content: flex-end;
+				flex-wrap: nowrap;
+			}
+
+			#nav .nav-links li {
+				margin: 0;
+			}
+
+			#nav .nav-links a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 0.85em;
+				white-space: nowrap;
+				transition: color 0.2s ease;
+				border-bottom: 2px solid transparent;
+				padding-bottom: 0.2em;
+			}
+
+			#nav .nav-links a:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#nav .nav-links a.active {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#nav .nav-name {
+				color: #fff;
+				font-weight: 600;
+				font-size: 1em;
+				white-space: nowrap;
+				flex: 0 0 auto;
+			}
+
+			body {
+				padding-top: 4em;
+			}
+
+			@media screen and (max-width: 736px) {
+				#nav .container {
+					flex-direction: column;
+					gap: 1em;
+					padding: 0 1em;
+				}
+
+				#nav .nav-links {
+					gap: 1em;
+					font-size: 0.85em;
+				}
+
+				#nav .nav-name {
+					font-size: 0.85em;
+				}
+
+				body {
+					padding-top: 6em;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				#nav .nav-links {
+					flex-wrap: wrap;
+					justify-content: center;
+					gap: 0.75em;
+				}
+			}
+
+			/* Page hero */
+			#page-hero {
+				background: linear-gradient(135deg, #2f3538 0%, #1a1f22 100%);
+				color: #ffffff;
+				padding: 4em 0 3em 0;
+				text-align: center;
+			}
+
+			#page-hero h1 {
+				font-size: 3em;
+				color: #ffffff;
+				margin-bottom: 0.3em;
+			}
+
+			#page-hero h2 {
+				font-size: 1.5em;
+				color: #f0f0f0;
+				font-weight: 300;
+				margin-bottom: 1em;
+			}
+
+			#page-hero p.lead {
+				font-size: 1.1em;
+				max-width: 50em;
+				margin: 0 auto;
+				line-height: 1.6;
+				color: #e8e8e8;
+			}
+
+			@media screen and (max-width: 736px) {
+				#page-hero h1 {
+					font-size: 2.2em;
+				}
+
+				#page-hero h2 {
+					font-size: 1.15em;
+				}
+			}
+
+			/* Three Services — light cards on white surface */
+			.service-cards {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5em;
+				margin: 2em 0;
+			}
+
+			@media (max-width: 768px) {
+				.service-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.service-card {
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-radius: 10px;
+				padding: 1.8em 1.5em;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+				transition: box-shadow 0.2s ease, transform 0.2s ease;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.service-card:hover {
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+				transform: translateY(-2px);
+			}
+
+			.service-card h3 {
+				color: var(--accent-primary);
+				font-size: 1.25em;
+				margin: 0 0 0.5em 0;
+				font-weight: 600;
+			}
+
+			.service-card p {
+				color: #4b5563;
+				margin: 0 0 1em 0;
+				line-height: 1.5;
+				flex-grow: 1;
+			}
+
+			.service-card p.pricing {
+				color: #6b7280;
+				font-size: 0.9em;
+				font-style: italic;
+				margin: 0;
+				border-top: 1px solid #f3f4f6;
+				padding-top: 0.8em;
+				flex-grow: 0;
+			}
+
+			/* Methodology list (5 P's) */
+			.method-list {
+				list-style: none;
+				padding: 0;
+				margin: 1em 0;
+			}
+
+			.method-list li {
+				padding: 0.5em 0;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			.method-list li:last-child {
+				border-bottom: none;
+			}
+
+			.method-list strong {
+				color: var(--accent-primary);
+				display: inline-block;
+				min-width: 8em;
+			}
+
+			/* Why list */
+			.why-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.why-list li {
+				padding: 0.6em 0;
+				padding-left: 1.5em;
+				position: relative;
+			}
+
+			.why-list li::before {
+				content: '\2713';
+				color: var(--accent-primary);
+				font-weight: bold;
+				position: absolute;
+				left: 0;
+				top: 0.6em;
+			}
+
+			.why-list strong {
+				color: #ffffff;
+			}
+
+			/* External presence buttons */
+			.external-links {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				justify-content: center;
+				margin: 1em 0;
+			}
+
+			/* Audit highlight box */
+			.audit-box {
+				background: rgba(15, 118, 110, 0.08);
+				border-left: 4px solid var(--accent-primary);
+				padding: 1.5em 2em;
+				border-radius: 4px;
+				margin: 1em 0;
+			}
+
+			.audit-box .price {
+				display: block;
+				margin-top: 1em;
+				color: var(--accent-primary);
+				font-style: italic;
+			}
+
+			/* CTA buttons (teal primary) */
+			.button.primary-cta {
+				background: var(--accent-primary);
+				color: #ffffff;
+				border: 2px solid var(--accent-primary);
+			}
+
+			.button.primary-cta:hover {
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
+			}
+
+			.button.secondary-cta {
+				background: transparent;
+				color: #ffffff;
+				border: 2px solid rgba(255, 255, 255, 0.4);
+			}
+
+			.button.secondary-cta:hover {
+				background: rgba(255, 255, 255, 0.08);
+				border-color: rgba(255, 255, 255, 0.7);
+			}
+
+			/* Final CTA section */
+			.final-cta {
+				text-align: center;
+				padding: 1em 0;
+			}
+
+			.final-cta .button {
+				font-size: 1.1em;
+				padding: 0.8em 1.6em;
+				margin-top: 1em;
+			}
+
+			.final-cta .email-fallback {
+				display: block;
+				margin-top: 1.5em;
+				font-size: 0.95em;
+				opacity: 0.85;
+			}
+
+			/* AI Twin Widget Label */
+			.ai-twin-label {
+				position: fixed;
+				bottom: 90px;
+				right: 30px;
+				background: rgba(47, 53, 56, 0.95);
+				color: #ffffff;
+				padding: 0.6em 1em;
+				border-radius: 20px;
+				font-size: 0.9em;
+				font-weight: 500;
+				z-index: 9999;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+				pointer-events: none;
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				animation: fadeInLabel 0.5s ease-in-out 1s both;
+			}
+
+			.ai-twin-label::after {
+				content: "\1F4AC";
+				font-size: 1.2em;
+			}
+
+			@keyframes fadeInLabel {
+				from {
+					opacity: 0;
+					transform: translateX(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				.ai-twin-label {
+					bottom: 80px;
+					right: 20px;
+					font-size: 0.8em;
+					padding: 0.5em 0.8em;
+				}
+			}
+
+			.augself-widget-button {
+				background: #3c78d7 !important;
+				padding: 0 !important;
+			}
+
+			.augself-widget-button img {
+				width: 60px !important;
+				height: 60px !important;
+				min-width: 60px !important;
+				min-height: 60px !important;
+				max-width: 60px !important;
+				max-height: 60px !important;
+				object-fit: cover !important;
+				border-radius: 50% !important;
+				display: block !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+				position: absolute !important;
+				top: 0 !important;
+				left: 0 !important;
+			}
+
+			/* ------------------------------------------------------------------
+			   Light-background overrides for content-dense consulting sections.
+			   The HTML5 UP "Tessellate" template paints .content.style1/.style2
+			   with dark gradients (main.css lines 2251–2257); those make our
+			   dense copy unreadable. Force white for the IDed sections below
+			   and recolor the dark-mode-tuned helper styles inside them.
+			   ------------------------------------------------------------------ */
+			#consulting-services .content,
+			#consulting-audit .content,
+			#consulting-methodology .content,
+			#consulting-why .content,
+			#consulting-presence .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#consulting-services > header,
+			#consulting-audit > header,
+			#consulting-methodology > header,
+			#consulting-why > header,
+			#consulting-presence > header,
+			#consulting-cta > header {
+				background: #ffffff;
+			}
+
+			#consulting-services h2,
+			#consulting-audit h2,
+			#consulting-methodology h2,
+			#consulting-why h2,
+			#consulting-presence h2,
+			#consulting-cta h2 {
+				color: #1f2937;
+			}
+
+			#consulting-audit h3,
+			#consulting-methodology h3,
+			#consulting-why h3 {
+				color: #1f2937;
+			}
+
+			#consulting-services > header p,
+			#consulting-audit p,
+			#consulting-methodology p,
+			#consulting-why p,
+			#consulting-presence p,
+			#consulting-cta p {
+				color: #4b5563;
+			}
+
+			#consulting-services .content a:not(.button),
+			#consulting-audit .content a:not(.button),
+			#consulting-methodology .content a:not(.button),
+			#consulting-why .content a:not(.button),
+			#consulting-presence .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			/* Audit highlight box on a white surface */
+			#consulting-audit .audit-box {
+				background: #f9fafb;
+				border-left: 4px solid var(--accent-primary);
+				color: #1f2937;
+			}
+
+			#consulting-audit .audit-box p {
+				color: #4b5563;
+			}
+
+			#consulting-audit .audit-box .price {
+				color: var(--accent-primary);
+				border-top: none;
+			}
+
+			/* 5 P's list dividers — flip from white-on-dark to gray-on-white */
+			#consulting-methodology .method-list li {
+				border-bottom: 1px solid #e5e7eb;
+			}
+
+			#consulting-methodology .method-list li:last-child {
+				border-bottom: none;
+			}
+
+			#consulting-methodology .method-list strong {
+				color: var(--accent-primary);
+			}
+
+			/* Why-list — strong was white-on-dark, swap to dark-on-white */
+			#consulting-why .why-list strong {
+				color: #1f2937;
+			}
+
+			/* Round 5 — Also available on: platform-link cards */
+			.platform-cards {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5em;
+				max-width: 700px;
+				margin: 2em auto 0;
+			}
+
+			@media (max-width: 768px) {
+				.platform-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.platform-card {
+				display: block;
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-radius: 10px;
+				padding: 1.8em 1.5em;
+				text-align: left;
+				text-decoration: none;
+				color: inherit;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+				transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+			}
+
+			.platform-card:hover {
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+				transform: translateY(-2px);
+				border-color: var(--accent-primary);
+			}
+
+			.platform-card h3 {
+				color: #1f2937;
+				font-size: 1.3em;
+				margin: 0 0 0.5em 0;
+				font-weight: 600;
+			}
+
+			.platform-card p {
+				color: #4b5563;
+				margin: 0 0 1em 0;
+				line-height: 1.5;
+				font-size: 0.95em;
+			}
+
+			.platform-card .platform-link {
+				color: var(--accent-primary);
+				font-weight: 600;
+				font-size: 0.95em;
+			}
+
+			.platform-card:hover .platform-link {
+				color: var(--accent-primary-hover);
+			}
+
+			/* Round 2 — Footer: light gray strip, matches home page */
+			#footer {
+				background: #f9fafb !important;
+				color: #6b7280;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#footer a,
+			#footer .icons a {
+				color: #6b7280;
+			}
+
+			#footer a:hover,
+			#footer .icons a:hover {
+				color: var(--accent-primary);
+			}
+
+			/* Round 5 — Override template's `p { text-align: justify }`
+			   (main.css:214) to remove word-river gaps. Keep centered any
+			   element where centering is the explicit design (section
+			   header intros, final-CTA copy). */
+			body p,
+			body li,
+			.service-card p,
+			.platform-card p {
+				text-align: left;
+			}
+
+			.final-cta p,
+			header p,
+			.section-intro {
+				text-align: center;
+			}
+
+			/* Round 5 — Inline Calendly embed on Let's-talk section */
+			#consulting-cta .calendly-inline-widget {
+				max-width: 900px;
+				margin: 0 auto;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+			}
+
+			#consulting-cta .contact-alt {
+				color: #6b7280;
+				font-size: 0.9em;
+				margin-top: 2em;
+				text-align: center;
+			}
+
+			#consulting-cta .contact-alt a {
+				color: var(--accent-primary);
+			}
+
+			#consulting-cta .contact-alt a:hover {
+				color: var(--accent-primary-hover);
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Navigation Bar -->
+		<nav id="nav">
+			<div class="container">
+				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#experience">Experience</a></li>
+					<li><a href="consulting.html" class="active">Consulting</a></li>
+					<li><a href="index.html#platforms">Platforms</a></li>
+					<li><a href="index.html#projects">Projects</a></li>
+					<li><a href="index.html#methodology">Methodology</a></li>
+					<li><a href="index.html#insights">Insights</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Page Hero -->
+		<section id="page-hero">
+			<div class="container">
+				<h1>Consulting</h1>
+				<h2>How I work with clients</h2>
+				<p class="lead">Most AI projects stall between proof-of-concept and daily use. I help SMBs and financial services teams cross that gap &mdash; through corporate AI workshops, production LLM systems, and strategic advisory. Three services, one methodology.</p>
+			</div>
+		</section>
+
+		<!-- Three Services -->
+		<section id="consulting-services" class="main">
+			<header>
+				<div class="container">
+					<h2>Three services</h2>
+					<p>Pick the engagement that fits where you are.</p>
+				</div>
+			</header>
+			<div class="content dark style2">
+				<div class="container">
+					<div class="service-cards">
+						<div class="service-card">
+							<h3>Strategic Advisory</h3>
+							<p>Executive-level guidance for leaders rolling out AI. Where to invest, where to wait, how to manage risk. Typically delivered as ongoing advisory or quarterly strategic reviews.</p>
+							<p class="pricing">From CHF 1,500 per day.</p>
+						</div>
+						<div class="service-card">
+							<h3>AI Workshops &amp; Training</h3>
+							<p>Five-module corporate AI training for non-technical business teams, built around the 5 P&rsquo;s of Prompting framework. Designed for real workflow adoption, not awareness. Virtual-first; in-person available in Europe.</p>
+							<p class="pricing">From CHF 2,000 per workshop. Multi-workshop pilots: CHF 5,500&ndash;6,000 for three sessions.</p>
+						</div>
+						<div class="service-card">
+							<h3>AI Implementation</h3>
+							<p>Production AI systems: RAG-based assistants, multi-agent architectures, custom LLM integrations. Same architectural patterns used in Augself.ai, EnableMate.ai, and the Swing Trader autonomous trading system.</p>
+							<p class="pricing">Project-based, from CHF 130/hour or fixed scope.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Audit Funnel -->
+		<section id="consulting-audit" class="main">
+			<header>
+				<div class="container">
+					<h2>The audit &mdash; where to start if you&rsquo;re not sure</h2>
+					<p>A structured assessment of where AI can deliver real value across your organization &mdash; and just as importantly, where it can&rsquo;t.</p>
+				</div>
+			</header>
+			<div class="content dark style1">
+				<div class="container medium">
+					<p>If you&rsquo;re unsure which service fits, the AI Opportunity Audit is the entry point. It produces an AI Opportunity Map, a prioritized roadmap, and recommended engagement paths. Findings often justify follow-on engagements 5&ndash;10&times; the audit fee, but the audit deliverables are valuable standalone.</p>
+					<div class="audit-box">
+						<strong>AI Opportunity Audit</strong>
+						<p style="margin-top: 0.6em;">Structured 2-week engagement. Stakeholder interviews, workflow review, opportunity mapping, and a prioritized roadmap you can act on with or without me.</p>
+						<span class="price">CHF 3,500&ndash;7,500 fixed, approximately 2 weeks, multi-stakeholder.</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 5 P's of Prompting -->
+		<section id="consulting-methodology" class="main">
+			<header>
+				<div class="container">
+					<h2>The 5 P&rsquo;s of Prompting</h2>
+					<p>Methodology spine. A framework for non-technical teams to consistently get useful output from AI tools.</p>
+				</div>
+			</header>
+			<div class="content dark style2">
+				<div class="container medium">
+					<p>I developed this framework for corporate AI workshops. It&rsquo;s the structure participants use during training and carry back to their daily work.</p>
+					<ul class="method-list">
+						<li><strong>Premise</strong> &mdash; what&rsquo;s the situation? Audience, goal, constraints.</li>
+						<li><strong>Persona</strong> &mdash; what role should the AI take?</li>
+						<li><strong>Pattern</strong> &mdash; what does good look like? Show one or two examples.</li>
+						<li><strong>Purpose</strong> &mdash; what specifically should it produce?</li>
+						<li><strong>Presentation</strong> &mdash; what format and length?</li>
+					</ul>
+					<p style="margin-top: 1.5em;">More on the AI Sweet Spot and the AI Opportunity Map on the <a href="index.html#methodology">Methodology section</a>.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why work with me -->
+		<section id="consulting-why" class="main">
+			<header>
+				<div class="container">
+					<h2>Why work with me</h2>
+					<p>Scientific rigor, regulated-sector experience, production AI built.</p>
+				</div>
+			</header>
+			<div class="content dark style1">
+				<div class="container medium">
+					<ul class="why-list">
+						<li><strong>Ph.D. in Physics</strong> &mdash; scientific rigor in every assessment.</li>
+						<li><strong>3+ years at Credit Suisse</strong> &mdash; regulated-sector experience on Palantir Foundry: trade surveillance, regulatory compliance, cybersecurity, holistic risk management.</li>
+						<li><strong>Cross-industry consulting</strong> &mdash; healthcare, energy, insurance, transportation, telecommunications, banking.</li>
+						<li><strong>Production AI platforms built</strong> &mdash; Augself.ai, EnableMate.ai, Swing Trader.</li>
+						<li><strong>Zurich-based, Swiss C Permit</strong> &mdash; available across the DACH region for in-person workshops and audits.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- External Presence -->
+		<section id="consulting-presence" class="main">
+			<header>
+				<div class="container">
+					<h2>Also available on</h2>
+				</div>
+			</header>
+			<div class="content dark style2">
+				<div class="container medium">
+					<div class="platform-cards">
+						<a class="platform-card" href="https://en.malt.ch/profile/joselazoflores" target="_blank" rel="noopener">
+							<h3>Malt</h3>
+							<p>Senior AI consulting and workshop facilitation through Europe&rsquo;s leading freelance marketplace for senior professionals.</p>
+							<span class="platform-link">View Malt profile &rarr;</span>
+						</a>
+						<a class="platform-card" href="https://www.upwork.com/services/product/development-it-an-ai-strategy-consultation-with-a-prioritised-implementation-roadmap-2051343532840256618?ref=project_share" target="_blank" rel="noopener">
+							<h3>Upwork</h3>
+							<p>AI Strategy Consultation with a prioritised implementation roadmap &mdash; a fixed-scope engagement for organisations exploring where AI fits in their business.</p>
+							<span class="platform-link">View this Upwork offering &rarr;</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Final CTA -->
+		<section id="consulting-cta" class="main">
+			<header>
+				<div class="container">
+					<h2>Let&rsquo;s talk</h2>
+					<p>The first conversation is always free. A 45-minute discovery call to understand your context and decide whether we&rsquo;re a fit. Pick a time below &mdash; no obligation, no pitch deck.</p>
+				</div>
+			</header>
+			<div class="content style4 featured">
+				<div class="container medium">
+					<!-- Calendly inline widget begin -->
+					<div class="calendly-inline-widget" data-url="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" style="min-width:320px;height:700px;"></div>
+					<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+					<!-- Calendly inline widget end -->
+					<p class="contact-alt">Prefer email? Reach me at <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a>.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/lazo-flores" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Jose Lazo-Flores. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Clicky Analytics -->
+		<script async data-id="101496361" src="https://static.getclicky.com/js"></script>
+
+		<!-- AI Twin Widget -->
+		<script src="https://augself.ai/widget.js" data-twin="Jose" data-position="right" data-avatar="https://res.cloudinary.com/dto4yl9fu/image/upload/v1769527069/augself/user-profiles/user_3_profile.jpg" data-color="#3c78d7"></script>
+
+		<!-- AI Twin Widget Label -->
+		<div class="ai-twin-label">Chat with my AI Twin</div>
+
+	</body>
+</html>

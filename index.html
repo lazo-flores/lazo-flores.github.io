@@ -6,12 +6,36 @@
 -->
 <html>
 	<head>
-		<title>Jose Lazo-Flores, Ph.D. | Data Scientist & AI Engineer</title>
+		<title>Jose Lazo-Flores, Ph.D. | Senior AI Consultant · Workshop Facilitator · LLM Systems</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" type="image/png" href="images/Avatar.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
+			/* Brand palette — teal primary, indigo secondary */
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+				--accent-secondary-hover: #17328a;
+			}
+
+			/* Section header accent underline */
+			.main > header h2 {
+				position: relative;
+				padding-bottom: 0.4em;
+			}
+
+			.main > header h2::after {
+				content: '';
+				display: block;
+				width: 3.5em;
+				height: 3px;
+				background: var(--accent-primary);
+				margin: 0.5em auto 0 auto;
+				border-radius: 2px;
+			}
+
 			/* Navigation Bar */
 			#nav {
 				position: fixed;
@@ -39,7 +63,10 @@
 				list-style: none;
 				margin: 0;
 				padding: 0;
-				gap: 2em;
+				gap: 1.5em;
+				flex: 1 1 auto;
+				justify-content: flex-end;
+				flex-wrap: nowrap;
 			}
 
 			#nav .nav-links li {
@@ -50,21 +77,25 @@
 				color: #fff;
 				text-decoration: none;
 				font-weight: 300;
-				font-size: 0.9em;
+				font-size: 0.85em;
+				white-space: nowrap;
 				transition: color 0.2s ease;
 				border-bottom: 2px solid transparent;
 				padding-bottom: 0.2em;
 			}
 
-			#nav .nav-links a:hover {
-				color: #f5a623;
-				border-bottom-color: #f5a623;
+			#nav .nav-links a:hover,
+			#nav .nav-links a.active {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
 			}
 
 			#nav .nav-name {
 				color: #fff;
-				font-weight: 400;
-				font-size: 0.9em;
+				font-weight: 600;
+				font-size: 1em;
+				white-space: nowrap;
+				flex: 0 0 auto;
 			}
 
 			/* Add padding to body to account for fixed nav */
@@ -146,7 +177,7 @@
 				display: inline-block;
 			}
 
-			#header p {
+			#header p.headline {
 				color: #ffffff;
 				font-size: 1.7em;
 				text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.95),
@@ -158,26 +189,62 @@
 				border-radius: 8px;
 				display: inline-block;
 				margin-top: 0.5em;
+				margin-bottom: 0.3em;
+			}
+
+			#header p.subhead {
+				color: #ffffff;
+				font-size: 1.1em;
+				text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95),
+				             0 0 15px rgba(0, 0, 0, 0.8);
+				font-weight: 400;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				background: transparent;
+				padding: 0.3em 0.7em;
+				border-radius: 8px;
+				display: inline-block;
+				margin-top: 0.3em;
+				max-width: 36em;
+				line-height: 1.5;
 			}
 
 			#header footer {
-				margin-top: 1em;
+				margin-top: 1.2em;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.9em;
+				align-items: center;
 			}
 
 			#header .button {
-				background: transparent;
-				color: #ffffff;
 				font-weight: 700;
-				font-size: 1.1em;
+				font-size: 1.05em;
 				font-family: Georgia, 'Times New Roman', Times, serif;
-				text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-				border: 2px solid rgba(255, 255, 255, 0.3);
 			}
 
-			#header .button:hover {
-				background: rgba(0, 0, 0, 0.3);
-				border-color: rgba(255, 255, 255, 0.5);
+			#header .button.primary-cta {
+				background: var(--accent-primary);
+				color: #ffffff;
+				border: 2px solid var(--accent-primary);
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+			}
+
+			#header .button.primary-cta:hover {
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
+			}
+
+			#header .button.secondary-cta {
+				background: transparent;
+				color: #ffffff;
+				border: 2px solid rgba(255, 255, 255, 0.5);
+				text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+			}
+
+			#header .button.secondary-cta:hover {
+				background: rgba(255, 255, 255, 0.1);
+				border-color: rgba(255, 255, 255, 0.8);
 			}
 
 			@media screen and (max-width: 736px) {
@@ -185,8 +252,12 @@
 					font-size: 2.2em;
 				}
 
-				#header p {
+				#header p.headline {
 					font-size: 1.2em;
+				}
+
+				#header p.subhead {
+					font-size: 0.95em;
 				}
 			}
 
@@ -299,6 +370,192 @@
 				}
 			}
 
+			/* Primary CTA button (teal) — usable outside the header */
+			.button.primary-cta {
+				background: var(--accent-primary);
+				color: #ffffff;
+				border: 2px solid var(--accent-primary);
+			}
+
+			.button.primary-cta:hover {
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
+			}
+
+			/* Contact CTA — focused conversion block */
+			.contact-cta {
+				text-align: center;
+				max-width: 640px;
+				margin: 0 auto;
+				padding: 1em 0;
+			}
+
+			.contact-cta h3 {
+				font-size: 1.6em;
+				font-weight: 600;
+				margin: 0 0 0.4em 0;
+			}
+
+			.contact-cta > p {
+				margin: 0 0 1.5em 0;
+				line-height: 1.5;
+			}
+
+			.contact-cta .contact-alt {
+				font-size: 0.9em;
+				margin-top: 1.5em;
+				margin-bottom: 0;
+			}
+
+			/* Insights cards */
+			.insight-card {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-left: 3px solid var(--accent-primary);
+				border-radius: 6px;
+				padding: 1.5em;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 0.75em;
+			}
+
+			.insight-card h3 {
+				color: #ffffff;
+				margin: 0;
+				font-size: 1.1em;
+				line-height: 1.35;
+			}
+
+			.insight-badge {
+				display: inline-block;
+				background: rgba(15, 118, 110, 0.15);
+				color: var(--accent-primary);
+				border: 1px solid rgba(15, 118, 110, 0.4);
+				padding: 0.25em 0.7em;
+				border-radius: 999px;
+				font-size: 0.75em;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				align-self: flex-start;
+			}
+
+			/* Workshop card icon banner (stand-in for project image) */
+			.workshop-banner {
+				width: 100%;
+				height: 300px;
+				border-radius: 8px;
+				margin-bottom: 1.5em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+				color: rgba(255, 255, 255, 0.95);
+				font-size: 6em;
+			}
+
+			@media screen and (max-width: 736px) {
+				.workshop-banner {
+					height: 250px;
+					font-size: 4.5em;
+				}
+			}
+
+			/* Methodology section */
+			.method-block {
+				margin-bottom: 2em;
+			}
+
+			.method-block h3 {
+				color: #ffffff;
+				margin-bottom: 0.5em;
+			}
+
+			.method-list {
+				list-style: none;
+				padding: 0;
+				margin: 1em 0;
+			}
+
+			.method-list li {
+				padding: 0.5em 0;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			.method-list li:last-child {
+				border-bottom: none;
+			}
+
+			.method-list strong {
+				color: var(--accent-primary);
+				display: inline-block;
+				min-width: 9em;
+			}
+
+			.quadrant-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1em;
+				margin: 1.25em 0;
+			}
+
+			.quadrant {
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-radius: 10px;
+				padding: 1.6em 1.4em;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+				transition: box-shadow 0.2s ease, transform 0.2s ease;
+			}
+
+			.quadrant:hover {
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+				transform: translateY(-2px);
+			}
+
+			.quadrant h4 {
+				color: #1f2937;
+				margin: 0 0 0.5em 0;
+				font-size: 1.1em;
+				font-weight: 600;
+			}
+
+			.quadrant p {
+				color: #4b5563;
+				margin: 0.2em 0;
+				font-size: 0.95em;
+				line-height: 1.5;
+			}
+
+			.quadrant.quadrant-q1 {
+				border-top: 4px solid var(--accent-primary);
+			}
+
+			.quadrant.quadrant-q2 {
+				border-top: 4px solid var(--accent-secondary);
+			}
+
+			.quadrant.quadrant-q3 {
+				border-top: 4px solid #B45309;
+			}
+
+			.quadrant.quadrant-q4 {
+				border-top: 4px solid #9ca3af;
+			}
+
+			@media screen and (max-width: 736px) {
+				.quadrant-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.method-list strong {
+					min-width: 0;
+					display: block;
+					margin-bottom: 0.2em;
+				}
+			}
+
 			/* Custom Avatar for AugSelf Widget */
 			.augself-widget-button {
 				background: #3c78d7 !important;
@@ -322,6 +579,359 @@
 				left: 0 !important;
 			}
 
+			/* ------------------------------------------------------------------
+			   Round 2 — propagate the consulting page's visual pattern to the
+			   home page. HTML5 UP "Tessellate" gradients on .content.style1/2/3
+			   clash with the brand palette; force white surfaces for the
+			   content-dense sections (About, Experience, Projects) and recolor
+			   text. Same approach used on consulting.html.
+			   ------------------------------------------------------------------ */
+			#about .content,
+			#experience .content,
+			#projects .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#about h2,
+			#experience h2,
+			#projects h2,
+			#about h3,
+			#experience h3,
+			#projects h3 {
+				color: #1f2937;
+			}
+
+			#about p,
+			#experience p,
+			#projects p {
+				color: #4b5563;
+			}
+
+			#about p strong,
+			#experience p strong,
+			#projects p strong {
+				color: #1f2937;
+			}
+
+			#about .content em,
+			#experience .content em,
+			#projects .content em {
+				color: #6b7280;
+			}
+
+			#about .content a:not(.button),
+			#experience .content a:not(.button),
+			#projects .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			#about .content a:not(.button):hover,
+			#experience .content a:not(.button):hover,
+			#projects .content a:not(.button):hover {
+				color: var(--accent-primary-hover);
+			}
+
+			/* Feature icons on light sections.
+			   The template's .dark .feature-icon .icon rule (main.css ~line 2134)
+			   paints the inner FA glyph white with a white-glass disc, designed
+			   for the original gradient bgs. On our new white surfaces those
+			   render white-on-white. Flip to teal disc + teal glyph, plus
+			   recolor the decorative dot/line tail beneath each icon. */
+			#about .feature-icon .icon,
+			#experience .feature-icon .icon,
+			#projects .feature-icon .icon {
+				background: rgba(15, 118, 110, 0.08);
+				box-shadow: inset 0 0 0 1px var(--accent-primary);
+				color: var(--accent-primary);
+			}
+
+			#about .feature-icon::before,
+			#about .feature-icon::after,
+			#experience .feature-icon::before,
+			#experience .feature-icon::after,
+			#projects .feature-icon::before,
+			#projects .feature-icon::after {
+				background: rgba(15, 118, 110, 0.4);
+			}
+
+			/* Round 2 — Platforms showcase: solid navy with teal accents.
+			   This is the "exhibit" section punctuating the page between the
+			   light About/Experience and the light Projects below. */
+			#platforms {
+				border-top: 3px solid var(--accent-primary);
+				border-bottom: 3px solid var(--accent-primary);
+			}
+
+			#platforms,
+			#platforms > header,
+			#platforms .content {
+				background: #0f172a !important;
+				color: #d1d5db;
+			}
+
+			#platforms h2 {
+				color: #ffffff;
+			}
+
+			#platforms p {
+				color: #d1d5db;
+			}
+
+			#platforms .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			#platforms .content a:not(.button):hover {
+				color: #ffffff;
+			}
+
+			/* Platform cards (the <section> wrappers inside each col-6) */
+			#platforms .content > .container > .row > .col-6-col-12-narrow,
+			#platforms .content > .container > .row > .col-6 {
+				display: flex;
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(15, 118, 110, 0.35);
+				border-radius: 10px;
+				padding: 1.8em 1.5em;
+				transition: border-color 0.2s ease, transform 0.2s ease;
+				width: 100%;
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section:hover {
+				border-color: rgba(15, 118, 110, 0.7);
+				transform: translateY(-2px);
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section h3 {
+				color: #ffffff;
+			}
+
+			#platforms .content > .container > .row > [class*="col-"] > section p strong {
+				color: #ffffff;
+			}
+
+			/* Round 2 — Contact: dark closing punctuation with a single
+			   top accent so it visually anchors the bottom of the page. */
+			#contact {
+				border-top: 3px solid var(--accent-primary);
+			}
+
+			#contact,
+			#contact > header,
+			#contact .content {
+				background: #0f172a !important;
+				color: #d1d5db;
+			}
+
+			#contact h2,
+			#contact h3 {
+				color: #ffffff;
+			}
+
+			#contact p {
+				color: #d1d5db;
+			}
+
+			#contact p strong {
+				color: #ffffff;
+			}
+
+			#contact a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			#contact a:not(.button):hover {
+				color: #ffffff;
+			}
+
+			#contact .contact-cta .contact-alt {
+				color: #9ca3af;
+			}
+
+			#contact .button {
+				background: var(--accent-primary);
+				color: #ffffff;
+				border: 2px solid var(--accent-primary);
+			}
+
+			#contact .button:hover {
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
+			}
+
+			/* Round 2 — Footer: light gray strip, matches consulting page */
+			#footer {
+				background: #f9fafb !important;
+				color: #6b7280;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#footer a,
+			#footer .icons a {
+				color: #6b7280;
+			}
+
+			#footer a:hover,
+			#footer .icons a:hover {
+				color: var(--accent-primary);
+			}
+
+			/* Round 3 — Methodology and Insights: white surfaces matching
+			   the rest of the home page's content rhythm. Round 2 deferred
+			   these. Same override pattern as About/Experience/Projects. */
+			#methodology .content,
+			#insights .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#methodology h2,
+			#methodology h3,
+			#insights h2,
+			#insights h3 {
+				color: #1f2937;
+			}
+
+			#methodology p,
+			#insights p {
+				color: #4b5563;
+			}
+
+			#methodology p strong,
+			#insights p strong {
+				color: #1f2937;
+			}
+
+			#methodology .content a:not(.button),
+			#insights .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			#methodology .content a:not(.button):hover,
+			#insights .content a:not(.button):hover {
+				color: var(--accent-primary-hover);
+			}
+
+			/* Flip round-1 dark-mode helpers in Methodology to light equivalents */
+			#methodology .method-list li {
+				border-bottom: 1px solid #e5e7eb;
+			}
+
+			#methodology .method-list li:last-child {
+				border-bottom: none;
+			}
+
+			/* Flip round-1 dark insight-card styling to light cards */
+			#insights .insight-card {
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-left: 3px solid var(--accent-primary);
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+			}
+
+			#insights .insight-card h3 {
+				color: #1f2937;
+			}
+
+			/* Round 4 — Methodology vertical rhythm.
+			   Each subsection lives in its own <section class="method-block">
+			   wrapper, so :first-of-type on h3 doesn't work (each is the
+			   first-of-type within its own parent). Target the wrapper
+			   instead: gap + hairline divider above every block after the
+			   first, breathing room above the first one. */
+			#methodology .method-block {
+				margin-bottom: 0;
+				padding-top: 3em;
+				margin-top: 3em;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#methodology .method-block:first-of-type {
+				padding-top: 1em;
+				margin-top: 1em;
+				border-top: none;
+			}
+
+			#methodology .method-block h3 {
+				margin-top: 0;
+				margin-bottom: 0.6em;
+				font-size: 1.4em;
+				font-weight: 600;
+			}
+
+			#methodology .method-block h3 + p {
+				margin-top: 0;
+			}
+
+			#methodology .method-block p {
+				margin-bottom: 1em;
+				line-height: 1.6;
+			}
+
+			/* Round 4 — Standardize section padding for consistent vertical
+			   rhythm. The template applies .main > .content { padding: 6em 0 }
+			   but special-cases .style4 to padding-top: 0 (main.css:2264),
+			   which was making the Contact section feel tight compared to the
+			   rest of the page. Normalize every section's content padding
+			   to 5em and tighten on mobile. */
+			#about > .content,
+			#experience > .content,
+			#platforms > .content,
+			#projects > .content,
+			#methodology > .content,
+			#insights > .content,
+			#contact > .content {
+				padding-top: 5em;
+				padding-bottom: 5em;
+			}
+
+			@media screen and (max-width: 768px) {
+				#about > .content,
+				#experience > .content,
+				#platforms > .content,
+				#projects > .content,
+				#methodology > .content,
+				#insights > .content,
+				#contact > .content {
+					padding-top: 3em;
+					padding-bottom: 3em;
+				}
+
+				#about > header,
+				#experience > header,
+				#platforms > header,
+				#projects > header,
+				#methodology > header,
+				#insights > header,
+				#contact > header {
+					padding-top: 3em;
+					padding-bottom: 2em;
+				}
+			}
+
+			/* Round 5 — Override template's `p { text-align: justify }`
+			   (main.css:214) to remove word-river gaps. Keep centered any
+			   element where centering is the explicit design (section
+			   header intros, the Contact CTA copy, final-CTA copy). */
+			body p,
+			body li,
+			.quadrant p,
+			.service-card p,
+			.platform-card p,
+			.insight-card p {
+				text-align: left;
+			}
+
+			.contact-cta p,
+			.final-cta p,
+			header p,
+			.section-intro {
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -332,10 +942,13 @@
 				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
 				<ul class="nav-links">
 					<li><a href="#header" class="scrolly">Home</a></li>
-					<li><a href="#about" class="scrolly">About Me</a></li>
+					<li><a href="#about" class="scrolly">About</a></li>
 					<li><a href="#experience" class="scrolly">Experience</a></li>
+					<li><a href="consulting.html">Consulting</a></li>
 					<li><a href="#platforms" class="scrolly">Platforms</a></li>
 					<li><a href="#projects" class="scrolly">Projects</a></li>
+					<li><a href="#methodology" class="scrolly">Methodology</a></li>
+					<li><a href="#insights" class="scrolly">Insights</a></li>
 					<li><a href="#contact" class="scrolly">Contact</a></li>
 				</ul>
 			</div>
@@ -348,10 +961,12 @@
 						<div class="col-8 col-12-narrow">
 							<header>
 								<h1>Jose Lazo-Flores, Ph.D.</h1>
-								<p>AI Solutions Consultant & Data Scientist</p>
+								<p class="headline">Senior AI Consultant &middot; Workshop Facilitator &middot; LLM Systems</p>
+								<p class="subhead">I help SMBs and financial services teams move AI from proof-of-concept to daily use. Ex&ndash;Credit Suisse &middot; Zurich.</p>
 							</header>
 							<footer>
-								<a href="#about" class="button scrolly">Learn More About Me</a>
+								<a href="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" class="button primary-cta" target="_blank" rel="noopener">Book a discovery call</a>
+								<a href="#about" class="button secondary-cta scrolly">Learn more</a>
 							</footer>
 						</div>
 						<div class="col-4 col-12-narrow">
@@ -587,7 +1202,7 @@
 								</section>
 							</div>
 						</div>
-						<div class="row" style="justify-content: center; margin-top: 2em;">
+						<div class="row" style="margin-top: 2em;">
 							<div class="col-6 col-12-narrow">
 								<section>
 									<img src="images/Swing_Trader.png" alt="AI Swing Trading Platform" class="project-image" />
@@ -610,6 +1225,27 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="#" class="button disabled">Coming Soon</a>
+									</div>
+								</section>
+							</div>
+							<div class="col-6 col-12-narrow">
+								<section>
+									<div class="workshop-banner" aria-hidden="true"><span class="icon solid fa-chalkboard-teacher"></span></div>
+									<h3>Corporate AI Workshop Curriculum</h3>
+									<p><strong>Role:</strong> Designer &amp; Facilitator</p>
+									<p>A five-module training program for non-technical business teams. Built around the 5 P&rsquo;s of Prompting framework, with hands-on exercises grounded in participants&rsquo; real workflows. Module 3 is rebuilt for each engagement around the client&rsquo;s specific functions (marketing, ops, HR, sales).</p>
+									<p>Delivered virtual-first, with in-person available across Europe. Curriculum materials are auto-generated for each cohort from a Python toolchain so engagement turnaround stays fast.</p>
+									<p><strong>Status:</strong> Active. Available for corporate engagements.</p>
+									<p><strong>Stack:</strong></p>
+									<div class="tech-tags">
+										<span class="tech-tag">Curriculum Design</span>
+										<span class="tech-tag">5 P&rsquo;s Framework</span>
+										<span class="tech-tag">python-docx</span>
+										<span class="tech-tag">python-pptx</span>
+										<span class="tech-tag">Virtual + In-Person</span>
+									</div>
+									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
+										<a href="consulting.html" class="button">See Workshop Details</a>
 									</div>
 								</section>
 							</div>
@@ -798,6 +1434,89 @@
 				</div>
 			</section>
 
+		<!-- Methodology -->
+			<section id="methodology" class="main">
+				<header>
+					<div class="container">
+						<h2>Methodology</h2>
+						<p>How I think about AI adoption: a prompting framework, a rubric for picking workflows, and a map for prioritizing investments.</p>
+					</div>
+				</header>
+				<div class="content dark style2">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<section class="method-block">
+									<h3>The 5 P&rsquo;s of Prompting</h3>
+									<p>A framework I developed for corporate AI workshops. For non-technical teams to consistently get useful output from AI tools:</p>
+									<ul class="method-list">
+										<li><strong>Premise</strong> &mdash; what&rsquo;s the situation? Audience, goal, constraints.</li>
+										<li><strong>Persona</strong> &mdash; what role should the AI take?</li>
+										<li><strong>Pattern</strong> &mdash; what does good look like? Show one or two examples.</li>
+										<li><strong>Purpose</strong> &mdash; what specifically should it produce?</li>
+										<li><strong>Presentation</strong> &mdash; what format and length?</li>
+									</ul>
+									<p style="margin-top: 1em;">Used as the spine of the <a href="consulting.html">corporate AI workshops</a>.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<section class="method-block">
+									<h3>The AI Sweet Spot</h3>
+									<p>A rubric for deciding whether a task is worth automating with AI. Four properties:</p>
+									<ul class="method-list">
+										<li><strong>High repetition</strong> &mdash; you do this often (weekly or daily).</li>
+										<li><strong>Language-heavy</strong> &mdash; primarily reading, writing, or transforming text.</li>
+										<li><strong>Low-to-medium stakes</strong> &mdash; mistakes are recoverable.</li>
+										<li><strong>Privacy-safe</strong> &mdash; no PII, regulated data, confidential strategy.</li>
+									</ul>
+									<p style="margin-top: 1em;">When all four apply, AI gives outsized leverage. When two or fewer apply, AI is probably more friction than help.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<section class="method-block">
+									<h3>The AI Opportunity Map</h3>
+									<p>For audit engagements, every identified task is plotted on an Impact &times; Suitability matrix. The quadrants determine the recommendation:</p>
+									<div class="quadrant-grid">
+										<div class="quadrant quadrant-q1">
+											<h4>Quick Wins</h4>
+											<p><em>High impact &middot; high suitability</em></p>
+											<p>Immediate engagement candidates.</p>
+										</div>
+										<div class="quadrant quadrant-q2">
+											<h4>Worth Exploring</h4>
+											<p><em>Lower impact &middot; high suitability</em></p>
+											<p>Pilot territory.</p>
+										</div>
+										<div class="quadrant quadrant-q3">
+											<h4>Process Improvement First</h4>
+											<p><em>High impact &middot; low suitability</em></p>
+											<p>Fix the process before adding AI.</p>
+										</div>
+										<div class="quadrant quadrant-q4">
+											<h4>Leave Alone</h4>
+											<p><em>Lower impact &middot; low suitability</em></p>
+											<p>No leverage.</p>
+										</div>
+									</div>
+									<p style="margin-top: 1.5em;">The Opportunity Map is part of the <a href="consulting.html">AI Opportunity Audit deliverables</a>.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<footer>
+									<a href="consulting.html" class="button">See how this maps to engagements</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		<!-- Basic Elements -->
 		<!--
 			<section class="main">
@@ -962,20 +1681,58 @@
 			</section>
 		-->
 
+		<!-- Insights -->
+			<section id="insights" class="main">
+				<header>
+					<div class="container">
+						<h2>Insights</h2>
+						<p>Field notes on AI adoption, the 5 P&rsquo;s of Prompting, and what works inside real companies. Articles drop here as they&rsquo;re written.</p>
+					</div>
+				</header>
+				<div class="content dark style1">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-narrow">
+								<article class="insight-card">
+									<span class="insight-badge">Coming soon</span>
+									<h3>The 5 P&rsquo;s of Prompting &mdash; A framework for non-technical teams</h3>
+								</article>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<article class="insight-card">
+									<span class="insight-badge">Coming soon</span>
+									<h3>The AI Sweet Spot &mdash; How to identify which workflows are worth automating</h3>
+								</article>
+							</div>
+							<div class="col-4 col-12-narrow">
+								<article class="insight-card">
+									<span class="insight-badge">Coming soon</span>
+									<h3>Why most corporate AI training fails by Friday</h3>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		<!-- Contact -->
 			<section id="contact" class="main">
 				<header>
 					<div class="container">
 						<h2>Get In Touch</h2>
-						<p>Interested in AI consulting, platform partnerships, or collaborating on data-driven solutions? Let's connect!</p>
+						<p>Interested in AI consulting, partnerships, or building an intelligent platform? Let&rsquo;s talk.</p>
 					</div>
 				</header>
 				<div class="content style4 featured">
 					<div class="container medium">
 						<div class="row">
 							<div class="col-12">
-								<p>Whether you're exploring AI strategy, need a feasibility assessment, or want to build an intelligent platform — I'm always open to discussing new consulting engagements, partnerships, and opportunities in AI and data science.</p>
-								<p><strong>Email:</strong> <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a></p>
+								<div class="contact-cta">
+									<h3>Ready to talk?</h3>
+									<p>The first conversation is always free. A 45-minute discovery call to understand your context and see if there&rsquo;s a fit.</p>
+									<a href="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" class="button primary-cta" target="_blank" rel="noopener">Book a discovery call</a>
+									<p class="contact-alt">Or email me directly at <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a></p>
+								</div>
 							</div>
 						</div>
 					</div>
