@@ -364,6 +364,34 @@
 				}
 			}
 
+			/* Primary CTA button (teal) — usable outside the header */
+			.button.primary-cta {
+				background: var(--accent-primary);
+				color: #ffffff;
+				border: 2px solid var(--accent-primary);
+			}
+
+			.button.primary-cta:hover {
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
+			}
+
+			/* Contact CTA layout */
+			.contact-cta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				justify-content: center;
+				margin: 1.5em 0 0.5em 0;
+			}
+
+			.contact-meta {
+				text-align: center;
+				font-size: 0.95em;
+				opacity: 0.85;
+				margin-top: 1em;
+			}
+
 			/* Workshop card icon banner (stand-in for project image) */
 			.workshop-banner {
 				width: 100%;
@@ -1245,15 +1273,19 @@
 				<header>
 					<div class="container">
 						<h2>Get In Touch</h2>
-						<p>Interested in AI consulting, platform partnerships, or collaborating on data-driven solutions? Let's connect!</p>
+						<p>Interested in AI consulting, partnerships, or building an intelligent platform? Let&rsquo;s talk.</p>
 					</div>
 				</header>
 				<div class="content style4 featured">
 					<div class="container medium">
 						<div class="row">
 							<div class="col-12">
-								<p>Whether you're exploring AI strategy, need a feasibility assessment, or want to build an intelligent platform — I'm always open to discussing new consulting engagements, partnerships, and opportunities in AI and data science.</p>
-								<p><strong>Email:</strong> <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a></p>
+								<p>Whether you&rsquo;re exploring AI strategy, need a feasibility assessment, or want to build a production system &mdash; the first conversation is always free. A 45-minute discovery call to understand your context and decide whether we&rsquo;re a fit.</p>
+								<div class="contact-cta">
+									<a href="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" class="button primary-cta" target="_blank" rel="noopener">Book a discovery call</a>
+									<a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="button">Email me</a>
+								</div>
+								<p class="contact-meta">Or reach me directly at <a href="mailto:Jose.Lazo.Flores.1@gmail.com">Jose.Lazo.Flores.1@gmail.com</a>.</p>
 							</div>
 						</div>
 					</div>
