@@ -175,34 +175,58 @@
 				}
 			}
 
-			/* Service cards */
+			/* Three Services — light cards on white surface */
+			.service-cards {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5em;
+				margin: 2em 0;
+			}
+
+			@media (max-width: 768px) {
+				.service-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+
 			.service-card {
-				background: rgba(255, 255, 255, 0.04);
-				border: 1px solid rgba(255, 255, 255, 0.08);
-				border-radius: 8px;
-				padding: 1.75em;
-				height: 100%;
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-radius: 10px;
+				padding: 1.8em 1.5em;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+				transition: box-shadow 0.2s ease, transform 0.2s ease;
 				display: flex;
 				flex-direction: column;
 			}
 
+			.service-card:hover {
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+				transform: translateY(-2px);
+			}
+
 			.service-card h3 {
-				color: #ffffff;
-				margin-bottom: 0.6em;
+				color: var(--accent-primary);
+				font-size: 1.25em;
+				margin: 0 0 0.5em 0;
+				font-weight: 600;
 			}
 
 			.service-card p {
+				color: #4b5563;
+				margin: 0 0 1em 0;
+				line-height: 1.5;
 				flex-grow: 1;
 			}
 
-			.service-card .price {
-				display: block;
-				margin-top: 1em;
-				padding-top: 1em;
-				border-top: 1px solid rgba(15, 118, 110, 0.4);
-				color: var(--accent-primary);
+			.service-card p.pricing {
+				color: #6b7280;
+				font-size: 0.9em;
 				font-style: italic;
-				font-size: 0.95em;
+				margin: 0;
+				border-top: 1px solid #f3f4f6;
+				padding-top: 0.8em;
+				flex-grow: 0;
 			}
 
 			/* Methodology list (5 P's) */
@@ -421,14 +445,13 @@
 				color: #1f2937;
 			}
 
-			#consulting-services h3,
 			#consulting-audit h3,
 			#consulting-methodology h3,
 			#consulting-why h3 {
 				color: #1f2937;
 			}
 
-			#consulting-services p,
+			#consulting-services > header p,
 			#consulting-audit p,
 			#consulting-methodology p,
 			#consulting-why p,
@@ -519,27 +542,21 @@
 			</header>
 			<div class="content dark style2">
 				<div class="container">
-					<div class="row">
-						<div class="col-4 col-12-narrow">
-							<div class="service-card">
-								<h3>Strategic Advisory</h3>
-								<p>Executive-level guidance for leaders rolling out AI. Where to invest, where to wait, how to manage risk. Typically delivered as ongoing advisory or quarterly strategic reviews.</p>
-								<span class="price">From &euro;1,500 per day.</span>
-							</div>
+					<div class="service-cards">
+						<div class="service-card">
+							<h3>Strategic Advisory</h3>
+							<p>Executive-level guidance for leaders rolling out AI. Where to invest, where to wait, how to manage risk. Typically delivered as ongoing advisory or quarterly strategic reviews.</p>
+							<p class="pricing">From &euro;1,500 per day.</p>
 						</div>
-						<div class="col-4 col-12-narrow">
-							<div class="service-card">
-								<h3>AI Workshops &amp; Training</h3>
-								<p>Five-module corporate AI training for non-technical business teams, built around the 5 P&rsquo;s of Prompting framework. Designed for real workflow adoption, not awareness. Virtual-first; in-person available in Europe.</p>
-								<span class="price">From &euro;2,000 per workshop. Multi-workshop pilots: &euro;5,500&ndash;&euro;6,000 for three sessions.</span>
-							</div>
+						<div class="service-card">
+							<h3>AI Workshops &amp; Training</h3>
+							<p>Five-module corporate AI training for non-technical business teams, built around the 5 P&rsquo;s of Prompting framework. Designed for real workflow adoption, not awareness. Virtual-first; in-person available in Europe.</p>
+							<p class="pricing">From &euro;2,000 per workshop. Multi-workshop pilots: &euro;5,500&ndash;&euro;6,000 for three sessions.</p>
 						</div>
-						<div class="col-4 col-12-narrow">
-							<div class="service-card">
-								<h3>AI Implementation</h3>
-								<p>Production AI systems: RAG-based assistants, multi-agent architectures, custom LLM integrations. Same architectural patterns used in Augself.ai, EnableMate.ai, and the Swing Trader autonomous trading system.</p>
-								<span class="price">Project-based, from &euro;130/hour or fixed scope.</span>
-							</div>
+						<div class="service-card">
+							<h3>AI Implementation</h3>
+							<p>Production AI systems: RAG-based assistants, multi-agent architectures, custom LLM integrations. Same architectural patterns used in Augself.ai, EnableMate.ai, and the Swing Trader autonomous trading system.</p>
+							<p class="pricing">Project-based, from &euro;130/hour or fixed scope.</p>
 						</div>
 					</div>
 				</div>
