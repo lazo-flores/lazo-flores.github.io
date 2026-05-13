@@ -339,6 +339,90 @@
 				}
 			}
 
+			/* Methodology section */
+			.method-block {
+				margin-bottom: 2em;
+			}
+
+			.method-block h3 {
+				color: #ffffff;
+				margin-bottom: 0.5em;
+			}
+
+			.method-list {
+				list-style: none;
+				padding: 0;
+				margin: 1em 0;
+			}
+
+			.method-list li {
+				padding: 0.5em 0;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			.method-list li:last-child {
+				border-bottom: none;
+			}
+
+			.method-list strong {
+				color: #0F766E;
+				display: inline-block;
+				min-width: 9em;
+			}
+
+			.quadrant-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1em;
+				margin: 1.25em 0;
+			}
+
+			.quadrant {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 6px;
+				padding: 1.25em;
+			}
+
+			.quadrant h4 {
+				color: #0F766E;
+				margin-bottom: 0.3em;
+				font-size: 1.1em;
+			}
+
+			.quadrant p {
+				margin: 0.2em 0;
+				font-size: 0.95em;
+			}
+
+			.quadrant.quadrant-q1 {
+				border-left: 3px solid #0F766E;
+			}
+
+			.quadrant.quadrant-q2 {
+				border-left: 3px solid #1E40AF;
+			}
+
+			.quadrant.quadrant-q3 {
+				border-left: 3px solid #1E40AF;
+			}
+
+			.quadrant.quadrant-q4 {
+				border-left: 3px solid rgba(255, 255, 255, 0.15);
+			}
+
+			@media screen and (max-width: 736px) {
+				.quadrant-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.method-list strong {
+					min-width: 0;
+					display: block;
+					margin-bottom: 0.2em;
+				}
+			}
+
 			/* Custom Avatar for AugSelf Widget */
 			.augself-widget-button {
 				background: #3c78d7 !important;
@@ -377,6 +461,7 @@
 					<li><a href="consulting.html">Consulting</a></li>
 					<li><a href="#platforms" class="scrolly">Platforms</a></li>
 					<li><a href="#projects" class="scrolly">Projects</a></li>
+					<li><a href="#methodology" class="scrolly">Methodology</a></li>
 					<li><a href="#contact" class="scrolly">Contact</a></li>
 				</ul>
 			</div>
@@ -834,6 +919,89 @@
 										<a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="button" style="margin-bottom: 1.5em;">Send Email</a>
 									</div>
 									<a href="#contact" class="button scrolly">Get In Touch</a>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Methodology -->
+			<section id="methodology" class="main">
+				<header>
+					<div class="container">
+						<h2>Methodology</h2>
+						<p>How I think about AI adoption: a prompting framework, a rubric for picking workflows, and a map for prioritizing investments.</p>
+					</div>
+				</header>
+				<div class="content dark style2">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<section class="method-block">
+									<h3>The 5 P&rsquo;s of Prompting</h3>
+									<p>A framework I developed for corporate AI workshops. For non-technical teams to consistently get useful output from AI tools:</p>
+									<ul class="method-list">
+										<li><strong>Premise</strong> &mdash; what&rsquo;s the situation? Audience, goal, constraints.</li>
+										<li><strong>Persona</strong> &mdash; what role should the AI take?</li>
+										<li><strong>Pattern</strong> &mdash; what does good look like? Show one or two examples.</li>
+										<li><strong>Purpose</strong> &mdash; what specifically should it produce?</li>
+										<li><strong>Presentation</strong> &mdash; what format and length?</li>
+									</ul>
+									<p style="margin-top: 1em;">Used as the spine of the <a href="consulting.html">corporate AI workshops</a>.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<section class="method-block">
+									<h3>The AI Sweet Spot</h3>
+									<p>A rubric for deciding whether a task is worth automating with AI. Four properties:</p>
+									<ul class="method-list">
+										<li><strong>High repetition</strong> &mdash; you do this often (weekly or daily).</li>
+										<li><strong>Language-heavy</strong> &mdash; primarily reading, writing, or transforming text.</li>
+										<li><strong>Low-to-medium stakes</strong> &mdash; mistakes are recoverable.</li>
+										<li><strong>Privacy-safe</strong> &mdash; no PII, regulated data, confidential strategy.</li>
+									</ul>
+									<p style="margin-top: 1em;">When all four apply, AI gives outsized leverage. When two or fewer apply, AI is probably more friction than help.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<section class="method-block">
+									<h3>The AI Opportunity Map</h3>
+									<p>For audit engagements, every identified task is plotted on an Impact &times; Suitability matrix. The quadrants determine the recommendation:</p>
+									<div class="quadrant-grid">
+										<div class="quadrant quadrant-q1">
+											<h4>Quick Wins</h4>
+											<p><em>High impact &middot; high suitability</em></p>
+											<p>Immediate engagement candidates.</p>
+										</div>
+										<div class="quadrant quadrant-q2">
+											<h4>Worth Exploring</h4>
+											<p><em>Lower impact &middot; high suitability</em></p>
+											<p>Pilot territory.</p>
+										</div>
+										<div class="quadrant quadrant-q3">
+											<h4>Process Improvement First</h4>
+											<p><em>High impact &middot; low suitability</em></p>
+											<p>Fix the process before adding AI.</p>
+										</div>
+										<div class="quadrant quadrant-q4">
+											<h4>Leave Alone</h4>
+											<p><em>Lower impact &middot; low suitability</em></p>
+											<p>No leverage.</p>
+										</div>
+									</div>
+									<p style="margin-top: 1.5em;">The Opportunity Map is part of the <a href="consulting.html">AI Opportunity Audit deliverables</a>.</p>
+								</section>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<footer>
+									<a href="consulting.html" class="button">See how this maps to engagements</a>
 								</footer>
 							</div>
 						</div>
