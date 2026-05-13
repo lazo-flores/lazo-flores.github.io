@@ -501,37 +501,47 @@
 			}
 
 			.quadrant {
-				background: rgba(255, 255, 255, 0.04);
-				border: 1px solid rgba(255, 255, 255, 0.08);
-				border-radius: 6px;
-				padding: 1.25em;
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-radius: 10px;
+				padding: 1.6em 1.4em;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+				transition: box-shadow 0.2s ease, transform 0.2s ease;
+			}
+
+			.quadrant:hover {
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+				transform: translateY(-2px);
 			}
 
 			.quadrant h4 {
-				color: var(--accent-primary);
-				margin-bottom: 0.3em;
+				color: #1f2937;
+				margin: 0 0 0.5em 0;
 				font-size: 1.1em;
+				font-weight: 600;
 			}
 
 			.quadrant p {
+				color: #4b5563;
 				margin: 0.2em 0;
 				font-size: 0.95em;
+				line-height: 1.5;
 			}
 
 			.quadrant.quadrant-q1 {
-				border-left: 3px solid var(--accent-primary);
+				border-top: 4px solid var(--accent-primary);
 			}
 
 			.quadrant.quadrant-q2 {
-				border-left: 3px solid var(--accent-secondary);
+				border-top: 4px solid var(--accent-secondary);
 			}
 
 			.quadrant.quadrant-q3 {
-				border-left: 3px solid var(--accent-secondary);
+				border-top: 4px solid #B45309;
 			}
 
 			.quadrant.quadrant-q4 {
-				border-left: 3px solid rgba(255, 255, 255, 0.15);
+				border-top: 4px solid #9ca3af;
 			}
 
 			@media screen and (max-width: 736px) {
@@ -813,19 +823,6 @@
 
 			#methodology .method-list li:last-child {
 				border-bottom: none;
-			}
-
-			#methodology .quadrant {
-				background: #f9fafb;
-				border: 1px solid #e5e7eb;
-			}
-
-			#methodology .quadrant.quadrant-q4 {
-				border-left: 3px solid #d1d5db;
-			}
-
-			#methodology .quadrant p {
-				color: #4b5563;
 			}
 
 			/* Flip round-1 dark insight-card styling to light cards */
