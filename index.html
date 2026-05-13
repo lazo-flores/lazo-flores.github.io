@@ -757,6 +757,76 @@
 				color: var(--accent-primary);
 			}
 
+			/* Round 3 — Methodology and Insights: white surfaces matching
+			   the rest of the home page's content rhythm. Round 2 deferred
+			   these. Same override pattern as About/Experience/Projects. */
+			#methodology .content,
+			#insights .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#methodology h2,
+			#methodology h3,
+			#insights h2,
+			#insights h3 {
+				color: #1f2937;
+			}
+
+			#methodology p,
+			#insights p {
+				color: #4b5563;
+			}
+
+			#methodology p strong,
+			#insights p strong {
+				color: #1f2937;
+			}
+
+			#methodology .content a:not(.button),
+			#insights .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			#methodology .content a:not(.button):hover,
+			#insights .content a:not(.button):hover {
+				color: var(--accent-primary-hover);
+			}
+
+			/* Flip round-1 dark-mode helpers in Methodology to light equivalents */
+			#methodology .method-list li {
+				border-bottom: 1px solid #e5e7eb;
+			}
+
+			#methodology .method-list li:last-child {
+				border-bottom: none;
+			}
+
+			#methodology .quadrant {
+				background: #f9fafb;
+				border: 1px solid #e5e7eb;
+			}
+
+			#methodology .quadrant.quadrant-q4 {
+				border-left: 3px solid #d1d5db;
+			}
+
+			#methodology .quadrant p {
+				color: #4b5563;
+			}
+
+			/* Flip round-1 dark insight-card styling to light cards */
+			#insights .insight-card {
+				background: #ffffff;
+				border: 1px solid #e5e7eb;
+				border-left: 3px solid var(--accent-primary);
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+			}
+
+			#insights .insight-card h3 {
+				color: #1f2937;
+			}
+
 		</style>
 	</head>
 	<body class="is-preload">
