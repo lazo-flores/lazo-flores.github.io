@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The AI Sweet Spot &mdash; How to Identify Tasks Worth Automating | Jose Lazo-Flores</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Most AI initiatives fail because someone tried to AI-ify the wrong task. The AI Sweet Spot is a rubric for finding the tasks that are actually worth automating." />
+		<link rel="icon" type="image/png" href="../../images/Avatar.png" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+			}
+
+			#nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(47, 53, 56, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 10000;
+				padding: 1em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+
+			#nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2em;
+			}
+
+			#nav .nav-links {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 1.5em;
+				flex: 1 1 auto;
+				justify-content: flex-end;
+				flex-wrap: nowrap;
+			}
+
+			#nav .nav-links li { margin: 0; }
+
+			#nav .nav-links a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 0.85em;
+				white-space: nowrap;
+				transition: color 0.2s ease;
+				border-bottom: 2px solid transparent;
+				padding-bottom: 0.2em;
+			}
+
+			#nav .nav-links a:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#nav .nav-name {
+				color: #fff;
+				font-weight: 600;
+				font-size: 1em;
+				white-space: nowrap;
+				flex: 0 0 auto;
+			}
+
+			body { padding-top: 4em; }
+
+			@media screen and (max-width: 736px) {
+				#nav .container { flex-direction: column; gap: 1em; padding: 0 1em; }
+				#nav .nav-links { gap: 1em; font-size: 0.85em; }
+				#nav .nav-name { font-size: 0.85em; }
+				body { padding-top: 6em; }
+			}
+
+			@media screen and (max-width: 480px) {
+				#nav .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.75em; }
+			}
+
+			#post-hero {
+				background: linear-gradient(135deg, #2f3538 0%, #1a1f22 100%);
+				color: #ffffff;
+				padding: 4em 0 3em 0;
+			}
+
+			#post-hero .container {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			#post-hero .back-link {
+				display: inline-block;
+				color: #d1d5db;
+				text-decoration: none;
+				font-size: 0.9em;
+				margin-bottom: 1.5em;
+				border-bottom: 1px solid transparent;
+				transition: color 0.2s ease, border-color 0.2s ease;
+			}
+
+			#post-hero .back-link:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#post-hero h1 {
+				font-size: 2.4em;
+				line-height: 1.2;
+				color: #ffffff;
+				margin: 0 0 0.6em 0;
+			}
+
+			#post-hero .post-meta {
+				color: #d1d5db;
+				font-size: 0.95em;
+				margin: 0;
+				font-weight: 300;
+			}
+
+			@media screen and (max-width: 736px) {
+				#post-hero h1 { font-size: 1.8em; }
+			}
+
+			#post-body .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#post-body .container {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			#post-body h2 {
+				color: #1f2937;
+				font-size: 1.55em;
+				font-weight: 600;
+				margin: 2.4em 0 0.6em 0;
+				line-height: 1.3;
+			}
+
+			#post-body h2:first-of-type { margin-top: 0.5em; }
+
+			#post-body h3 {
+				color: #1f2937;
+				font-size: 1.2em;
+				font-weight: 600;
+				margin: 1.8em 0 0.5em 0;
+				line-height: 1.35;
+			}
+
+			#post-body p,
+			#post-body li {
+				color: #4b5563;
+				line-height: 1.75;
+				text-align: left;
+				font-size: 1.02em;
+			}
+
+			#post-body p { margin: 0 0 1.15em 0; }
+
+			#post-body ul {
+				list-style: disc;
+				padding-left: 1.5em;
+				margin: 0 0 1.15em 0;
+			}
+
+			#post-body ul li { margin-bottom: 0.5em; }
+
+			#post-body a {
+				color: var(--accent-primary);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: border-color 0.2s ease;
+			}
+
+			#post-body a:hover { border-bottom-color: var(--accent-primary); }
+
+			#post-body strong {
+				color: #1f2937;
+				font-weight: 600;
+			}
+
+			#post-body hr {
+				margin: 3em 0 2em 0;
+				border: none;
+				height: 1px;
+				background: #e5e7eb;
+			}
+
+			.post-cta {
+				margin-top: 2em;
+				color: #6b7280;
+				font-style: italic;
+				font-size: 0.98em;
+				line-height: 1.7;
+			}
+
+			.post-cta p { margin: 0 0 0.8em 0; text-align: left; }
+
+			.post-cta a {
+				font-style: normal;
+				font-weight: 600;
+			}
+
+			#footer {
+				background: #f9fafb !important;
+				color: #6b7280;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#footer a, #footer .icons a { color: #6b7280; }
+
+			#footer a:hover, #footer .icons a:hover { color: var(--accent-primary); }
+
+			body p, body li { text-align: left; }
+			header p, .section-intro { text-align: center; }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Navigation Bar -->
+		<nav id="nav">
+			<div class="container">
+				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
+				<ul class="nav-links">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../index.html#about">About</a></li>
+					<li><a href="../../index.html#experience">Experience</a></li>
+					<li><a href="../../consulting.html">Consulting</a></li>
+					<li><a href="../../index.html#platforms">Platforms</a></li>
+					<li><a href="../../index.html#projects">Projects</a></li>
+					<li><a href="../../index.html#methodology">Methodology</a></li>
+					<li><a href="../../index.html#insights">Insights</a></li>
+					<li><a href="../../index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Article Hero -->
+		<section id="post-hero">
+			<div class="container">
+				<a class="back-link" href="../../index.html#insights">&larr; Back to Insights</a>
+				<h1>The AI Sweet Spot: How to Tell Which Tasks Are Actually Worth Automating</h1>
+				<p class="post-meta">6 minute read</p>
+			</div>
+		</section>
+
+		<!-- Article Body -->
+		<section id="post-body" class="main">
+			<div class="content">
+				<div class="container">
+
+					<p>Most AI initiatives fail because someone tried to AI-ify the wrong task.</p>
+
+					<p>I&rsquo;ve seen this pattern in every workshop I&rsquo;ve run. A team leader gets ChatGPT Enterprise licences, picks the most visible bottleneck in their function, asks the AI to handle it, and reports back two weeks later that &ldquo;it just doesn&rsquo;t work for us.&rdquo; On closer inspection, the task itself was the problem &mdash; not the AI, not the prompt, not the tooling.</p>
+
+					<p>There&rsquo;s a structural reason this happens. The visibility of a task often has nothing to do with its suitability for AI. The most painful task isn&rsquo;t always the most automatable. The most repeated task isn&rsquo;t always worth the upfront prompt-engineering investment. The task your boss keeps asking about may be exactly the task AI is worst at.</p>
+
+					<p>After watching teams burn cycles on the wrong tasks, I built a rubric I now use in every audit and every workshop. I call it the <strong>AI Sweet Spot</strong>.</p>
+
+					<h2>The four properties</h2>
+
+					<p>A task fits the Sweet Spot when all four of these apply:</p>
+
+					<h3>High repetition</h3>
+
+					<p>The task is done often &mdash; weekly, daily, multiple times per day. Investment in a prompt template, a custom GPT, or an automation pays back many times over.</p>
+
+					<p>Tasks done once a year don&rsquo;t fit, even if they&rsquo;re painful. Tasks done once a quarter rarely fit either. The repetition has to be high enough that the time spent making the task AI-ready is amortised across many uses.</p>
+
+					<h3>Language-heavy</h3>
+
+					<p>The task is primarily about reading, writing, or transforming text. This is AI&rsquo;s core competency &mdash; drafting, summarising, translating, restructuring, brainstorming.</p>
+
+					<p>Tasks that are primarily about math, physical work, real-time data retrieval, or personal judgment don&rsquo;t fit. AI can support these but is rarely the leverage point. The leverage is at the language layer.</p>
+
+					<h3>Low-to-medium stakes</h3>
+
+					<p>Mistakes are recoverable. The output will be reviewed before it reaches its final destination.</p>
+
+					<p>High-stakes work &mdash; board memos, regulatory filings, contracts going directly to clients &mdash; needs AI as a draft accelerator, not as a final-output generator. The Sweet Spot is the zone where a 90%-good first draft saves significant time without creating risk.</p>
+
+					<h3>Privacy-safe</h3>
+
+					<p>The task doesn&rsquo;t require sharing customer PII, regulated data, salaries, confidential strategy, or other sensitive information with an external AI tool.</p>
+
+					<p>For sensitive tasks, AI may still apply &mdash; but via a privately-deployed tool with appropriate data residency guarantees. The cost and complexity rise accordingly.</p>
+
+					<h2>How to use the rubric</h2>
+
+					<p>Pick a recurring task. Score it on each property:</p>
+
+					<ul>
+						<li><strong>Repetition</strong>: 1 (rare) to 5 (multiple times daily)</li>
+						<li><strong>Language-heavy</strong>: 1 (almost no text) to 5 (entirely text-based)</li>
+						<li><strong>Stakes</strong>: 1 (high stakes, low margin for error) to 5 (low stakes, easily recoverable)</li>
+						<li><strong>Privacy-safe</strong>: yes or no</li>
+					</ul>
+
+					<p>Tasks that score high on all four (and &ldquo;yes&rdquo; on privacy) are your top candidates. Tasks that score three of four are workable with caveats. Tasks that score two or fewer are probably not worth the investment.</p>
+
+					<h2>What scores in the Sweet Spot &mdash; real examples</h2>
+
+					<p>These are the kinds of tasks where AI consistently delivers outsized leverage:</p>
+
+					<ul>
+						<li><strong>Drafting first-pass replies to non-sensitive emails.</strong> High repetition, language-heavy, low stakes (you&rsquo;ll review before sending), privacy-safe.</li>
+						<li><strong>Summarising meeting transcripts for absent colleagues.</strong> Daily for some people, pure language work, low stakes (the human reads the meeting if they care), privacy-safe if you&rsquo;re careful.</li>
+						<li><strong>Generating brainstorm options within explicit constraints.</strong> Useful when you need volume of ideas to filter. Language-heavy. Low stakes (you pick what survives).</li>
+						<li><strong>Rewriting drafts in different tones or for different audiences.</strong> A &ldquo;translate this to a CEO tone&rdquo; or &ldquo;make this more direct&rdquo; pass. Pure transformation. High leverage.</li>
+						<li><strong>Extracting action items from long Slack threads.</strong> Common pattern. AI is good at this; humans are bad at it.</li>
+						<li><strong>Templatising recurring document types.</strong> Job descriptions, briefs, status updates, agendas &mdash; anything that follows a stable structure but needs custom content.</li>
+					</ul>
+
+					<h2>What scores outside the Sweet Spot</h2>
+
+					<p>These are the friction-heavy engagements that disappoint:</p>
+
+					<ul>
+						<li><strong>High-stakes decisions requiring confidence in every fact.</strong> A board memo about layoffs. A regulatory filing. AI can draft, but every fact still needs human verification, which often costs more time than writing from scratch.</li>
+						<li><strong>Original strategic judgment.</strong> AI helps draft; humans decide. If your task is &ldquo;decide whether to enter market X,&rdquo; AI is the wrong tool. If your task is &ldquo;draft the analysis for whether to enter market X,&rdquo; AI fits.</li>
+						<li><strong>Real-time data retrieval.</strong> AI doesn&rsquo;t know what happened yesterday. Use search engines, internal data tools, or APIs for current information.</li>
+						<li><strong>Highly sensitive data without proper deployment infrastructure.</strong> A custom GPT on top of OpenAI&rsquo;s public API isn&rsquo;t where you process customer health records.</li>
+						<li><strong>One-off creative work where prompt-building cost exceeds doing cost.</strong> If you&rsquo;ll spend 30 minutes engineering the prompt and 30 minutes editing the output for a task you&rsquo;d have done in 30 minutes manually, AI is the wrong tool.</li>
+					</ul>
+
+					<h2>The Impact &times; Suitability matrix</h2>
+
+					<p>For organisational AI strategy, the Sweet Spot rubric scales into a matrix. Every identified task gets plotted on two axes:</p>
+
+					<ul>
+						<li><strong>Impact</strong> &mdash; how much time, money, or risk is at stake?</li>
+						<li><strong>Suitability</strong> &mdash; how many Sweet Spot properties does the task meet?</li>
+					</ul>
+
+					<p>The four quadrants are diagnostic:</p>
+
+					<ul>
+						<li><strong>Quick Wins</strong> (high impact + high suitability) &mdash; start here. Immediate engagement candidates.</li>
+						<li><strong>Worth Exploring</strong> (lower impact + high suitability) &mdash; pilot territory. Try, learn, iterate.</li>
+						<li><strong>Process Improvement First</strong> (high impact + low suitability) &mdash; fix the process before adding AI. The pain you&rsquo;re feeling is structural, not AI-solvable.</li>
+						<li><strong>Leave Alone</strong> (low impact + low suitability) &mdash; no leverage. Move on.</li>
+					</ul>
+
+					<p>This matrix is the centerpiece deliverable of the AI Opportunity Audit. It produces a defensible prioritisation for AI investment that survives stakeholder scrutiny.</p>
+
+					<h2>Why teams skip this step</h2>
+
+					<p>The Sweet Spot rubric is unglamorous. It involves asking unsexy questions about boring tasks. Leadership often wants AI to address the visible problem &mdash; the slow process everyone complains about, the cost center that draws board attention &mdash; rather than the small, repetitive tasks that are actually leverageable.</p>
+
+					<p>The trap: applying AI to the visible problem when the visible problem doesn&rsquo;t fit the Sweet Spot is how you end up two months in with no measurable result. Then you&rsquo;ve burned political capital and the next AI initiative becomes harder to fund.</p>
+
+					<p>The discipline of scoring tasks before committing to them is what separates teams that get measurable AI value from teams that don&rsquo;t.</p>
+
+					<h2>Where this fits in the broader methodology</h2>
+
+					<p>The Sweet Spot rubric is one of three frameworks I use in corporate AI work:</p>
+
+					<ul>
+						<li>The <a href="../the-5-ps-of-prompting/">5 P&rsquo;s of Prompting</a> &mdash; how to construct prompts that work.</li>
+						<li><strong>The AI Sweet Spot</strong> &mdash; how to know which tasks to prompt for.</li>
+						<li>The workshop adoption methodology (<a href="../why-corporate-ai-training-fails-by-friday/">why most corporate AI training fails by Friday</a>) &mdash; how to make AI a daily habit rather than a workshop high.</li>
+					</ul>
+
+					<p>The three work together. The 5 P&rsquo;s is useless on the wrong task. The Sweet Spot is useless without a methodology for actually using AI on the right tasks. The adoption work is useless if the underlying tooling and process aren&rsquo;t sound.</p>
+
+					<p>For most teams I work with, the audit starts with the Sweet Spot rubric, then surfaces the right tasks, then plans the workshop and implementation work around them.</p>
+
+					<hr />
+
+					<div class="post-cta">
+						<p>The Sweet Spot rubric is part of the AI Opportunity Audit &mdash; a structured assessment of where AI can deliver value across your organisation, and just as importantly, where it can&rsquo;t.</p>
+						<p><a href="../../consulting.html">Chat with my AI discovery assistant</a> or <a href="../../consulting.html">book a 45-min discovery call</a> to discuss whether an audit is the right next step for your team.</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/lazo-flores" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Jose Lazo-Flores. All rights reserved.</li><li><a href="../../privacy.html">Privacy Policy</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../../assets/js/browser.min.js"></script>
+		<script src="../../assets/js/breakpoints.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+
+		<!-- Clicky Analytics -->
+		<script async data-id="101496361" src="https://static.getclicky.com/js"></script>
+
+	</body>
+</html>

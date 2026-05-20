@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Why Most Corporate AI Training Fails by Friday &mdash; and What Sticks | Jose Lazo-Flores</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="AI workshops land well but teams revert to old workflows by Friday. The reasons are structural, not motivational — and the fix is unglamorous but real." />
+		<link rel="icon" type="image/png" href="../../images/Avatar.png" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+			}
+
+			#nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(47, 53, 56, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 10000;
+				padding: 1em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+
+			#nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2em;
+			}
+
+			#nav .nav-links {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 1.5em;
+				flex: 1 1 auto;
+				justify-content: flex-end;
+				flex-wrap: nowrap;
+			}
+
+			#nav .nav-links li { margin: 0; }
+
+			#nav .nav-links a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 0.85em;
+				white-space: nowrap;
+				transition: color 0.2s ease;
+				border-bottom: 2px solid transparent;
+				padding-bottom: 0.2em;
+			}
+
+			#nav .nav-links a:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#nav .nav-name {
+				color: #fff;
+				font-weight: 600;
+				font-size: 1em;
+				white-space: nowrap;
+				flex: 0 0 auto;
+			}
+
+			body { padding-top: 4em; }
+
+			@media screen and (max-width: 736px) {
+				#nav .container { flex-direction: column; gap: 1em; padding: 0 1em; }
+				#nav .nav-links { gap: 1em; font-size: 0.85em; }
+				#nav .nav-name { font-size: 0.85em; }
+				body { padding-top: 6em; }
+			}
+
+			@media screen and (max-width: 480px) {
+				#nav .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.75em; }
+			}
+
+			#post-hero {
+				background: linear-gradient(135deg, #2f3538 0%, #1a1f22 100%);
+				color: #ffffff;
+				padding: 4em 0 3em 0;
+			}
+
+			#post-hero .container {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			#post-hero .back-link {
+				display: inline-block;
+				color: #d1d5db;
+				text-decoration: none;
+				font-size: 0.9em;
+				margin-bottom: 1.5em;
+				border-bottom: 1px solid transparent;
+				transition: color 0.2s ease, border-color 0.2s ease;
+			}
+
+			#post-hero .back-link:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#post-hero h1 {
+				font-size: 2.4em;
+				line-height: 1.2;
+				color: #ffffff;
+				margin: 0 0 0.6em 0;
+			}
+
+			#post-hero .post-meta {
+				color: #d1d5db;
+				font-size: 0.95em;
+				margin: 0;
+				font-weight: 300;
+			}
+
+			@media screen and (max-width: 736px) {
+				#post-hero h1 { font-size: 1.8em; }
+			}
+
+			#post-body .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#post-body .container {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			#post-body h2 {
+				color: #1f2937;
+				font-size: 1.55em;
+				font-weight: 600;
+				margin: 2.4em 0 0.6em 0;
+				line-height: 1.3;
+			}
+
+			#post-body h2:first-of-type { margin-top: 0.5em; }
+
+			#post-body h3 {
+				color: #1f2937;
+				font-size: 1.2em;
+				font-weight: 600;
+				margin: 1.8em 0 0.5em 0;
+				line-height: 1.35;
+			}
+
+			#post-body p,
+			#post-body li {
+				color: #4b5563;
+				line-height: 1.75;
+				text-align: left;
+				font-size: 1.02em;
+			}
+
+			#post-body p { margin: 0 0 1.15em 0; }
+
+			#post-body ul,
+			#post-body ol {
+				padding-left: 1.5em;
+				margin: 0 0 1.15em 0;
+			}
+
+			#post-body ul { list-style: disc; }
+			#post-body ol { list-style: decimal; }
+
+			#post-body ul li,
+			#post-body ol li { margin-bottom: 0.5em; }
+
+			#post-body a {
+				color: var(--accent-primary);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: border-color 0.2s ease;
+			}
+
+			#post-body a:hover { border-bottom-color: var(--accent-primary); }
+
+			#post-body strong {
+				color: #1f2937;
+				font-weight: 600;
+			}
+
+			#post-body hr {
+				margin: 3em 0 2em 0;
+				border: none;
+				height: 1px;
+				background: #e5e7eb;
+			}
+
+			.post-cta {
+				margin-top: 2em;
+				color: #6b7280;
+				font-style: italic;
+				font-size: 0.98em;
+				line-height: 1.7;
+			}
+
+			.post-cta p { margin: 0 0 0.8em 0; text-align: left; }
+
+			.post-cta a {
+				font-style: normal;
+				font-weight: 600;
+			}
+
+			#footer {
+				background: #f9fafb !important;
+				color: #6b7280;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#footer a, #footer .icons a { color: #6b7280; }
+
+			#footer a:hover, #footer .icons a:hover { color: var(--accent-primary); }
+
+			body p, body li { text-align: left; }
+			header p, .section-intro { text-align: center; }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Navigation Bar -->
+		<nav id="nav">
+			<div class="container">
+				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
+				<ul class="nav-links">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../index.html#about">About</a></li>
+					<li><a href="../../index.html#experience">Experience</a></li>
+					<li><a href="../../consulting.html">Consulting</a></li>
+					<li><a href="../../index.html#platforms">Platforms</a></li>
+					<li><a href="../../index.html#projects">Projects</a></li>
+					<li><a href="../../index.html#methodology">Methodology</a></li>
+					<li><a href="../../index.html#insights">Insights</a></li>
+					<li><a href="../../index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Article Hero -->
+		<section id="post-hero">
+			<div class="container">
+				<a class="back-link" href="../../index.html#insights">&larr; Back to Insights</a>
+				<h1>Why Most Corporate AI Training Fails by Friday</h1>
+				<p class="post-meta">6 minute read</p>
+			</div>
+		</section>
+
+		<!-- Article Body -->
+		<section id="post-body" class="main">
+			<div class="content">
+				<div class="container">
+
+					<p>I&rsquo;ve watched a pattern play out maybe a dozen times over the past two years. A company invests in AI training. The session lands well. Everyone leaves inspired. People talk about it at lunch the next day. By Friday of that week, the team is using AI roughly the same amount they used it before the workshop. By the following Monday, the workshop might as well have not happened.</p>
+
+					<p>This isn&rsquo;t a failure of intent. The people leading the training mean it. The people attending want it to work. The materials are usually fine. The tools are deployed.</p>
+
+					<p>What fails is the gap between <em>knowing</em> and <em>doing</em> &mdash; and corporate AI training, almost universally, is built to optimise the first and ignore the second.</p>
+
+					<h2>The gap nobody owns</h2>
+
+					<p>Most corporate AI training treats AI as a knowledge problem. <em>If only people understood what AI can do, they would use it.</em> So the training session is structured as: here&rsquo;s what AI is, here&rsquo;s what it can do, here are some examples, now you know.</p>
+
+					<p>But the people in that room already know AI can write emails. They&rsquo;ve seen ChatGPT. They&rsquo;ve probably tried it. What they haven&rsquo;t done is build the muscle memory of reaching for AI when a relevant task comes up in their week.</p>
+
+					<p>That muscle memory has nothing to do with knowledge. It&rsquo;s a habit. And habits aren&rsquo;t built in 90-minute sessions, no matter how well-structured.</p>
+
+					<p>The Friday problem is what happens when training optimises for knowledge transfer when the actual constraint is habit formation.</p>
+
+					<h2>Three reasons workshops fail to stick</h2>
+
+					<p>After running enough workshops to see the failure modes, I&rsquo;ve narrowed the causes to three patterns.</p>
+
+					<h3>1. The training is generic when it needs to be specific</h3>
+
+					<p>The marketing team and the operations team have different problems, different tools, different workflows. A workshop that treats them identically &mdash; same examples, same exercises, same prompts &mdash; leaves both teams thinking &ldquo;this was useful in theory but doesn&rsquo;t quite fit what I actually do.&rdquo;</p>
+
+					<p>After a few hours, &ldquo;doesn&rsquo;t quite fit&rdquo; becomes &ldquo;doesn&rsquo;t fit.&rdquo; After a few days, &ldquo;doesn&rsquo;t fit&rdquo; becomes &ldquo;wasn&rsquo;t for me.&rdquo; The team reverts.</p>
+
+					<p>The fix is function-specific content. In my workshop curriculum, Module 3 is rebuilt for every engagement around the client&rsquo;s actual functions. Marketing exercises use marketing examples. Ops exercises use ops examples. The content has to land on the work the team is actually doing today, not on abstract scenarios.</p>
+
+					<h3>2. The exercises don&rsquo;t produce reusable artifacts</h3>
+
+					<p>Most workshop exercises produce experience. The participant tries something, sees it work, has an &ldquo;ah-ha&rdquo; moment, and... that&rsquo;s it. There&rsquo;s nothing tangible they take back to their week.</p>
+
+					<p>Compare two designs for the same exercise:</p>
+
+					<ul>
+						<li><strong>Experience-producing</strong>: &ldquo;Use AI to summarise a meeting transcript.&rdquo; Participant tries it, sees a summary, feels good about it, moves on.</li>
+						<li><strong>Artifact-producing</strong>: &ldquo;Build a reusable prompt template for summarising your team&rsquo;s recurring weekly meetings. Test it on this week&rsquo;s meeting transcript. Save the template. Use it next week.&rdquo;</li>
+					</ul>
+
+					<p>The second design produces a thing the participant takes home. A template. A saved prompt. A custom GPT. The artifact creates a recurring trigger to use AI &mdash; every time the meeting happens, the template is right there.</p>
+
+					<p>Without artifacts, the workshop is theatre. Inspiring, scenic, gone.</p>
+
+					<h3>3. There&rsquo;s no peer accountability after the session</h3>
+
+					<p>Workshop ends. Participants go back to their desks. The team doesn&rsquo;t have a structured way to ask each other &ldquo;what AI thing did you try this week?&rdquo; There&rsquo;s no Slack channel, no weekly check-in, no shared prompt library, no visible accountability.</p>
+
+					<p>In the absence of social reinforcement, the new behaviour decays. Two participants might compare notes on Tuesday. By Friday, the conversation has moved on.</p>
+
+					<p>The fix is structural. Most successful AI adoption I&rsquo;ve seen involves a peer learning rhythm: a pair-up on day one, a shared prompt library that gets contributions from everyone, a 15-minute weekly check-in for the first month. None of this is glamorous. All of it works.</p>
+
+					<h2>What stickiness actually requires</h2>
+
+					<p>Three things, in order:</p>
+
+					<ol>
+						<li><strong>Function-specific content</strong> that lands on the team&rsquo;s actual work, not abstract scenarios.</li>
+						<li><strong>Artifact-producing exercises</strong> that send each participant home with a tangible reusable asset.</li>
+						<li><strong>Peer accountability rhythms</strong> that keep new behaviour alive during the critical first 30 days.</li>
+					</ol>
+
+					<p>A workshop that nails all three is the exception. A workshop that nails one of them has a chance. A workshop that nails none of them is, predictably, useless by Friday.</p>
+
+					<h2>Why most training is built the other way</h2>
+
+					<p>Three structural reasons.</p>
+
+					<p><strong>It&rsquo;s easier to sell.</strong> A two-hour workshop with a flashy title is easier to budget for than a three-month adoption programme. Procurement loves it. The trainer&rsquo;s calendar loves it. Whether it works is a downstream question that happens after the invoice is paid.</p>
+
+					<p><strong>Trainers are paid by the session, not the outcome.</strong> Almost all AI training contracts pay for sessions delivered, not behaviour changed. The economics push toward maximising session count, not maximising stickiness.</p>
+
+					<p><strong>The buyer often isn&rsquo;t the user.</strong> The L&amp;D leader who hires the trainer isn&rsquo;t the marketing manager who needs to actually use AI on Monday. There&rsquo;s a structural mismatch between who pays and who has to make the behaviour change real.</p>
+
+					<h2>What my workshop curriculum is built around</h2>
+
+					<p>I designed the five-module corporate AI curriculum specifically against these failure modes.</p>
+
+					<ul>
+						<li><strong>Module 1</strong> establishes the mental model and identifies high-leverage tasks using <a href="../the-ai-sweet-spot/">the AI Sweet Spot rubric</a> &mdash; the team starts with the right tasks, not the visible ones.</li>
+						<li><strong>Module 2</strong> teaches <a href="../the-5-ps-of-prompting/">the 5 P&rsquo;s of Prompting framework</a> &mdash; a methodology that survives outside the workshop room.</li>
+						<li><strong>Module 3</strong> is rebuilt for every engagement around the client&rsquo;s specific functions &mdash; function-specific content, not generic.</li>
+						<li><strong>Module 4</strong> connects the framework to whatever internal AI tools the client has deployed &mdash; Copilot, Claude Enterprise, custom GPTs &mdash; so participants leave with workflows that match their tooling.</li>
+						<li><strong>Module 5</strong> establishes peer accountability rhythms and a 30-day adoption plan &mdash; the structural reinforcement that prevents the Friday revert.</li>
+					</ul>
+
+					<p>Every module produces tangible artifacts that participants take home. Every module references and reinforces the others. The curriculum is engineered specifically against the Friday-failure pattern.</p>
+
+					<p>This is unglamorous compared to &ldquo;transformational AI workshop.&rdquo; It&rsquo;s also what actually works.</p>
+
+					<h2>If you&rsquo;re investing in AI training</h2>
+
+					<p>Three questions to ask before committing:</p>
+
+					<ol>
+						<li><strong>Will Module 3 (or its equivalent) be rebuilt around our specific functions, or are we getting a generic curriculum?</strong></li>
+						<li><strong>What tangible artifact does each participant take home from each session?</strong></li>
+						<li><strong>What&rsquo;s the adoption rhythm for the 30 days after the workshop, and who owns it?</strong></li>
+					</ol>
+
+					<p>If the trainer can&rsquo;t answer these clearly, you&rsquo;re buying theatre. There are no exceptions to this.</p>
+
+					<hr />
+
+					<div class="post-cta">
+						<p>If you&rsquo;re rolling out AI in a team and want a workshop that survives Friday, the corporate AI workshop curriculum is designed exactly for that.</p>
+						<p><a href="../../consulting.html">Chat with my AI discovery assistant</a> or <a href="../../consulting.html">book a 45-min discovery call</a> to discuss your situation.</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/lazo-flores" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Jose Lazo-Flores. All rights reserved.</li><li><a href="../../privacy.html">Privacy Policy</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../../assets/js/browser.min.js"></script>
+		<script src="../../assets/js/breakpoints.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+
+		<!-- Clicky Analytics -->
+		<script async data-id="101496361" src="https://static.getclicky.com/js"></script>
+
+	</body>
+</html>
