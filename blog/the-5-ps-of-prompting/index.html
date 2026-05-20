@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The 5 P&rsquo;s of Prompting &mdash; A Framework for Non-Technical Teams | Jose Lazo-Flores</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Most prompt engineering frameworks were built by engineers for engineers. The 5 P's of Prompting is the methodology I built for non-technical business teams." />
+		<link rel="icon" type="image/png" href="../../images/Avatar.png" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+			}
+
+			/* Navigation Bar — same as other pages */
+			#nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(47, 53, 56, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 10000;
+				padding: 1em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+
+			#nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2em;
+			}
+
+			#nav .nav-links {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 1.5em;
+				flex: 1 1 auto;
+				justify-content: flex-end;
+				flex-wrap: nowrap;
+			}
+
+			#nav .nav-links li { margin: 0; }
+
+			#nav .nav-links a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 0.85em;
+				white-space: nowrap;
+				transition: color 0.2s ease;
+				border-bottom: 2px solid transparent;
+				padding-bottom: 0.2em;
+			}
+
+			#nav .nav-links a:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#nav .nav-name {
+				color: #fff;
+				font-weight: 600;
+				font-size: 1em;
+				white-space: nowrap;
+				flex: 0 0 auto;
+			}
+
+			body { padding-top: 4em; }
+
+			@media screen and (max-width: 736px) {
+				#nav .container { flex-direction: column; gap: 1em; padding: 0 1em; }
+				#nav .nav-links { gap: 1em; font-size: 0.85em; }
+				#nav .nav-name { font-size: 0.85em; }
+				body { padding-top: 6em; }
+			}
+
+			@media screen and (max-width: 480px) {
+				#nav .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.75em; }
+			}
+
+			/* Article hero — dark, content-led */
+			#post-hero {
+				background: linear-gradient(135deg, #2f3538 0%, #1a1f22 100%);
+				color: #ffffff;
+				padding: 4em 0 3em 0;
+			}
+
+			#post-hero .container {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			#post-hero .back-link {
+				display: inline-block;
+				color: #d1d5db;
+				text-decoration: none;
+				font-size: 0.9em;
+				margin-bottom: 1.5em;
+				border-bottom: 1px solid transparent;
+				transition: color 0.2s ease, border-color 0.2s ease;
+			}
+
+			#post-hero .back-link:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#post-hero h1 {
+				font-size: 2.4em;
+				line-height: 1.2;
+				color: #ffffff;
+				margin: 0 0 0.6em 0;
+			}
+
+			#post-hero .post-meta {
+				color: #d1d5db;
+				font-size: 0.95em;
+				margin: 0;
+				font-weight: 300;
+			}
+
+			#post-hero .post-meta .sep {
+				margin: 0 0.6em;
+				opacity: 0.5;
+			}
+
+			@media screen and (max-width: 736px) {
+				#post-hero h1 { font-size: 1.8em; }
+			}
+
+			/* Article body */
+			#post-body .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#post-body .container {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			#post-body h2 {
+				color: #1f2937;
+				font-size: 1.55em;
+				font-weight: 600;
+				margin: 2.4em 0 0.6em 0;
+				line-height: 1.3;
+			}
+
+			#post-body h2:first-of-type {
+				margin-top: 0.5em;
+			}
+
+			#post-body h3 {
+				color: #1f2937;
+				font-size: 1.2em;
+				font-weight: 600;
+				margin: 1.8em 0 0.5em 0;
+				line-height: 1.35;
+			}
+
+			#post-body p,
+			#post-body li {
+				color: #4b5563;
+				line-height: 1.75;
+				text-align: left;
+				font-size: 1.02em;
+			}
+
+			#post-body p {
+				margin: 0 0 1.15em 0;
+			}
+
+			#post-body ul {
+				list-style: disc;
+				padding-left: 1.5em;
+				margin: 0 0 1.15em 0;
+			}
+
+			#post-body ul li {
+				margin-bottom: 0.5em;
+			}
+
+			#post-body a {
+				color: var(--accent-primary);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: border-color 0.2s ease;
+			}
+
+			#post-body a:hover {
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#post-body strong {
+				color: #1f2937;
+				font-weight: 600;
+			}
+
+			#post-body blockquote {
+				margin: 1.4em 0;
+				padding: 1em 1.4em;
+				border-left: 3px solid var(--accent-primary);
+				background: #f9fafb;
+				border-radius: 0 6px 6px 0;
+				color: #4b5563;
+				font-style: normal;
+			}
+
+			#post-body blockquote p:last-child {
+				margin-bottom: 0;
+			}
+
+			#post-body hr {
+				margin: 3em 0 2em 0;
+				border: none;
+				height: 1px;
+				background: #e5e7eb;
+			}
+
+			/* Closing CTA */
+			.post-cta {
+				margin-top: 2em;
+				color: #6b7280;
+				font-style: italic;
+				font-size: 0.98em;
+				line-height: 1.7;
+			}
+
+			.post-cta p {
+				margin: 0 0 0.8em 0;
+				text-align: left;
+			}
+
+			.post-cta a {
+				font-style: normal;
+				font-weight: 600;
+			}
+
+			/* Footer (light gray) */
+			#footer {
+				background: #f9fafb !important;
+				color: #6b7280;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#footer a,
+			#footer .icons a {
+				color: #6b7280;
+			}
+
+			#footer a:hover,
+			#footer .icons a:hover {
+				color: var(--accent-primary);
+			}
+
+			/* Override template's `p { text-align: justify }` */
+			body p, body li { text-align: left; }
+			header p, .section-intro { text-align: center; }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Navigation Bar -->
+		<nav id="nav">
+			<div class="container">
+				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
+				<ul class="nav-links">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../index.html#about">About</a></li>
+					<li><a href="../../index.html#experience">Experience</a></li>
+					<li><a href="../../consulting.html">Consulting</a></li>
+					<li><a href="../../index.html#platforms">Platforms</a></li>
+					<li><a href="../../index.html#projects">Projects</a></li>
+					<li><a href="../../index.html#methodology">Methodology</a></li>
+					<li><a href="../../index.html#insights">Insights</a></li>
+					<li><a href="../../index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Article Hero -->
+		<section id="post-hero">
+			<div class="container">
+				<a class="back-link" href="../../index.html#insights">&larr; Back to Insights</a>
+				<h1>The 5 P&rsquo;s of Prompting: A Framework Built for Non-Technical Teams</h1>
+				<p class="post-meta">Published May 20, 2026 <span class="sep">&middot;</span> 6 minute read</p>
+			</div>
+		</section>
+
+		<!-- Article Body -->
+		<section id="post-body" class="main">
+			<div class="content">
+				<div class="container">
+
+					<p>Most prompt engineering advice was written by prompt engineers, for prompt engineers. That&rsquo;s the problem.</p>
+
+					<p>When I started running corporate AI workshops for non-technical business teams &mdash; marketing managers, ops leads, HR directors &mdash; I&rsquo;d watch them try to apply the frameworks they&rsquo;d read about online. CRISPE. CO-STAR. RTF. RTC. ICIO. Each one is structurally sound. Each one assumes its reader thinks like a software engineer.</p>
+
+					<p>A marketing manager who&rsquo;s been writing copy for fifteen years doesn&rsquo;t need to learn what a &ldquo;system message&rdquo; is. She needs a memorable, transferable model for what makes one prompt work and another fail. After three weeks of trying to retrofit existing frameworks for non-technical audiences, I gave up and built my own.</p>
+
+					<p>I call it the <strong>5 P&rsquo;s of Prompting</strong>. It&rsquo;s the methodology I now teach in every corporate AI workshop, and it&rsquo;s the spine of every prompt I write myself.</p>
+
+					<h2>The five elements</h2>
+
+					<p>A prompt that actually produces useful output has five distinct components. Most failing prompts are failing on one of these.</p>
+
+					<h3>1. Premise &mdash; what&rsquo;s the situation?</h3>
+
+					<p>The premise is the context the AI needs to understand the task: audience, goal, constraints, relevant background.</p>
+
+					<p>Without premise, AI defaults to the most generic interpretation. &ldquo;Write a LinkedIn post&rdquo; produces something that could be written by anyone for any company. &ldquo;Write a LinkedIn post for mid-market SaaS founders, audience is skeptical of AI hype, goal is to drive blog traffic&rdquo; produces a post that has a chance of working.</p>
+
+					<p>The quality bar: a colleague reading just the premise should understand what&rsquo;s being attempted.</p>
+
+					<h3>2. Persona &mdash; what role should the AI take?</h3>
+
+					<p>The persona is who the AI is being asked to be while completing the task. This is the single highest-leverage element. AI defaults to a generic helpful voice; specifying a persona shifts both substance and tone.</p>
+
+					<p>&ldquo;Act as an expert&rdquo; is too vague. &ldquo;Act as a senior B2B copywriter who has written for Stripe and Notion&rdquo; is specific enough that the model can match the pattern.</p>
+
+					<p>A useful test: can you name a real person or role who would produce this output? If yes, you have a usable persona. If no, you don&rsquo;t.</p>
+
+					<h3>3. Pattern &mdash; what does good look like?</h3>
+
+					<p>The pattern is the example. One or two demonstrations of what you want, or what you want to avoid.</p>
+
+					<p>AI matches patterns better than instructions. &ldquo;Make it punchy&rdquo; is harder for the model to interpret than &ldquo;like this: [paste a punchy example].&rdquo; A single concrete sample beats a paragraph of adjectives.</p>
+
+					<p>Counter-intuitive: more examples is not better. Three or more starts hurting output quality &mdash; the model overfits to whatever quirks are in your examples. One or two is the sweet spot.</p>
+
+					<h3>4. Purpose &mdash; what specifically should it produce?</h3>
+
+					<p>The purpose is the action. Verb plus deliverable. Vague purposes (&ldquo;help me with this&rdquo;) produce vague output.</p>
+
+					<p>If you&rsquo;re stacking multiple actions (&ldquo;summarise, then critique, then suggest improvements&rdquo;), don&rsquo;t. Chain prompts. Each prompt does one thing well. Stacking actions in a single prompt is how output quality collapses.</p>
+
+					<h3>5. Presentation &mdash; what format and length?</h3>
+
+					<p>The presentation is the output specification. Format, length, structure.</p>
+
+					<p>Without presentation, you get whatever the AI thinks is appropriate &mdash; often wall-of-text. With presentation, you get something you can paste directly into its destination.</p>
+
+					<p>&ldquo;Short and clear&rdquo; isn&rsquo;t a presentation. &ldquo;Three bullet points, 15 words maximum each, no headings, no emoji&rdquo; is.</p>
+
+					<h2>A before-and-after</h2>
+
+					<p>Same task, same model, two prompts.</p>
+
+					<p><strong>Vague:</strong></p>
+
+					<blockquote>
+						<p>&ldquo;Summarise this customer call.&rdquo;</p>
+					</blockquote>
+
+					<p>Output: a paragraph-style recap of what the customer said. Useful for almost nothing.</p>
+
+					<p><strong>5 P&rsquo;s:</strong></p>
+
+					<blockquote>
+						<p>Premise: 45-minute customer call about a renewal decision. Customer is a CFO at a mid-market SaaS firm, undecided about renewing our contract.</p>
+						<p>Persona: Act as a customer success manager preparing a handoff note for the account manager.</p>
+						<p>Pattern: Useful notes look like &ldquo;Customer concerned about X &mdash; quoted Y from their email last week.&rdquo; Not useful: &ldquo;Customer talked about pricing.&rdquo;</p>
+						<p>Purpose: Extract the three concerns the customer raised, the language they used, and any specific objections.</p>
+						<p>Presentation: Three bullets. Each bullet: concern + verbatim quote + suggested response angle.</p>
+					</blockquote>
+
+					<p>Output: actually useful. The handoff happens cleanly. The next call starts at the right depth.</p>
+
+					<h2>Where the framework applies</h2>
+
+					<p>The 5 P&rsquo;s works for every AI assistant your team will ever use. ChatGPT, Claude, Microsoft Copilot, Google Gemini, custom GPTs, internal AI tools.</p>
+
+					<p>It&rsquo;s tool-agnostic on purpose. Most teams will deploy multiple AI tools over the next two years; a methodology that only works in one breaks every time a new tool gets added.</p>
+
+					<p>It works for every task type. Drafting, summarising, transforming, brainstorming, analysing &mdash; the framework structures the prompt regardless of the task category.</p>
+
+					<p>For more on which tasks are worth automating with AI in the first place, see <a href="../the-ai-sweet-spot/">The AI Sweet Spot</a>.</p>
+
+					<h2>Where it doesn&rsquo;t apply</h2>
+
+					<p>Two limits worth flagging.</p>
+
+					<p><strong>It doesn&rsquo;t fix tool selection.</strong> If you&rsquo;re using AI for a task where AI is the wrong tool &mdash; real-time data retrieval, sensitive personal judgment, regulatory work that requires zero ambiguity &mdash; the 5 P&rsquo;s won&rsquo;t save you. The framework optimises prompting; it doesn&rsquo;t decide what to prompt for.</p>
+
+					<p><strong>It doesn&rsquo;t replace iteration.</strong> Even a well-formed prompt sometimes produces output that&rsquo;s almost-but-not-quite right. The framework gives you a diagnostic &mdash; you can identify which P needs adjustment &mdash; but you&rsquo;ll still iterate. Two or three refinements is normal; if you&rsquo;re at five and still off, restart with a different framing.</p>
+
+					<h2>How to start using it</h2>
+
+					<p>Pick one recurring task you do at least weekly. Write a prompt for it using all five P&rsquo;s, in order. Run it. Adjust the P that produced the weakest part of the output. Run again.</p>
+
+					<p>Three rounds of this with one task is usually enough to internalise the framework. After that, you don&rsquo;t need to write &ldquo;Premise:&rdquo; or &ldquo;Persona:&rdquo; labels in your prompts &mdash; the structure becomes intuitive. The labels are training wheels.</p>
+
+					<p>The point of the framework isn&rsquo;t to give you a template. It&rsquo;s to give you a mental model for what makes a prompt work, so when one fails, you can fix it.</p>
+
+					<hr />
+
+					<div class="post-cta">
+						<p>The 5 P&rsquo;s of Prompting is the methodology spine of my corporate AI workshops. If you&rsquo;re rolling out AI in a team that doesn&rsquo;t have an AI engineer to lean on, the workshop curriculum applies the framework to your team&rsquo;s specific functions &mdash; marketing, operations, HR, sales.</p>
+						<p><a href="../../consulting.html">Chat with my AI discovery assistant</a> or <a href="../../consulting.html">book a 45-min discovery call</a> if it&rsquo;s relevant to your team.</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/lazo-flores" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Jose Lazo-Flores. All rights reserved.</li><li><a href="../../privacy.html">Privacy Policy</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../../assets/js/browser.min.js"></script>
+		<script src="../../assets/js/breakpoints.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+
+		<!-- Clicky Analytics -->
+		<script async data-id="101496361" src="https://static.getclicky.com/js"></script>
+
+	</body>
+</html>
