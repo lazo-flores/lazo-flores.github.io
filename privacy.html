@@ -1,0 +1,515 @@
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Privacy Policy | Jose Lazo-Flores, Ph.D.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="How joselazoflores.com handles personal data: visitors, the Discovery Assistant, third-party processors, your rights." />
+		<link rel="icon" type="image/png" href="images/Avatar.png" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Brand palette — teal primary, indigo secondary */
+			:root {
+				--accent-primary: #0F766E;
+				--accent-primary-hover: #0b5e58;
+				--accent-secondary: #1E40AF;
+			}
+
+			/* Section header accent underline (matches consulting page) */
+			.main > header h2 {
+				position: relative;
+				padding-bottom: 0.4em;
+			}
+
+			.main > header h2::after {
+				content: '';
+				display: block;
+				width: 3.5em;
+				height: 3px;
+				background: var(--accent-primary);
+				margin: 0.5em auto 0 auto;
+				border-radius: 2px;
+			}
+
+			/* Navigation Bar — identical to index.html / consulting.html */
+			#nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(47, 53, 56, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 10000;
+				padding: 1em 0;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+
+			#nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2em;
+			}
+
+			#nav .nav-links {
+				display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				gap: 1.5em;
+				flex: 1 1 auto;
+				justify-content: flex-end;
+				flex-wrap: nowrap;
+			}
+
+			#nav .nav-links li { margin: 0; }
+
+			#nav .nav-links a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 0.85em;
+				white-space: nowrap;
+				transition: color 0.2s ease;
+				border-bottom: 2px solid transparent;
+				padding-bottom: 0.2em;
+			}
+
+			#nav .nav-links a:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#nav .nav-name {
+				color: #fff;
+				font-weight: 600;
+				font-size: 1em;
+				white-space: nowrap;
+				flex: 0 0 auto;
+			}
+
+			body { padding-top: 4em; }
+
+			@media screen and (max-width: 736px) {
+				#nav .container { flex-direction: column; gap: 1em; padding: 0 1em; }
+				#nav .nav-links { gap: 1em; font-size: 0.85em; }
+				#nav .nav-name { font-size: 0.85em; }
+				body { padding-top: 6em; }
+			}
+
+			@media screen and (max-width: 480px) {
+				#nav .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.75em; }
+			}
+
+			/* Page hero — smaller variant, dark */
+			#page-hero {
+				background: linear-gradient(135deg, #2f3538 0%, #1a1f22 100%);
+				color: #ffffff;
+				padding: 3.5em 0 2.5em 0;
+				text-align: center;
+			}
+
+			#page-hero h1 {
+				font-size: 2.6em;
+				color: #ffffff;
+				margin-bottom: 0.3em;
+			}
+
+			#page-hero .last-updated {
+				font-size: 0.95em;
+				color: #d1d5db;
+				margin: 0;
+				font-weight: 300;
+			}
+
+			@media screen and (max-width: 736px) {
+				#page-hero h1 { font-size: 2em; }
+			}
+
+			/* Policy content — white surface, left-aligned, readable */
+			#privacy-policy .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#privacy-policy .container {
+				max-width: 820px;
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			#privacy-policy h2 {
+				color: #1f2937;
+				font-size: 1.5em;
+				font-weight: 600;
+				margin: 2.4em 0 0.6em 0;
+			}
+
+			#privacy-policy h2:first-of-type {
+				margin-top: 0.5em;
+			}
+
+			#privacy-policy h3 {
+				color: #1f2937;
+				font-size: 1.15em;
+				font-weight: 600;
+				margin: 1.6em 0 0.4em 0;
+			}
+
+			#privacy-policy p,
+			#privacy-policy li {
+				color: #4b5563;
+				line-height: 1.7;
+				text-align: left;
+			}
+
+			#privacy-policy p {
+				margin: 0 0 1em 0;
+			}
+
+			#privacy-policy ul {
+				list-style: disc;
+				padding-left: 1.5em;
+				margin: 0 0 1em 0;
+			}
+
+			#privacy-policy ul li {
+				margin-bottom: 0.4em;
+			}
+
+			#privacy-policy a {
+				color: var(--accent-primary);
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: border-color 0.2s ease;
+			}
+
+			#privacy-policy a:hover {
+				border-bottom-color: var(--accent-primary);
+			}
+
+			#privacy-policy code {
+				background: #f3f4f6;
+				color: #1f2937;
+				padding: 0.1em 0.4em;
+				border-radius: 4px;
+				font-size: 0.92em;
+				font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+			}
+
+			#privacy-policy strong {
+				color: #1f2937;
+				font-weight: 600;
+			}
+
+			/* § 5 third-party table */
+			.privacy-table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 1.4em 0;
+				font-size: 0.92em;
+				background: #ffffff;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+				border-radius: 8px;
+				overflow: hidden;
+			}
+
+			.privacy-table th,
+			.privacy-table td {
+				padding: 0.85em 1em;
+				border-bottom: 1px solid #e5e7eb;
+				text-align: left;
+				vertical-align: top;
+				line-height: 1.55;
+			}
+
+			.privacy-table th {
+				background: #f9fafb;
+				color: #1f2937;
+				font-weight: 600;
+				border-bottom: 2px solid var(--accent-primary);
+			}
+
+			.privacy-table tr:last-child td {
+				border-bottom: none;
+			}
+
+			.privacy-table tr:nth-child(even) td {
+				background: #fafafa;
+			}
+
+			@media screen and (max-width: 736px) {
+				.privacy-table {
+					font-size: 0.85em;
+				}
+				.privacy-table th,
+				.privacy-table td {
+					padding: 0.6em 0.7em;
+				}
+			}
+
+			/* Closing footnote (the GmbH/AG block) */
+			.policy-footnote {
+				margin-top: 2em;
+				padding: 1em 1.4em;
+				border-left: 3px solid var(--accent-primary);
+				background: #f9fafb;
+				color: #4b5563;
+				font-style: italic;
+				border-radius: 0 6px 6px 0;
+			}
+
+			.policy-footnote p { margin: 0; }
+
+			/* Footer (light gray, matches other pages) */
+			#footer {
+				background: #f9fafb !important;
+				color: #6b7280;
+				border-top: 1px solid #e5e7eb;
+			}
+
+			#footer a,
+			#footer .icons a {
+				color: #6b7280;
+			}
+
+			#footer a:hover,
+			#footer .icons a:hover {
+				color: var(--accent-primary);
+			}
+
+			/* Override template's `p { text-align: justify }` */
+			body p, body li {
+				text-align: left;
+			}
+
+			header p, .section-intro {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Navigation Bar -->
+		<nav id="nav">
+			<div class="container">
+				<div class="nav-name">Jose Lazo-Flores, Ph.D.</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#experience">Experience</a></li>
+					<li><a href="consulting.html">Consulting</a></li>
+					<li><a href="index.html#platforms">Platforms</a></li>
+					<li><a href="index.html#projects">Projects</a></li>
+					<li><a href="index.html#methodology">Methodology</a></li>
+					<li><a href="index.html#insights">Insights</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Page Hero -->
+		<section id="page-hero">
+			<div class="container">
+				<h1>Privacy Policy</h1>
+				<p class="last-updated"><strong>Last updated:</strong> 2026-05-20</p>
+			</div>
+		</section>
+
+		<!-- Policy Body -->
+		<section id="privacy-policy" class="main">
+			<div class="content">
+				<div class="container">
+
+					<h2>1. Who we are</h2>
+					<p>This site, <strong>joselazoflores.com</strong>, is operated by <strong>Jose Lazo-Flores</strong> as an individual sole trader, based in <strong>Zurich</strong>, Switzerland. For any matter relating to your personal data, you can reach us at <strong><a href="mailto:jose.lazo.flores.1@gmail.com">jose.lazo.flores.1@gmail.com</a></strong>.</p>
+					<p>When client work is invoiced through third-party platforms (Malt, Upwork) or umbrella employers (Helvetic Payroll, Sallis), those intermediaries handle the commercial relationship only &mdash; they do not have access to data collected on joselazoflores.com or to your conversations with the Discovery Assistant.</p>
+
+					<h2>2. What this policy covers</h2>
+					<p>This policy describes how we handle personal data when you visit joselazoflores.com or interact with the AI Discovery Assistant embedded on the <strong>/consulting</strong> page.</p>
+					<p>The Discovery Assistant is provided by <strong>Augself</strong> (augself.ai), which is also operated by Jose Lazo-Flores. Conversations with the assistant are processed by Augself on our behalf.</p>
+
+					<h2>3. Data we collect</h2>
+
+					<h3>3.1 Automatically when you visit the site</h3>
+					<ul>
+						<li><strong>Server logs:</strong> standard request metadata (IP address, browser user-agent string, page visited, timestamp). Used only for diagnostics and security.</li>
+						<li><strong>Cookies / local storage:</strong> see &sect; 7 below.</li>
+					</ul>
+
+					<h3>3.2 When you chat with the Discovery Assistant</h3>
+					<p>The assistant is an AI chatbot designed to help us understand your project before a first call. When you use it, we collect:</p>
+					<ul>
+						<li><strong>The full text of your conversation</strong> with the assistant.</li>
+						<li><strong>Your IP address</strong> and browser user-agent, recorded against the conversation.</li>
+						<li><strong>Any personal or company information you choose to share</strong> &mdash; typically your name, email, company name, role, industry, country, budget signals, and timeline. You decide what to share.</li>
+						<li><strong>A structured summary</strong> the assistant generates at the end of each conversation, which is emailed to Jose.</li>
+					</ul>
+					<p>You are interacting with an AI, not a human. The assistant will identify itself as such if asked. You can stop the conversation at any time, and you are not obliged to share any specific information.</p>
+
+					<h3>3.3 When you contact us directly</h3>
+					<p>If you email, message, or otherwise contact us outside the chatbot, we receive the information you choose to send (name, email, message contents).</p>
+
+					<h2>4. How we use your data</h2>
+					<ul>
+						<li>To respond to your inquiry &mdash; either by Jose directly or via the Discovery Assistant.</li>
+						<li>To prepare for follow-up conversations and proposals if you appear to be a potential client.</li>
+						<li>To improve the Discovery Assistant&rsquo;s responses, on an aggregated basis. We do not train any third-party AI model on your conversation content (see &sect; 5 below).</li>
+						<li>To keep records for legitimate business and accounting purposes.</li>
+					</ul>
+					<p>We do <strong>not</strong> sell your data, share it with advertisers, or use it for behavioural ad targeting.</p>
+
+					<h2>5. Third-party processors and services</h2>
+					<p>The following third parties receive data when you visit joselazoflores.com. Each is listed with its purpose and the kind of data it sees:</p>
+
+					<table class="privacy-table">
+						<thead>
+							<tr>
+								<th>Service</th>
+								<th>Purpose</th>
+								<th>What it receives</th>
+								<th>Location</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>Railway</strong> (railway.app)</td>
+								<td>Hosts the Augself backend and Postgres database where Discovery Assistant conversations are stored</td>
+								<td>Your full conversation, IP, user-agent, contact info you share</td>
+								<td>EU region</td>
+							</tr>
+							<tr>
+								<td><strong>OpenAI</strong> (openai.com)</td>
+								<td>Generates the Discovery Assistant&rsquo;s responses. Per OpenAI&rsquo;s API policy, content sent via the API is <strong>not used to train OpenAI&rsquo;s models</strong></td>
+								<td>Each message of your conversation, anonymous to OpenAI</td>
+								<td>United States</td>
+							</tr>
+							<tr>
+								<td><strong>Resend</strong> (resend.com)</td>
+								<td>Delivers the summary email to Jose after each Discovery Assistant conversation</td>
+								<td>The structured summary including any contact info you shared</td>
+								<td>EU/US</td>
+							</tr>
+							<tr>
+								<td><strong>Clicky</strong> (clicky.com)</td>
+								<td>First-party-cookie web analytics &mdash; gives Jose anonymous visit counts and page-by-page stats. <strong>Sets first-party cookies</strong> (e.g., <code>_jsuid</code>) used for visitor identification</td>
+								<td>Your IP, browser user-agent, pages visited, referrer</td>
+								<td>United States</td>
+							</tr>
+							<tr>
+								<td><strong>Calendly</strong> (calendly.com)</td>
+								<td>If you open the booking widget on <code>/consulting</code>, Calendly handles the booking flow. <strong>Sets its own cookies</strong> (<code>__cf_bm</code>, etc.). Governed by calendly.com/privacy</td>
+								<td>Your selected time, name, email you enter on Calendly&rsquo;s form, IP</td>
+								<td>United States</td>
+							</tr>
+							<tr>
+								<td><strong>Google Fonts</strong> (fonts.googleapis.com)</td>
+								<td>Loads the Roboto typeface used for body text and form fields. Does not set cookies, but Google logs the IP of each font request</td>
+								<td>Your IP, user-agent</td>
+								<td>Global</td>
+							</tr>
+							<tr>
+								<td><strong>Hugging Face Spaces</strong> (huggingface.co)</td>
+								<td>Embeds interactive AI demos in the Projects section of the homepage. Each embed loads inside an iframe that <strong>may set its own cookies</strong> under huggingface.co</td>
+								<td>Whatever you input into the demos, plus the iframe&rsquo;s own analytics</td>
+								<td>United States</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>Transfers of personal data outside Switzerland/EU are covered by the European Commission&rsquo;s Standard Contractual Clauses or equivalent safeguards.</p>
+					<p>The Augself backend itself is operated by Jose Lazo-Flores; it is listed separately above only because it is hosted on Railway.</p>
+
+					<h2>6. Storage and retention</h2>
+					<ul>
+						<li><strong>Chat conversations and Discovery summaries</strong> are stored in Augself&rsquo;s Postgres database for as long as we may reasonably need them for follow-up or accounting (typically up to <strong>24 months</strong>).</li>
+						<li><strong>Email correspondence</strong> is retained for <strong>[5 years]</strong> for business-record purposes.</li>
+						<li><strong>Server logs</strong> are retained for <strong>[30 days]</strong> unless a security incident requires longer retention.</li>
+					</ul>
+					<p>You can request earlier deletion at any time (&sect; 8).</p>
+
+					<h2>7. Cookies, local storage, and tracking</h2>
+					<p>joselazoflores.com itself does not deploy advertising or marketing trackers. We do not use Google Analytics, Google Tag Manager, Facebook Pixel, Hotjar, Mixpanel, Segment, or Amplitude. We do not have a cookie-consent banner.</p>
+					<p>That said, the following cookies and storage items are set when you visit:</p>
+					<ul>
+						<li><strong>Clicky analytics (<code>clicky.com</code>)</strong> sets first-party cookies under joselazoflores.com (e.g., <code>_jsuid</code>, <code>cluid</code>, <code>clv</code>) to count visitors and recognize returning visits. Clicky&rsquo;s privacy policy: clicky.com/terms.</li>
+						<li><strong>Calendly (<code>calendly.com</code>)</strong> sets its own cookies (e.g., <code>__cf_bm</code> via Cloudflare) when the booking widget loads on the <code>/consulting</code> page. Governed by calendly.com/privacy.</li>
+						<li><strong>Hugging Face (<code>huggingface.co</code>)</strong> may set cookies inside the iframe embeds in the Projects section of the homepage. Governed by huggingface.co/privacy.</li>
+						<li><strong>The Augself Discovery Assistant</strong> uses <strong>browser local storage on augself.ai&rsquo;s origin</strong> (not cookies) to remember your conversation across page reloads on the same device. This data stays in your browser unless you send a message.</li>
+					</ul>
+					<p>If you prefer not to accept these cookies you can:</p>
+					<ul>
+						<li>Block third-party cookies in your browser (Calendly, Hugging Face iframes affected)</li>
+						<li>Block first-party cookies on joselazoflores.com (Clicky affected)</li>
+						<li>Block scripts from clicky.com, assets.calendly.com, or huggingface.co at the browser/extension level</li>
+					</ul>
+					<p>These steps may break the corresponding features (you would not be able to book through the embedded Calendly widget, for example), but the rest of the site continues to work.</p>
+
+					<h2>8. Your rights</h2>
+					<p>Under Swiss nFADP and (if you are in the EU/EEA) GDPR, you have the right to:</p>
+					<ul>
+						<li><strong>Access</strong> the personal data we hold about you;</li>
+						<li><strong>Correct</strong> inaccurate data;</li>
+						<li><strong>Delete</strong> your data (&ldquo;right to be forgotten&rdquo;);</li>
+						<li><strong>Restrict</strong> or <strong>object to</strong> specific processing;</li>
+						<li><strong>Receive a portable copy</strong> of your data;</li>
+						<li><strong>Lodge a complaint</strong> with the Swiss Federal Data Protection and Information Commissioner (FDPIC, edoeb.admin.ch) or, in the EU, your local supervisory authority.</li>
+					</ul>
+					<p>To exercise any of these rights, email <strong><a href="mailto:jose.lazo.flores.1@gmail.com">jose.lazo.flores.1@gmail.com</a></strong>. We will respond within <strong>30 days</strong>.</p>
+
+					<h2>9. Children</h2>
+					<p>Our services are intended for business users. We do not knowingly collect personal data from anyone under 16.</p>
+
+					<h2>10. Security</h2>
+					<p>We use industry-standard measures to protect your data: encrypted connections (TLS) between your browser and our servers and between all sub-processors, scoped database access, and credential rotation. No system is perfectly secure; if we become aware of a data breach affecting your personal data, we will notify you and the relevant authorities as required by law.</p>
+
+					<h2>11. Changes to this policy</h2>
+					<p>We may update this policy from time to time. The &ldquo;Last updated&rdquo; date at the top of the page indicates the current version. Material changes will be announced on the homepage or via email if we have your contact details.</p>
+
+					<h2>12. Contact</h2>
+					<p><strong>Jose Lazo-Flores</strong> (individual sole trader)<br />
+					Leimbachstrasse 37, 8041 Zurich, Switzerland<br />
+					<a href="mailto:jose.lazo.flores.1@gmail.com">jose.lazo.flores.1@gmail.com</a></p>
+
+					<div class="policy-footnote">
+						<p>When you incorporate a GmbH or AG, only the controller name and business address in &sect;&sect; 1 and 12 need updating; the rest of this policy continues to apply unchanged.</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/lazo-flores" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				<li><a href="mailto:Jose.Lazo.Flores.1@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Jose Lazo-Flores. All rights reserved.</li><li><a href="privacy.html">Privacy Policy</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Clicky Analytics -->
+		<script async data-id="101496361" src="https://static.getclicky.com/js"></script>
+
+	</body>
+</html>
