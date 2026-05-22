@@ -261,6 +261,13 @@
 				}
 			}
 
+			/* Reset profile-image upscale when columns stack so it doesn't overlap the CTA buttons */
+			@media screen and (max-width: 1000px) {
+				#header img[src="images/OfficeBackgroundMe.png"] {
+					transform: none;
+				}
+			}
+
 			/* Project Images Styling */
 			.project-image {
 				width: 100%;
