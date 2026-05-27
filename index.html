@@ -639,6 +639,37 @@
 				color: var(--accent-primary-hover);
 			}
 
+			/* Project card buttons. The section now sits on white, but the
+			   template's .dark .button rule (main.css ~2057) paints buttons
+			   white-on-white — invisible. Repaint the primary action (Live
+			   Demo, footer CTAs) teal solid, and the repo link teal outline. */
+			#projects .content .button:not(.disabled) {
+				background: var(--accent-primary);
+				box-shadow: none;
+				color: #ffffff;
+				border: 2px solid var(--accent-primary);
+			}
+
+			#projects .content .button:not(.disabled):hover {
+				background: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
+			}
+
+			#projects .content .button.alt {
+				background: transparent;
+				color: var(--accent-primary);
+			}
+
+			#projects .content .button.alt:hover {
+				background: rgba(15, 118, 110, 0.08);
+				color: var(--accent-primary-hover);
+				border-color: var(--accent-primary-hover);
+			}
+
+			#projects .content .button .icon {
+				margin-right: 0.5em;
+			}
+
 			/* Feature icons on light sections.
 			   The template's .dark .feature-icon .icon rule (main.css ~line 2134)
 			   paints the inner FA glyph white with a white-glass disc, designed
@@ -1300,6 +1331,7 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="https://huggingface.co/spaces/jlazoflores/instructor_assistant" class="button" target="_blank">Live Demo</a>
+											<a href="https://github.com/lazo-flores/instructor_assistant" class="button alt" target="_blank" rel="noopener"><span class="icon brands fa-github" aria-hidden="true"></span>View Code</a>
 									</div>
 								</section>
 							</div>
@@ -1323,6 +1355,7 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="https://huggingface.co/spaces/jlazoflores/deep_research" class="button" target="_blank">Live Demo</a>
+											<a href="https://github.com/lazo-flores/deep_research" class="button alt" target="_blank" rel="noopener"><span class="icon brands fa-github" aria-hidden="true"></span>View Code</a>
 									</div>
 								</section>
 							</div>
@@ -1377,6 +1410,7 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="https://0758b91d9bab673c2a.gradio.live" class="button" target="_blank">Live Demo</a>
+											<a href="https://github.com/lazo-flores/proof_reader" class="button alt" target="_blank" rel="noopener"><span class="icon brands fa-github" aria-hidden="true"></span>View Code</a>
 									</div>
 								</section>
 							</div>
@@ -1400,6 +1434,7 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="https://huggingface.co/spaces/jlazoflores/universal_translator" class="button" target="_blank">Live Demo</a>
+											<a href="https://github.com/lazo-flores/universal_translator" class="button alt" target="_blank" rel="noopener"><span class="icon brands fa-github" aria-hidden="true"></span>View Code</a>
 									</div>
 								</section>
 							</div>
@@ -1422,6 +1457,7 @@
 									</div>
 									<div style="margin-top: 1.5em; display: flex; gap: 0.75em; flex-wrap: wrap; justify-content: center;">
 										<a href="https://huggingface.co/spaces/jlazoflores/Language_Tutor" class="button" target="_blank">Live Demo</a>
+											<a href="https://github.com/lazo-flores/language_tutor" class="button alt" target="_blank" rel="noopener"><span class="icon brands fa-github" aria-hidden="true"></span>View Code</a>
 									</div>
 								</section>
 							</div>
