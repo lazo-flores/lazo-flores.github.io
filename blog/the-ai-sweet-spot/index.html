@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>The AI Sweet Spot &mdash; How to Identify Tasks Worth Automating | Jose Lazo-Flores</title>
+		<title>The AI Sweet Spot: How to Identify Tasks Worth Automating | Jose Lazo-Flores</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Most AI initiatives fail because someone tried to AI-ify the wrong task. The AI Sweet Spot is a rubric for finding the tasks that are actually worth automating." />
@@ -129,6 +129,11 @@
 				font-size: 0.95em;
 				margin: 0;
 				font-weight: 300;
+			}
+
+			#post-hero .post-meta .sep {
+				margin: 0 0.6em;
+				opacity: 0.5;
 			}
 
 			@media screen and (max-width: 736px) {
@@ -257,7 +262,7 @@
 			<div class="container">
 				<a class="back-link" href="../../index.html#insights">&larr; Back to Insights</a>
 				<h1>The AI Sweet Spot: How to Tell Which Tasks Are Actually Worth Automating</h1>
-				<p class="post-meta">6 minute read</p>
+				<p class="post-meta">Published June 8, 2026 <span class="sep">&middot;</span> 6 minute read</p>
 			</div>
 		</section>
 
@@ -268,11 +273,11 @@
 
 					<p>Most AI initiatives fail because someone tried to AI-ify the wrong task.</p>
 
-					<p>I&rsquo;ve seen this pattern in every workshop I&rsquo;ve run. A team leader gets ChatGPT Enterprise licences, picks the most visible bottleneck in their function, asks the AI to handle it, and reports back two weeks later that &ldquo;it just doesn&rsquo;t work for us.&rdquo; On closer inspection, the task itself was the problem &mdash; not the AI, not the prompt, not the tooling.</p>
+					<p>I&rsquo;ve seen this pattern repeatedly: in consulting engagements across industries, in implementation conversations, and in my own production AI work. A team leader gets ChatGPT Enterprise licences, picks the most visible bottleneck in their function, asks the AI to handle it, and reports back two weeks later that &ldquo;it just doesn&rsquo;t work for us.&rdquo; On closer inspection, the task itself was the problem, not the AI, the prompt, or the tooling.</p>
 
 					<p>There&rsquo;s a structural reason this happens. The visibility of a task often has nothing to do with its suitability for AI. The most painful task isn&rsquo;t always the most automatable. The most repeated task isn&rsquo;t always worth the upfront prompt-engineering investment. The task your boss keeps asking about may be exactly the task AI is worst at.</p>
 
-					<p>After watching teams burn cycles on the wrong tasks, I built a rubric I now use in every audit and every workshop. I call it the <strong>AI Sweet Spot</strong>.</p>
+					<p>To address this systematically, I built a rubric: the <strong>AI Sweet Spot</strong>. It&rsquo;s the foundation of every audit I design and the diagnostic that opens the corporate AI workshop curriculum.</p>
 
 					<h2>The four properties</h2>
 
@@ -280,13 +285,13 @@
 
 					<h3>High repetition</h3>
 
-					<p>The task is done often &mdash; weekly, daily, multiple times per day. Investment in a prompt template, a custom GPT, or an automation pays back many times over.</p>
+					<p>The task comes up weekly, daily, or sometimes several times a day. Investment in a prompt template, a custom GPT, or an automation pays back many times over.</p>
 
 					<p>Tasks done once a year don&rsquo;t fit, even if they&rsquo;re painful. Tasks done once a quarter rarely fit either. The repetition has to be high enough that the time spent making the task AI-ready is amortised across many uses.</p>
 
 					<h3>Language-heavy</h3>
 
-					<p>The task is primarily about reading, writing, or transforming text. This is AI&rsquo;s core competency &mdash; drafting, summarising, translating, restructuring, brainstorming.</p>
+					<p>The task is primarily about reading, writing, or transforming text. This is AI&rsquo;s core competency: drafting, summarising, translating, restructuring, brainstorming.</p>
 
 					<p>Tasks that are primarily about math, physical work, real-time data retrieval, or personal judgment don&rsquo;t fit. AI can support these but is rarely the leverage point. The leverage is at the language layer.</p>
 
@@ -294,13 +299,13 @@
 
 					<p>Mistakes are recoverable. The output will be reviewed before it reaches its final destination.</p>
 
-					<p>High-stakes work &mdash; board memos, regulatory filings, contracts going directly to clients &mdash; needs AI as a draft accelerator, not as a final-output generator. The Sweet Spot is the zone where a 90%-good first draft saves significant time without creating risk.</p>
+					<p>Work like board memos, regulatory filings, or contracts that go straight to a client needs AI as a draft accelerator, not a final-output generator. The Sweet Spot is the zone where a 90%-good first draft saves significant time without creating risk.</p>
 
 					<h3>Privacy-safe</h3>
 
 					<p>The task doesn&rsquo;t require sharing customer PII, regulated data, salaries, confidential strategy, or other sensitive information with an external AI tool.</p>
 
-					<p>For sensitive tasks, AI may still apply &mdash; but via a privately-deployed tool with appropriate data residency guarantees. The cost and complexity rise accordingly.</p>
+					<p>Sensitive tasks can still use AI, but only through a privately deployed tool with the right data-residency guarantees. The cost and complexity rise accordingly.</p>
 
 					<h2>How to use the rubric</h2>
 
@@ -315,7 +320,7 @@
 
 					<p>Tasks that score high on all four (and &ldquo;yes&rdquo; on privacy) are your top candidates. Tasks that score three of four are workable with caveats. Tasks that score two or fewer are probably not worth the investment.</p>
 
-					<h2>What scores in the Sweet Spot &mdash; real examples</h2>
+					<h2>What scores in the Sweet Spot: real examples</h2>
 
 					<p>These are the kinds of tasks where AI consistently delivers outsized leverage:</p>
 
@@ -325,7 +330,7 @@
 						<li><strong>Generating brainstorm options within explicit constraints.</strong> Useful when you need volume of ideas to filter. Language-heavy. Low stakes (you pick what survives).</li>
 						<li><strong>Rewriting drafts in different tones or for different audiences.</strong> A &ldquo;translate this to a CEO tone&rdquo; or &ldquo;make this more direct&rdquo; pass. Pure transformation. High leverage.</li>
 						<li><strong>Extracting action items from long Slack threads.</strong> Common pattern. AI is good at this; humans are bad at it.</li>
-						<li><strong>Templatising recurring document types.</strong> Job descriptions, briefs, status updates, agendas &mdash; anything that follows a stable structure but needs custom content.</li>
+						<li><strong>Templatising recurring document types.</strong> Job descriptions, briefs, status updates, agendas, and anything else that follows a stable structure but needs custom content.</li>
 					</ul>
 
 					<h2>What scores outside the Sweet Spot</h2>
@@ -345,24 +350,24 @@
 					<p>For organisational AI strategy, the Sweet Spot rubric scales into a matrix. Every identified task gets plotted on two axes:</p>
 
 					<ul>
-						<li><strong>Impact</strong> &mdash; how much time, money, or risk is at stake?</li>
-						<li><strong>Suitability</strong> &mdash; how many Sweet Spot properties does the task meet?</li>
+						<li><strong>Impact</strong>: how much time, money, or risk is at stake?</li>
+						<li><strong>Suitability</strong>: how many Sweet Spot properties does the task meet?</li>
 					</ul>
 
 					<p>The four quadrants are diagnostic:</p>
 
 					<ul>
-						<li><strong>Quick Wins</strong> (high impact + high suitability) &mdash; start here. Immediate engagement candidates.</li>
-						<li><strong>Worth Exploring</strong> (lower impact + high suitability) &mdash; pilot territory. Try, learn, iterate.</li>
-						<li><strong>Process Improvement First</strong> (high impact + low suitability) &mdash; fix the process before adding AI. The pain you&rsquo;re feeling is structural, not AI-solvable.</li>
-						<li><strong>Leave Alone</strong> (low impact + low suitability) &mdash; no leverage. Move on.</li>
+						<li><strong>Quick Wins</strong> (high impact + high suitability): start here. These are your immediate engagement candidates.</li>
+						<li><strong>Worth Exploring</strong> (lower impact + high suitability): pilot territory. Try, learn, iterate.</li>
+						<li><strong>Process Improvement First</strong> (high impact + low suitability): fix the process before you add AI. The pain you&rsquo;re feeling is structural, not AI-solvable.</li>
+						<li><strong>Leave Alone</strong> (low impact + low suitability): no leverage, so move on.</li>
 					</ul>
 
 					<p>This matrix is the centerpiece deliverable of the AI Opportunity Audit. It produces a defensible prioritisation for AI investment that survives stakeholder scrutiny.</p>
 
 					<h2>Why teams skip this step</h2>
 
-					<p>The Sweet Spot rubric is unglamorous. It involves asking unsexy questions about boring tasks. Leadership often wants AI to address the visible problem &mdash; the slow process everyone complains about, the cost center that draws board attention &mdash; rather than the small, repetitive tasks that are actually leverageable.</p>
+					<p>The Sweet Spot rubric is unglamorous. It involves asking unsexy questions about boring tasks. Leadership usually wants AI pointed at whatever is most visible, the slow process everyone complains about or the cost center that draws board attention. The small, repetitive tasks that actually have leverage tend to get overlooked.</p>
 
 					<p>The trap: applying AI to the visible problem when the visible problem doesn&rsquo;t fit the Sweet Spot is how you end up two months in with no measurable result. Then you&rsquo;ve burned political capital and the next AI initiative becomes harder to fund.</p>
 
@@ -373,20 +378,20 @@
 					<p>The Sweet Spot rubric is one of three frameworks I use in corporate AI work:</p>
 
 					<ul>
-						<li>The <a href="../the-5-ps-of-prompting/">5 P&rsquo;s of Prompting</a> &mdash; how to construct prompts that work.</li>
-						<li><strong>The AI Sweet Spot</strong> &mdash; how to know which tasks to prompt for.</li>
-						<li>The workshop adoption methodology (<a href="../why-corporate-ai-training-fails-by-friday/">why most corporate AI training fails by Friday</a>) &mdash; how to make AI a daily habit rather than a workshop high.</li>
+						<li>The <a href="../the-5-ps-of-prompting/">5 P&rsquo;s of Prompting</a>: how to construct prompts that work.</li>
+						<li><strong>The AI Sweet Spot</strong>: how to know which tasks to prompt for.</li>
+						<li>The workshop adoption methodology (<a href="../why-corporate-ai-training-fails-by-friday/">why most corporate AI training fails by Friday</a>): how to make AI a daily habit rather than a workshop high.</li>
 					</ul>
 
 					<p>The three work together. The 5 P&rsquo;s is useless on the wrong task. The Sweet Spot is useless without a methodology for actually using AI on the right tasks. The adoption work is useless if the underlying tooling and process aren&rsquo;t sound.</p>
 
-					<p>For most teams I work with, the audit starts with the Sweet Spot rubric, then surfaces the right tasks, then plans the workshop and implementation work around them.</p>
+					<p>The audit is built to start with the Sweet Spot rubric: surface the right tasks first, then plan the workshop and implementation work around them.</p>
 
 					<hr />
 
 					<div class="post-cta">
-						<p>The Sweet Spot rubric is part of the AI Opportunity Audit &mdash; a structured assessment of where AI can deliver value across your organisation, and just as importantly, where it can&rsquo;t.</p>
-						<p><a href="../../consulting.html">Chat with my AI discovery assistant</a> or <a href="../../consulting.html">book a 45-min discovery call</a> to discuss whether an audit is the right next step for your team.</p>
+						<p>The Sweet Spot rubric is part of the AI Opportunity Audit, a structured assessment of where AI can deliver value across your organisation and, just as importantly, where it can&rsquo;t.</p>
+						<p><a href="../../consulting.html">Chat with my AI discovery assistant</a> or <a href="../../consulting.html#consulting-cta">book a 45-min discovery call</a> to discuss whether an audit is the right next step for your team.</p>
 					</div>
 
 				</div>
@@ -417,6 +422,9 @@
 
 		<!-- Clicky Analytics -->
 		<script async data-id="101496361" src="https://static.getclicky.com/js"></script>
+
+		<!-- Augself Discovery Assistant Widget -->
+		<script src="https://augself.ai/widget.js" data-twin="discovery" data-position="right" data-color="#0F766E" async></script>
 
 	</body>
 </html>

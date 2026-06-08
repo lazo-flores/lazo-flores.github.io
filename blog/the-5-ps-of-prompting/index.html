@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>The 5 P&rsquo;s of Prompting &mdash; A Framework for Non-Technical Teams | Jose Lazo-Flores</title>
+		<title>The 5 P&rsquo;s of Prompting: A Framework for Non-Technical Teams | Jose Lazo-Flores</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Most prompt engineering frameworks were built by engineers for engineers. The 5 P's of Prompting is the methodology I built for non-technical business teams." />
@@ -19,7 +19,7 @@
 				--accent-secondary: #1E40AF;
 			}
 
-			/* Navigation Bar — same as other pages */
+			/* Navigation Bar - same as other pages */
 			#nav {
 				position: fixed;
 				top: 0;
@@ -91,7 +91,7 @@
 				#nav .nav-links { flex-wrap: wrap; justify-content: center; gap: 0.75em; }
 			}
 
-			/* Article hero — dark, content-led */
+			/* Article hero - dark, content-led */
 			#post-hero {
 				background: linear-gradient(135deg, #2f3538 0%, #1a1f22 100%);
 				color: #ffffff;
@@ -310,7 +310,7 @@
 
 					<p>Most prompt engineering advice was written by prompt engineers, for prompt engineers. That&rsquo;s the problem.</p>
 
-					<p>When I designed my corporate AI workshop curriculum for non-technical business teams &mdash; built around marketing managers, ops leads, HR directors who use AI in their daily work but aren&rsquo;t technical &mdash; the first design challenge was prompt engineering. I started where anyone would: with the established frameworks online. CRISPE. CO-STAR. RTF. RTC. ICIO. Each one is structurally sound. Each one assumes its reader thinks like a software engineer.</p>
+					<p>My audience was non-technical business teams: marketing managers, ops leads, and HR directors who use AI in their daily work but aren&rsquo;t engineers. When I designed the corporate AI workshop curriculum for them, the first design challenge was prompt engineering. I started where anyone would, with the established frameworks online. CRISPE. CO-STAR. RTF. RTC. ICIO. Each one is structurally sound. Each one assumes its reader thinks like a software engineer.</p>
 
 					<p>A marketing manager who&rsquo;s been writing copy for fifteen years doesn&rsquo;t need to learn what a &ldquo;system message&rdquo; is. She needs a memorable, transferable model for what makes one prompt work and another fail. After working through how each existing framework would actually land with non-technical audiences, I gave up on retrofitting them and built my own.</p>
 
@@ -320,7 +320,7 @@
 
 					<p>A prompt that actually produces useful output has five distinct components. Most failing prompts are failing on one of these.</p>
 
-					<h3>1. Premise &mdash; what&rsquo;s the situation?</h3>
+					<h3>1. Premise: what&rsquo;s the situation?</h3>
 
 					<p>The premise is the context the AI needs to understand the task: audience, goal, constraints, relevant background.</p>
 
@@ -328,7 +328,7 @@
 
 					<p>The quality bar: a colleague reading just the premise should understand what&rsquo;s being attempted.</p>
 
-					<h3>2. Persona &mdash; what role should the AI take?</h3>
+					<h3>2. Persona: what role should the AI take?</h3>
 
 					<p>The persona is who the AI is being asked to be while completing the task. This is the single highest-leverage element. AI defaults to a generic helpful voice; specifying a persona shifts both substance and tone.</p>
 
@@ -336,25 +336,25 @@
 
 					<p>A useful test: can you name a real person or role who would produce this output? If yes, you have a usable persona. If no, you don&rsquo;t.</p>
 
-					<h3>3. Pattern &mdash; what does good look like?</h3>
+					<h3>3. Pattern: what does good look like?</h3>
 
 					<p>The pattern is the example. One or two demonstrations of what you want, or what you want to avoid.</p>
 
 					<p>AI matches patterns better than instructions. &ldquo;Make it punchy&rdquo; is harder for the model to interpret than &ldquo;like this: [paste a punchy example].&rdquo; A single concrete sample beats a paragraph of adjectives.</p>
 
-					<p>Counter-intuitive: more examples is not better. Three or more starts hurting output quality &mdash; the model overfits to whatever quirks are in your examples. One or two is the sweet spot.</p>
+					<p>Counter-intuitive: more examples is not better. Three or more starts hurting output quality: the model overfits to whatever quirks are in your examples. One or two is the sweet spot.</p>
 
-					<h3>4. Purpose &mdash; what specifically should it produce?</h3>
+					<h3>4. Purpose: what specifically should it produce?</h3>
 
 					<p>The purpose is the action. Verb plus deliverable. Vague purposes (&ldquo;help me with this&rdquo;) produce vague output.</p>
 
 					<p>If you&rsquo;re stacking multiple actions (&ldquo;summarise, then critique, then suggest improvements&rdquo;), don&rsquo;t. Chain prompts. Each prompt does one thing well. Stacking actions in a single prompt is how output quality collapses.</p>
 
-					<h3>5. Presentation &mdash; what format and length?</h3>
+					<h3>5. Presentation: what format and length?</h3>
 
 					<p>The presentation is the output specification. Format, length, structure.</p>
 
-					<p>Without presentation, you get whatever the AI thinks is appropriate &mdash; often wall-of-text. With presentation, you get something you can paste directly into its destination.</p>
+					<p>Without presentation, you get whatever the AI thinks is appropriate, usually a wall of text. With presentation, you get something you can paste directly into its destination.</p>
 
 					<p>&ldquo;Short and clear&rdquo; isn&rsquo;t a presentation. &ldquo;Three bullet points, 15 words maximum each, no headings, no emoji&rdquo; is.</p>
 
@@ -375,7 +375,7 @@
 					<blockquote>
 						<p>Premise: 45-minute customer call about a renewal decision. Customer is a CFO at a mid-market SaaS firm, undecided about renewing our contract.</p>
 						<p>Persona: Act as a customer success manager preparing a handoff note for the account manager.</p>
-						<p>Pattern: Useful notes look like &ldquo;Customer concerned about X &mdash; quoted Y from their email last week.&rdquo; Not useful: &ldquo;Customer talked about pricing.&rdquo;</p>
+						<p>Pattern: Useful notes look like &ldquo;Customer concerned about X, quoted Y from their email last week.&rdquo; Not useful: &ldquo;Customer talked about pricing.&rdquo;</p>
 						<p>Purpose: Extract the three concerns the customer raised, the language they used, and any specific objections.</p>
 						<p>Presentation: Three bullets. Each bullet: concern + verbatim quote + suggested response angle.</p>
 					</blockquote>
@@ -388,7 +388,7 @@
 
 					<p>It&rsquo;s tool-agnostic on purpose. Most teams will deploy multiple AI tools over the next two years; a methodology that only works in one breaks every time a new tool gets added.</p>
 
-					<p>It works for every task type. Drafting, summarising, transforming, brainstorming, analysing &mdash; the framework structures the prompt regardless of the task category.</p>
+					<p>It works for every task type. Whether you&rsquo;re drafting, summarising, transforming, brainstorming, or analysing, the framework structures the prompt regardless of the category.</p>
 
 					<p>For more on which tasks are worth automating with AI in the first place, see <a href="../the-ai-sweet-spot/">The AI Sweet Spot</a>.</p>
 
@@ -396,23 +396,23 @@
 
 					<p>Two limits worth flagging.</p>
 
-					<p><strong>It doesn&rsquo;t fix tool selection.</strong> If you&rsquo;re using AI for a task where AI is the wrong tool &mdash; real-time data retrieval, sensitive personal judgment, regulatory work that requires zero ambiguity &mdash; the 5 P&rsquo;s won&rsquo;t save you. The framework optimises prompting; it doesn&rsquo;t decide what to prompt for.</p>
+					<p><strong>It doesn&rsquo;t fix tool selection.</strong> If you&rsquo;re using AI for a task where AI is the wrong tool, like real-time data retrieval, sensitive personal judgment, or regulatory work that needs zero ambiguity, the 5 P&rsquo;s won&rsquo;t save you. The framework optimises prompting; it doesn&rsquo;t decide what to prompt for.</p>
 
-					<p><strong>It doesn&rsquo;t replace iteration.</strong> Even a well-formed prompt sometimes produces output that&rsquo;s almost-but-not-quite right. The framework gives you a diagnostic &mdash; you can identify which P needs adjustment &mdash; but you&rsquo;ll still iterate. Two or three refinements is normal; if you&rsquo;re at five and still off, restart with a different framing.</p>
+					<p><strong>It doesn&rsquo;t replace iteration.</strong> Even a well-formed prompt sometimes produces output that&rsquo;s almost-but-not-quite right. The framework gives you a diagnostic, so you can see which P needs adjusting, but you&rsquo;ll still iterate. Two or three refinements is normal; if you&rsquo;re at five and still off, restart with a different framing.</p>
 
 					<h2>How to start using it</h2>
 
 					<p>Pick one recurring task you do at least weekly. Write a prompt for it using all five P&rsquo;s, in order. Run it. Adjust the P that produced the weakest part of the output. Run again.</p>
 
-					<p>Three rounds of this with one task is usually enough to internalise the framework. After that, you don&rsquo;t need to write &ldquo;Premise:&rdquo; or &ldquo;Persona:&rdquo; labels in your prompts &mdash; the structure becomes intuitive. The labels are training wheels.</p>
+					<p>Three rounds of this with one task is usually enough to internalise the framework. After that, you don&rsquo;t need to write &ldquo;Premise:&rdquo; or &ldquo;Persona:&rdquo; labels in your prompts anymore. The structure becomes intuitive, and the labels are just training wheels.</p>
 
 					<p>The point of the framework isn&rsquo;t to give you a template. It&rsquo;s to give you a mental model for what makes a prompt work, so when one fails, you can fix it.</p>
 
 					<hr />
 
 					<div class="post-cta">
-						<p>The 5 P&rsquo;s of Prompting is the methodology spine of my corporate AI workshops. If you&rsquo;re rolling out AI in a team that doesn&rsquo;t have an AI engineer to lean on, the workshop curriculum applies the framework to your team&rsquo;s specific functions &mdash; marketing, operations, HR, sales.</p>
-						<p>Try my AI discovery assistant &mdash; the chat icon in the bottom-right corner of this page &mdash; or <a href="../../consulting.html#consulting-cta">book a 45-min discovery call</a> if it&rsquo;s relevant to your team.</p>
+						<p>The 5 P&rsquo;s of Prompting is the methodology spine of my corporate AI workshops. If you&rsquo;re rolling out AI in a team that doesn&rsquo;t have an AI engineer to lean on, the workshop curriculum applies the framework to your team&rsquo;s specific functions: marketing, operations, HR, sales.</p>
+						<p><a href="../../consulting.html">Chat with my AI discovery assistant</a> or <a href="../../consulting.html#consulting-cta">book a 45-min discovery call</a> if it&rsquo;s relevant to your team.</p>
 					</div>
 
 				</div>
