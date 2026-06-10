@@ -6,14 +6,14 @@
 -->
 <html>
 	<head>
-		<title>Consulting | Jose Lazo-Flores, Ph.D.</title>
+		<title>AI Consulting | Jose Lazo-Flores, Ph.D.</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Senior AI Consultant for SMBs and financial services. Strategic Advisory, AI Workshops & Training, and AI Implementation. Zurich-based." />
 		<link rel="icon" type="image/png" href="images/Avatar.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Brand palette — teal primary, indigo secondary */
+			/* Brand palette - teal primary, indigo secondary */
 			:root {
 				--accent-primary: #0F766E;
 				--accent-primary-hover: #0b5e58;
@@ -175,7 +175,7 @@
 				}
 			}
 
-			/* Three Services — light cards on white surface */
+			/* Three Services - light cards on white surface */
 			.service-cards {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
@@ -484,7 +484,7 @@
 				border-top: none;
 			}
 
-			/* 5 P's list dividers — flip from white-on-dark to gray-on-white */
+			/* 5 P's list dividers - flip from white-on-dark to gray-on-white */
 			#consulting-methodology .method-list li {
 				border-bottom: 1px solid #e5e7eb;
 			}
@@ -497,12 +497,12 @@
 				color: var(--accent-primary);
 			}
 
-			/* Why-list — strong was white-on-dark, swap to dark-on-white */
+			/* Why-list - strong was white-on-dark, swap to dark-on-white */
 			#consulting-why .why-list strong {
 				color: #1f2937;
 			}
 
-			/* Round 5 — Also available on: platform-link cards */
+			/* Round 5 - Also available on: platform-link cards */
 			.platform-cards {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
@@ -560,7 +560,7 @@
 				color: var(--accent-primary-hover);
 			}
 
-			/* Round 2 — Footer: light gray strip, matches home page */
+			/* Round 2 - Footer: light gray strip, matches home page */
 			#footer {
 				background: #f9fafb !important;
 				color: #6b7280;
@@ -577,7 +577,7 @@
 				color: var(--accent-primary);
 			}
 
-			/* Round 5 — Override template's `p { text-align: justify }`
+			/* Round 5 - Override template's `p { text-align: justify }`
 			   (main.css:214) to remove word-river gaps. Keep centered any
 			   element where centering is the explicit design (section
 			   header intros, final-CTA copy). */
@@ -594,7 +594,7 @@
 				text-align: center;
 			}
 
-			/* Round 5 — Inline Calendly embed on Let's-talk section */
+			/* Round 5 - Inline Calendly embed on Let's-talk section */
 			#consulting-cta .calendly-inline-widget {
 				max-width: 900px;
 				margin: 0 auto;
@@ -617,6 +617,223 @@
 			#consulting-cta .contact-alt a:hover {
 				color: var(--accent-primary-hover);
 			}
+
+			/* ===== Consulting Hub v2 additions (Jun 2026 restructure) ===== */
+
+			/* Page-hero primary CTA */
+			#page-hero .button.primary-cta {
+				margin-top: 1.5em;
+				font-size: 1.05em;
+				padding: 0.8em 1.6em;
+			}
+
+			/* White surfaces for the new hub sections */
+			#consulting-who .content,
+			#consulting-start .content,
+			#consulting-insights .content {
+				background: #ffffff !important;
+				color: #4b5563;
+			}
+
+			#consulting-who > header,
+			#consulting-start > header,
+			#consulting-insights > header {
+				background: #ffffff;
+			}
+
+			#consulting-who h2,
+			#consulting-start h2,
+			#consulting-insights h2 {
+				color: #1f2937;
+			}
+
+			#consulting-who h3,
+			#consulting-start h3,
+			#consulting-insights h3 {
+				color: #1f2937;
+			}
+
+			#consulting-who p,
+			#consulting-start p,
+			#consulting-insights p {
+				color: #4b5563;
+			}
+
+			#consulting-who .content a:not(.button),
+			#consulting-start .content a:not(.button),
+			#consulting-insights .content a:not(.button) {
+				color: var(--accent-primary);
+			}
+
+			/* Who it's for */
+			.who-list {
+				list-style: disc;
+				padding-left: 1.3em;
+				margin: 0.5em 0 0;
+				max-width: 48em;
+			}
+
+			.who-list li {
+				color: #4b5563;
+				padding: 0.4em 0;
+				line-height: 1.55;
+				text-align: left;
+			}
+
+			.who-list strong {
+				color: #1f2937;
+			}
+
+			.who-note {
+				color: #6b7280;
+				font-style: italic;
+				margin-top: 1.3em;
+			}
+
+			/* Where to start - reuse the audit-box look for both offers */
+			#consulting-start .audit-box {
+				background: #f9fafb;
+				border-left: 4px solid var(--accent-primary);
+				color: #1f2937;
+				margin-bottom: 1.5em;
+			}
+
+			#consulting-start .audit-box strong {
+				color: #1f2937;
+				font-size: 1.1em;
+			}
+
+			#consulting-start .audit-box p {
+				color: #4b5563;
+			}
+
+			#consulting-start .audit-box .price {
+				color: var(--accent-primary);
+				border-top: none;
+				font-style: italic;
+			}
+
+			#consulting-start .start-talk {
+				margin-top: 1.8em;
+				text-align: center;
+			}
+
+			#consulting-start .start-talk p {
+				text-align: center;
+			}
+
+			#consulting-start .start-talk .button {
+				margin-top: 1em;
+			}
+
+			/* All-prices note under the service cards */
+			.chf-note {
+				text-align: center;
+				color: #6b7280;
+				font-style: italic;
+				font-size: 0.95em;
+				margin-top: 1.6em;
+			}
+
+			/* 3-up clickable card grids for Methodology + Insights */
+			.framework-cards,
+			.insight-cards {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5em;
+				margin: 2em 0 0;
+				max-width: none;
+			}
+
+			@media (max-width: 768px) {
+				.framework-cards,
+				.insight-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.framework-card .mini-list {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 1em 0;
+			}
+
+			.framework-card .mini-list li {
+				color: #4b5563;
+				font-size: 0.9em;
+				padding: 0.12em 0;
+				line-height: 1.45;
+				text-align: left;
+			}
+
+			.framework-card .mini-list strong {
+				color: var(--accent-primary);
+			}
+
+			/* Also-available-on: allow 3 cards across */
+			#consulting-presence .platform-cards {
+				grid-template-columns: repeat(3, 1fr);
+				max-width: 900px;
+			}
+
+			@media (max-width: 768px) {
+				#consulting-presence .platform-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			/* Section sub-nav: sticky secondary bar under the main nav */
+			html { scroll-behavior: smooth; }
+
+			#sub-nav {
+				position: sticky;
+				top: 4em;
+				z-index: 9000;
+				background: #ffffff;
+				border-bottom: 1px solid #e5e7eb;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+			}
+
+			#sub-nav .container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2em;
+				display: flex;
+				gap: 2.2em;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			#sub-nav a {
+				display: inline-block;
+				padding: 0.9em 0;
+				color: #4b5563;
+				text-decoration: none;
+				font-size: 0.9em;
+				font-weight: 500;
+				white-space: nowrap;
+				border-bottom: 2px solid transparent;
+				transition: color 0.2s ease, border-color 0.2s ease;
+			}
+
+			#sub-nav a:hover {
+				color: var(--accent-primary);
+				border-bottom-color: var(--accent-primary);
+			}
+
+			/* Offset anchored jumps so headings clear both sticky bars */
+			#consulting-services,
+			#consulting-start,
+			#consulting-methodology,
+			#consulting-insights {
+				scroll-margin-top: 7.5em;
+			}
+
+			@media screen and (max-width: 736px) {
+				#sub-nav { top: 6em; }
+				#sub-nav .container { gap: 1.2em; padding: 0 1em; }
+				#sub-nav a { font-size: 0.82em; padding: 0.7em 0; }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -632,92 +849,176 @@
 					<li><a href="consulting.html" class="active">Consulting</a></li>
 					<li><a href="index.html#platforms">Platforms</a></li>
 					<li><a href="index.html#projects">Projects</a></li>
-					<li><a href="index.html#methodology">Methodology</a></li>
-					<li><a href="index.html#insights">Insights</a></li>
 					<li><a href="index.html#contact">Contact</a></li>
 				</ul>
+			</div>
+		</nav>
+
+		<!-- Section sub-nav (sticky; jumps to the hub's main sections) -->
+		<nav id="sub-nav" aria-label="Consulting sections">
+			<div class="container">
+				<a href="#consulting-services">What I do</a>
+				<a href="#consulting-start">Where to start</a>
+				<a href="#consulting-methodology">Methodology</a>
+				<a href="#consulting-insights">Insights</a>
 			</div>
 		</nav>
 
 		<!-- Page Hero -->
 		<section id="page-hero">
 			<div class="container">
-				<h1>Consulting</h1>
-				<h2>How I work with clients</h2>
-				<p class="lead">Most AI projects stall between proof-of-concept and daily use. I help SMBs and financial services teams cross that gap &mdash; through corporate AI workshops, production LLM systems, and strategic advisory. Three services, one methodology.</p>
+				<h1>AI Consulting</h1>
+				<p class="lead">Most AI projects stall between proof-of-concept and daily use. I help teams cross that gap, with corporate AI workshops, production LLM systems, and strategic advisory. Three services, one methodology.</p>
+				<a href="#consulting-cta" class="button primary-cta">Book a 45-minute discovery call</a>
 			</div>
 		</section>
 
-		<!-- Three Services -->
+		<!-- Who it's for -->
+		<section id="consulting-who" class="main">
+			<header>
+				<div class="container">
+					<h2>Who it&rsquo;s for</h2>
+					<p>This work fits you if&hellip;</p>
+				</div>
+			</header>
+			<div class="content">
+				<div class="container medium">
+					<ul class="who-list">
+						<li>You lead a team in <strong>professional services or financial services</strong> (advisory, compliance, finance, insurance, legal, operations) in the <strong>DACH region</strong>.</li>
+						<li>Your team has tried AI tools but adoption stalled, or stayed stuck at &ldquo;a few people use ChatGPT sometimes.&rdquo;</li>
+						<li>You want AI applied to <strong>real workflows with measurable time savings</strong>, not a one-off inspirational session.</li>
+						<li>You care about doing this <strong>safely</strong>: privacy, regulated data, and where AI should not be used.</li>
+					</ul>
+					<p class="who-note">If you are looking for a quick demo or a generic &ldquo;intro to AI&rdquo; talk, I am probably not your best fit. My work is about adoption that survives the week.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- What I do - three services -->
 		<section id="consulting-services" class="main">
 			<header>
 				<div class="container">
-					<h2>Three services</h2>
-					<p>Pick the engagement that fits where you are.</p>
+					<h2>What I do</h2>
+					<p>Three services, one methodology. Pick the engagement that fits where you are.</p>
 				</div>
 			</header>
-			<div class="content dark style2">
+			<div class="content">
 				<div class="container">
 					<div class="service-cards">
 						<div class="service-card">
 							<h3>Strategic Advisory</h3>
-							<p>Executive-level guidance for leaders rolling out AI. Where to invest, where to wait, how to manage risk. Best delivered as ongoing advisory or quarterly strategic reviews.</p>
+							<p>Executive-level guidance for leaders rolling out AI. Where to invest, where to wait, how to manage risk. Typically delivered as ongoing advisory or quarterly strategic reviews.</p>
 							<p class="pricing">From CHF 1,500 per day.</p>
 						</div>
 						<div class="service-card">
 							<h3>AI Workshops &amp; Training</h3>
 							<p>Five-module corporate AI training for non-technical business teams, built around the 5 P&rsquo;s of Prompting framework. Designed for real workflow adoption, not awareness. Virtual-first; in-person available in Europe.</p>
-							<p class="pricing">From CHF 2,000 per workshop. Multi-workshop pilots: CHF 5,500&ndash;6,000 for three sessions.</p>
+							<p class="pricing">From CHF 2,000 per workshop. Multi-workshop pilots: CHF 5,500 to CHF 6,000 for three sessions.</p>
 						</div>
 						<div class="service-card">
 							<h3>AI Implementation</h3>
-							<p>Production AI systems: RAG-based assistants, multi-agent architectures, custom LLM integrations. Same architectural patterns used in Augself.ai, EnableMate.ai, and the Swing Trader autonomous trading system.</p>
-							<p class="pricing">Project-based, from CHF 130/hour or fixed scope.</p>
+							<p>Production AI systems: RAG-based assistants, multi-agent architectures, custom LLM integrations. The same architectural patterns behind Augself.ai, EnableMate.ai, and my Swing Trader autonomous trading system.</p>
+							<p class="pricing">Project-based, from CHF 130 per hour or fixed scope.</p>
 						</div>
 					</div>
+					<p class="chf-note">All prices are in CHF. A quote in EUR or USD is available on request.</p>
 				</div>
 			</div>
 		</section>
 
-		<!-- Audit Funnel -->
-		<section id="consulting-audit" class="main">
+		<!-- Where to start -->
+		<section id="consulting-start" class="main">
 			<header>
 				<div class="container">
-					<h2>The audit &mdash; where to start if you&rsquo;re not sure</h2>
-					<p>A structured assessment of where AI can deliver real value across your organization &mdash; and just as importantly, where it can&rsquo;t.</p>
+					<h2>Where to start</h2>
+					<p>Not sure which service fits? Here are three ways in.</p>
 				</div>
 			</header>
-			<div class="content dark style1">
+			<div class="content">
 				<div class="container medium">
-					<p>If you&rsquo;re unsure which service fits, the AI Opportunity Audit is the entry point. It produces an AI Opportunity Map, a prioritized roadmap, and recommended engagement paths &mdash; designed to be valuable standalone, and to inform any follow-on engagements that emerge.</p>
 					<div class="audit-box">
-						<strong>AI Opportunity Audit</strong>
-						<p style="margin-top: 0.6em;">Structured 2-week engagement. Stakeholder interviews, workflow review, opportunity mapping, and a prioritized roadmap you can act on with or without me.</p>
-						<span class="price">CHF 3,500&ndash;7,500 fixed, approximately 2 weeks, multi-stakeholder.</span>
+						<strong>Start with the AI Opportunity Audit</strong>
+						<p style="margin-top: 0.6em;">A structured assessment of where AI can deliver real value across your organization, and just as importantly, where it cannot. The audit produces an AI Opportunity Map, a prioritized roadmap, and recommended engagement paths. The deliverables are designed to stand on their own, whether or not you take any follow-on work.</p>
+						<span class="price">Audit: CHF 3,500 to CHF 7,500 fixed, roughly 2 weeks, multi-stakeholder.</span>
+					</div>
+					<div class="audit-box">
+						<strong>Prefer to start small? Claude Setup &amp; Coaching</strong>
+						<p style="margin-top: 0.6em;">The 4-week Claude Setup &amp; Coaching program gets a non-technical team or owner running Claude across their daily work, with a hands-on setup and weekly coaching. A fixed-scope, lower-commitment way to begin.</p>
+						<span class="price">CHF 1,800, 4 weeks.</span>
+					</div>
+					<div class="start-talk">
+						<p><strong>Or just talk it through.</strong> The first conversation is always free: a 45-minute discovery call to understand your context and decide whether we are a fit. No obligation, no pitch deck.</p>
+						<a href="#consulting-cta" class="button primary-cta">Book a discovery call</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- 5 P's of Prompting -->
+		<!-- Methodology -->
 		<section id="consulting-methodology" class="main">
 			<header>
 				<div class="container">
-					<h2>The 5 P&rsquo;s of Prompting</h2>
-					<p>Methodology spine. A framework for non-technical teams to consistently get useful output from AI tools.</p>
+					<h2>The methodology behind the work</h2>
+					<p>Three frameworks run through every engagement. They work together: the first decides what to point AI at, the second makes the prompting reliable, the third makes the habit stick.</p>
 				</div>
 			</header>
-			<div class="content dark style2">
-				<div class="container medium">
-					<p>I developed this framework for corporate AI workshops. It&rsquo;s the structure participants use during training and carry back to their daily work.</p>
-					<ul class="method-list">
-						<li><strong>Premise</strong> &mdash; what&rsquo;s the situation? Audience, goal, constraints.</li>
-						<li><strong>Persona</strong> &mdash; what role should the AI take?</li>
-						<li><strong>Pattern</strong> &mdash; what does good look like? Show one or two examples.</li>
-						<li><strong>Purpose</strong> &mdash; what specifically should it produce?</li>
-						<li><strong>Presentation</strong> &mdash; what format and length?</li>
-					</ul>
-					<p style="margin-top: 1.5em;">More on the AI Sweet Spot and the AI Opportunity Map on the <a href="index.html#methodology">Methodology section</a>.</p>
+			<div class="content">
+				<div class="container">
+					<div class="framework-cards">
+						<a class="platform-card framework-card" href="blog/the-ai-sweet-spot/">
+							<h3>The AI Sweet Spot</h3>
+							<p>A rubric for finding the tasks where AI actually delivers, scored on four properties: high repetition, language-heavy, low-to-medium stakes, and privacy-safe. It scales into an Impact x Suitability matrix for prioritizing across a whole function. This is the diagnostic that opens every audit and workshop.</p>
+							<span class="platform-link">Read the full rubric &rarr;</span>
+						</a>
+						<a class="platform-card framework-card" href="blog/the-5-ps-of-prompting/">
+							<h3>The 5 P&rsquo;s of Prompting</h3>
+							<p>The framework I designed so non-technical teams can consistently get useful output from AI tools:</p>
+							<ul class="mini-list">
+								<li><strong>Premise</strong>: what&rsquo;s the situation?</li>
+								<li><strong>Persona</strong>: what role should the AI take?</li>
+								<li><strong>Pattern</strong>: what does good look like?</li>
+								<li><strong>Purpose</strong>: what should it produce?</li>
+								<li><strong>Presentation</strong>: what format and length?</li>
+							</ul>
+							<span class="platform-link">Read the framework &rarr;</span>
+						</a>
+						<a class="platform-card framework-card" href="blog/why-corporate-ai-training-fails-by-friday/">
+							<h3>The adoption methodology</h3>
+							<p>Most corporate AI training is forgotten by Friday. The fix is structural: function-specific content, exercises that produce reusable artifacts, and peer accountability rhythms for the first 30 days. This is the backbone of the five-module workshop curriculum.</p>
+							<span class="platform-link">Read why training fails by Friday &rarr;</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Insights -->
+		<section id="consulting-insights" class="main">
+			<header>
+				<div class="container">
+					<h2>Insights</h2>
+					<p>Writing on putting AI to work in real businesses.</p>
+				</div>
+			</header>
+			<div class="content">
+				<div class="container">
+					<div class="insight-cards">
+						<a class="platform-card" href="blog/the-ai-sweet-spot/">
+							<h3>The AI Sweet Spot</h3>
+							<p>How to tell which tasks are actually worth automating.</p>
+							<span class="platform-link">Read article &rarr;</span>
+						</a>
+						<a class="platform-card" href="blog/the-5-ps-of-prompting/">
+							<h3>The 5 P&rsquo;s of Prompting</h3>
+							<p>A framework built for non-technical teams.</p>
+							<span class="platform-link">Read article &rarr;</span>
+						</a>
+						<a class="platform-card" href="blog/why-corporate-ai-training-fails-by-friday/">
+							<h3>Why most corporate AI training fails by Friday</h3>
+							<p>And what makes it stick.</p>
+							<span class="platform-link">Read article &rarr;</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -733,11 +1034,11 @@
 			<div class="content dark style1">
 				<div class="container medium">
 					<ul class="why-list">
-						<li><strong>Ph.D. in Physics</strong> &mdash; scientific rigor in every assessment.</li>
-						<li><strong>3+ years at Credit Suisse</strong> &mdash; regulated-sector experience on Palantir Foundry: trade surveillance, regulatory compliance, cybersecurity, holistic risk management.</li>
-						<li><strong>Cross-industry consulting</strong> &mdash; healthcare, energy, insurance, transportation, telecommunications, banking.</li>
-						<li><strong>Production AI platforms built</strong> &mdash; Augself.ai, EnableMate.ai, Swing Trader.</li>
-						<li><strong>Zurich-based, Swiss C Permit</strong> &mdash; available across the DACH region for in-person workshops and audits.</li>
+						<li><strong>Ph.D. in Physics</strong>: scientific rigor in every assessment.</li>
+						<li><strong>3+ years at Credit Suisse</strong>: regulated-sector experience on Palantir Foundry, including trade surveillance, regulatory compliance, cybersecurity, and the holistic risk management framework.</li>
+						<li><strong>Cross-industry consulting</strong>: healthcare, energy, insurance, transportation, telecommunications, banking.</li>
+						<li><strong>Production AI platforms built</strong>: Augself.ai, EnableMate.ai, Swing Trader.</li>
+						<li><strong>Zurich-based, Swiss C Permit</strong>: available across the DACH region for in-person workshops and audits.</li>
 					</ul>
 				</div>
 			</div>
@@ -760,8 +1061,13 @@
 						</a>
 						<a class="platform-card" href="https://www.upwork.com/services/product/development-it-an-ai-strategy-consultation-with-a-prioritised-implementation-roadmap-2051343532840256618?ref=project_share" target="_blank" rel="noopener">
 							<h3>Upwork</h3>
-							<p>AI Strategy Consultation with a prioritised implementation roadmap &mdash; a fixed-scope engagement for organisations exploring where AI fits in their business.</p>
+							<p>AI Strategy Consultation with a prioritised implementation roadmap, a fixed-scope engagement for organisations exploring where AI fits in their business.</p>
 							<span class="platform-link">View this Upwork offering &rarr;</span>
+						</a>
+						<a class="platform-card" href="https://www.linkedin.com/in/jose-lazo-flores-52b21a82/" target="_blank" rel="noopener">
+							<h3>LinkedIn</h3>
+							<p>Follow my work and writing on putting AI to work in professional and financial services.</p>
+							<span class="platform-link">Connect on LinkedIn &rarr;</span>
 						</a>
 					</div>
 				</div>
@@ -772,8 +1078,8 @@
 		<section id="consulting-cta" class="main">
 			<header>
 				<div class="container">
-					<h2>Let&rsquo;s talk</h2>
-					<p>The first conversation is always free. A 45-minute discovery call to understand your context and decide whether we&rsquo;re a fit. Pick a time below &mdash; no obligation, no pitch deck.</p>
+					<h2>The first conversation is free</h2>
+					<p>A 45-minute discovery call to understand your context and decide whether we are a fit. Pick a time below. No obligation, no pitch deck.</p>
 				</div>
 			</header>
 			<div class="content style4 featured">
@@ -812,7 +1118,7 @@
 		<!-- Clicky Analytics -->
 		<script async data-id="101496361" src="https://static.getclicky.com/js"></script>
 
-		<!-- AI Twin Widget — Discovery Assistant (consulting page only) -->
+		<!-- AI Twin Widget - Discovery Assistant (consulting page only) -->
 		<script src="https://augself.ai/widget.js" data-twin="discovery" data-position="right" data-color="#0F766E" async></script>
 
 		<!-- AI Twin Widget Label -->
