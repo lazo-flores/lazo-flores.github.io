@@ -12,7 +12,7 @@
 		<link rel="icon" type="image/png" href="images/Avatar.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Brand palette — teal primary, indigo secondary */
+			/* Brand palette - teal primary, indigo secondary */
 			:root {
 				--accent-primary: #0F766E;
 				--accent-primary-hover: #0b5e58;
@@ -377,7 +377,7 @@
 				}
 			}
 
-			/* Primary CTA button (teal) — usable outside the header */
+			/* Primary CTA button (teal) - usable outside the header */
 			.button.primary-cta {
 				background: var(--accent-primary);
 				color: #ffffff;
@@ -389,7 +389,7 @@
 				border-color: var(--accent-primary-hover);
 			}
 
-			/* Contact CTA — focused conversion block */
+			/* Contact CTA - focused conversion block */
 			.contact-cta {
 				text-align: center;
 				max-width: 640px;
@@ -587,7 +587,7 @@
 			}
 
 			/* ------------------------------------------------------------------
-			   Round 2 — propagate the consulting page's visual pattern to the
+			   Round 2 - propagate the consulting page's visual pattern to the
 			   home page. HTML5 UP "Tessellate" gradients on .content.style1/2/3
 			   clash with the brand palette; force white surfaces for the
 			   content-dense sections (About, Experience, Projects) and recolor
@@ -641,7 +641,7 @@
 
 			/* Project card buttons. The section now sits on white, but the
 			   template's .dark .button rule (main.css ~2057) paints buttons
-			   white-on-white — invisible. Repaint the primary action (Live
+			   white-on-white - invisible. Repaint the primary action (Live
 			   Demo, footer CTAs) teal solid, and the repo link teal outline. */
 			#projects .content .button:not(.disabled) {
 				background: var(--accent-primary);
@@ -693,7 +693,7 @@
 				background: rgba(15, 118, 110, 0.4);
 			}
 
-			/* Round 2 — Platforms showcase: solid navy with teal accents.
+			/* Round 2 - Platforms showcase: solid navy with teal accents.
 			   This is the "exhibit" section punctuating the page between the
 			   light About/Experience and the light Projects below. */
 			#platforms {
@@ -752,7 +752,7 @@
 				color: #ffffff;
 			}
 
-			/* Round 2 — Contact: dark closing punctuation with a single
+			/* Round 2 - Contact: dark closing punctuation with a single
 			   top accent so it visually anchors the bottom of the page. */
 			#contact {
 				border-top: 3px solid var(--accent-primary);
@@ -801,7 +801,7 @@
 				border-color: var(--accent-primary-hover);
 			}
 
-			/* Round 2 — Footer: light gray strip, matches consulting page */
+			/* Round 2 - Footer: light gray strip, matches consulting page */
 			#footer {
 				background: #f9fafb !important;
 				color: #6b7280;
@@ -818,7 +818,7 @@
 				color: var(--accent-primary);
 			}
 
-			/* Round 3 — Methodology and Insights: white surfaces matching
+			/* Round 3 - Methodology and Insights: white surfaces matching
 			   the rest of the home page's content rhythm. Round 2 deferred
 			   these. Same override pattern as About/Experience/Projects. */
 			#methodology .content,
@@ -875,7 +875,7 @@
 				color: #1f2937;
 			}
 
-			/* Round 4 — Methodology vertical rhythm.
+			/* Round 4 - Methodology vertical rhythm.
 			   Each subsection lives in its own <section class="method-block">
 			   wrapper, so :first-of-type on h3 doesn't work (each is the
 			   first-of-type within its own parent). Target the wrapper
@@ -910,7 +910,7 @@
 				line-height: 1.6;
 			}
 
-			/* Round 4 — Standardize section padding for consistent vertical
+			/* Round 4 - Standardize section padding for consistent vertical
 			   rhythm. The template applies .main > .content { padding: 6em 0 }
 			   but special-cases .style4 to padding-top: 0 (main.css:2264),
 			   which was making the Contact section feel tight compared to the
@@ -951,7 +951,7 @@
 				}
 			}
 
-			/* Round 5 — Override template's `p { text-align: justify }`
+			/* Round 5 - Override template's `p { text-align: justify }`
 			   (main.css:214) to remove word-river gaps. Keep centered any
 			   element where centering is the explicit design (section
 			   header intros, the Contact CTA copy, final-CTA copy). */
@@ -970,6 +970,56 @@
 			.section-intro {
 				text-align: center;
 			}
+			/* Consulting banner (business front door) */
+			#consulting-banner {
+				background: #f8fafa;
+				border-bottom: 3px solid var(--accent-primary);
+				padding: 2.6em 0;
+			}
+			#consulting-banner .container {
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 0 2em;
+				text-align: center;
+			}
+			#consulting-banner .eyebrow {
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				font-size: 0.8em;
+				font-weight: 600;
+				color: var(--accent-primary);
+				margin: 0 0 0.5em;
+			}
+			#consulting-banner h2 {
+				color: #1f2937;
+				font-size: 1.9em;
+				line-height: 1.2;
+				margin: 0 0 0.4em;
+			}
+			#consulting-banner .banner-subhead {
+				color: #4b5563;
+				max-width: 46em;
+				margin: 0 auto 1.4em;
+				line-height: 1.6;
+			}
+			#consulting-banner .banner-actions {
+				display: flex;
+				gap: 0.8em;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			#consulting-banner .button.banner-secondary {
+				background: transparent;
+				color: var(--accent-primary);
+				border: 2px solid var(--accent-primary);
+			}
+			#consulting-banner .button.banner-secondary:hover {
+				background: rgba(15,118,110,0.08);
+			}
+			@media screen and (max-width: 736px) {
+				#consulting-banner { padding: 2em 0; }
+				#consulting-banner h2 { font-size: 1.45em; }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -985,12 +1035,23 @@
 					<li><a href="consulting.html">Consulting</a></li>
 					<li><a href="#platforms" class="scrolly">Platforms</a></li>
 					<li><a href="#projects" class="scrolly">Projects</a></li>
-					<li><a href="#methodology" class="scrolly">Methodology</a></li>
-					<li><a href="#insights" class="scrolly">Insights</a></li>
 					<li><a href="#contact" class="scrolly">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
+
+			<!-- Consulting Banner (business front door) -->
+			<section id="consulting-banner">
+				<div class="container">
+					<p class="eyebrow">Jose Lazo-Flores AI Consulting</p>
+					<h2>Move AI from proof-of-concept into daily use.</h2>
+					<p class="banner-subhead">I help professional-services and financial-services teams in the DACH region put AI to work where it actually pays off: corporate AI workshops, production LLM systems, and strategic advisory.</p>
+					<div class="banner-actions">
+						<a href="consulting.html" class="button primary-cta">Explore consulting</a>
+						<a href="https://calendly.com/jose-lazo-flores-1/ai-consulting-discovery-call" class="button banner-secondary" target="_blank" rel="noopener">Book a discovery call</a>
+					</div>
+				</div>
+			</section>
 
 		<!-- Header -->
 			<section id="header" class="dark">
@@ -1071,7 +1132,7 @@
 									<header>
 										<h3>Trader Contextual Surveillance</h3>
 									</header>
-									<p>At Credit Suisse, contributed to the design and implementation of the Trader Contextual Surveillance (TCS) process — a Foundry- and PySpark-based data analytics solution developed to monitor trading activities across the firm's global trading platforms. The system was designed to detect patterns of potential insider dealing and market manipulation by generating alerts for trades requiring further scrutiny. Over thirty distinct surveillance scenarios were implemented, covering a wide range of behaviors and market conditions. The project not only strengthened compliance and risk management capabilities but also identified potential regulatory loopholes that had not yet been formally recognized by market authorities.</p>
+									<p>At Credit Suisse, contributed to the design and implementation of the Trader Contextual Surveillance (TCS) process, a Foundry- and PySpark-based data analytics solution developed to monitor trading activities across the firm's global trading platforms. The system was designed to detect patterns of potential insider dealing and market manipulation by generating alerts for trades requiring further scrutiny. Over thirty distinct surveillance scenarios were implemented, covering a wide range of behaviors and market conditions. The project not only strengthened compliance and risk management capabilities but also identified potential regulatory loopholes that had not yet been formally recognized by market authorities.</p>
 								</section>
 							</div>
 							<div class="col-4 col-12-narrow">
@@ -1089,7 +1150,7 @@
 									<header>
 										<h3>Holistic Risk Management</h3>
 									</header>
-									<p>At Credit Suisse, contributed to the design and implementation of the Holistic Risk Management Framework (HRMF)— a Foundry- and PySpark-based data analytics solution developed to identify, quantify, and highlight actionable risk across the organization. The framework integrated diverse datasets from multiple business and security domains to provide a comprehensive, data-driven view of the bank's risk landscape. It implemented key metrics to evaluate the effectiveness of the bank's cybersecurity programs and enabled proactive monitoring of emerging vulnerabilities and operational risks.</p>
+									<p>At Credit Suisse, contributed to the design and implementation of the Holistic Risk Management Framework (HRMF), a Foundry- and PySpark-based data analytics solution developed to identify, quantify, and highlight actionable risk across the organization. The framework integrated diverse datasets from multiple business and security domains to provide a comprehensive, data-driven view of the bank's risk landscape. It implemented key metrics to evaluate the effectiveness of the bank's cybersecurity programs and enabled proactive monitoring of emerging vulnerabilities and operational risks.</p>
 								</section>
 							</div>
 							<div class="col-12">
@@ -1124,7 +1185,7 @@
 								<section>
 									<h3>Co-Founder & CTO | EnableMate</h3>
 									<p><em>March 2026 - Present</em></p>
-									<p>Initially engaged as an AI consultant to conduct a feasibility study for an AI-powered sales enablement platform. After validating the technical approach, joined as Co-Founder and CTO. Leading the development of the AI engine that enforces brand guidelines, tone of voice, and compliance rules, enabling sales teams to generate on-brand, compliant assets in under 40 seconds — 12x faster than manual content creation.</p>
+									<p>Initially engaged as an AI consultant to conduct a feasibility study for an AI-powered sales enablement platform. After validating the technical approach, joined as Co-Founder and CTO. Leading the development of the AI engine that enforces brand guidelines, tone of voice, and compliance rules, enabling sales teams to generate on-brand, compliant assets in under 40 seconds, 12x faster than manual content creation.</p>
 								</section>
 							</div>
 							<div class="col-12">
@@ -1202,7 +1263,7 @@
 									<img src="images/Augself.png" alt="Augself - AI Digital Twin Platform" class="project-image" />
 									<h3>Augself</h3>
 									<p><strong>Role:</strong> Founder</p>
-									<p>AI-powered digital twin platform that enables individuals, businesses, researchers, and educators to create personalized AI assistants trained on their own documents. Users upload their content — resumes, portfolios, research papers, product documentation — and Augself creates an intelligent agent using Retrieval-Augmented Generation (RAG) technology that can answer questions on their behalf 24/7.</p>
+									<p>AI-powered digital twin platform that enables individuals, businesses, researchers, and educators to create personalized AI assistants trained on their own documents. Users upload their content, resumes, portfolios, research papers, product documentation, and Augself creates an intelligent agent using Retrieval-Augmented Generation (RAG) technology that can answer questions on their behalf 24/7.</p>
 									<p>The platform features an embeddable chat widget for any website, shareable chat links, an analytics dashboard, and a privacy-first architecture with GDPR compliance and a self-hosted deployment option via Docker and Ollama.</p>
 									<p><strong>Technologies:</strong></p>
 									<div class="tech-tags">
@@ -1224,8 +1285,8 @@
 									<img src="images/EnableMate.png" alt="EnableMate - AI Sales Enablement Platform" class="project-image" />
 									<h3>EnableMate</h3>
 									<p><strong>Role:</strong> Co-Founder & CTO</p>
-									<p>AI-powered sales enablement platform that bridges the gap between marketing and sales teams. Marketing defines brand guidelines, tone of voice, templates, and compliance rules in a central Brand Hub. The AI engine then enforces those rules automatically on every generated asset — no manual approvals needed.</p>
-									<p>Sales teams describe what they need in plain language and receive a finished, on-brand, compliant asset in under 40 seconds. The platform supports presentations, emails, one-pagers, and pitch decks with built-in localization for multiple languages and regional markets — 12x faster than manual content creation.</p>
+									<p>AI-powered sales enablement platform that bridges the gap between marketing and sales teams. Marketing defines brand guidelines, tone of voice, templates, and compliance rules in a central Brand Hub. The AI engine then enforces those rules automatically on every generated asset, no manual approvals needed.</p>
+									<p>Sales teams describe what they need in plain language and receive a finished, on-brand, compliant asset in under 40 seconds. The platform supports presentations, emails, one-pagers, and pitch decks with built-in localization for multiple languages and regional markets, 12x faster than manual content creation.</p>
 									<p><strong>Technologies:</strong></p>
 									<div class="tech-tags">
 										<span class="tech-tag">Python</span>
@@ -1246,7 +1307,7 @@
 									<img src="images/Swing_Trader.png" alt="AI Swing Trading Platform" class="project-image" />
 									<h3>AI Swing Trading Platform</h3>
 									<p><strong>Role:</strong> Creator</p>
-									<p>Autonomous swing trading system built on a multi-agent AI architecture. Five analyst agents — each modeled after a distinct investment philosophy — independently analyze candidate stocks using technical indicators, market context, and ML-generated signals. A manager agent orchestrates the team, synthesizing recommendations through a weighted consensus mechanism where agents earn influence based on their historical performance.</p>
+									<p>Autonomous swing trading system built on a multi-agent AI architecture. Five analyst agents, each modeled after a distinct investment philosophy, independently analyze candidate stocks using technical indicators, market context, and ML-generated signals. A manager agent orchestrates the team, synthesizing recommendations through a weighted consensus mechanism where agents earn influence based on their historical performance.</p>
 									<p>The platform incorporates ML models trained on 41 technical and market features to scan approximately 800 stocks daily. It connects directly to Schwab's trading API for live order execution with automated stop-loss enforcement, position limits, and Pattern Day Trader compliance.</p>
 									<p><strong>Technologies:</strong></p>
 									<div class="tech-tags">
@@ -1340,7 +1401,7 @@
 									<img src="images/DeepResearch.jpg" alt="Deep Research Agent" class="project-image" />
 									<h3>Deep Research Agent</h3>
 									<p>Developed a team of AI Agents designed to autonomously research user-defined topics and generate comprehensive, well-structured reports in Markdown format. Upon receiving a research request, the agents coordinate to gather and analyze information from trusted sources, synthesize key findings, and produce a concise yet thorough report complete with citations, summaries, and relevant insights.</p>
-									<p>Once the report is generated, the process continues with automated email delivery, sending the finalized Markdown document directly to the user for review or integration into existing workflows. The agents are capable of adapting their research depth and style to different domains — from technical and scientific subjects to market and business intelligence.</p>
+									<p>Once the report is generated, the process continues with automated email delivery, sending the finalized Markdown document directly to the user for review or integration into existing workflows. The agents are capable of adapting their research depth and style to different domains, from technical and scientific subjects to market and business intelligence.</p>
 									<p><strong>Technologies:</strong></p>
 									<div class="tech-tags">
 										<span class="tech-tag">Python</span>
@@ -1420,7 +1481,7 @@
 								<section>
 									<img src="images/Universal_Translator.jpg" alt="Universal Translator" class="project-image" />
 									<h3>Universal Translator</h3>
-									<p>Universal Translator is an AI-powered language companion designed to make communication effortless across borders. Using advanced machine learning models, the app automatically detects the input language—whether typed text or spoken audio—without requiring any manual selection. Its intuitive interface lets users speak, write, or upload content, and the app instantly recognizes the language in real time.</p>
+									<p>Universal Translator is an AI-powered language companion designed to make communication effortless across borders. Using advanced machine learning models, the app automatically detects the input language, whether typed text or spoken audio, without requiring any manual selection. Its intuitive interface lets users speak, write, or upload content, and the app instantly recognizes the language in real time.</p>
 									<p>Once detected, Universal Translator seamlessly delivers accurate translations into any user-defined target languages. Supporting more than 60 languages out of the box, it offers extensive global coverage, with the flexibility to add new languages on demand. Whether for travel, business, or everyday conversations, Universal Translator empowers users to understand and be understood anywhere in the world.</p>
 									<p><strong>Technologies:</strong></p>
 									<div class="tech-tags">
@@ -1471,290 +1532,6 @@
 									</div>
 									<a href="#contact" class="button scrolly">Get In Touch</a>
 								</footer>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<!-- Methodology -->
-			<section id="methodology" class="main">
-				<header>
-					<div class="container">
-						<h2>Methodology</h2>
-						<p>How I think about AI adoption: a prompting framework, a rubric for picking workflows, and a map for prioritizing investments.</p>
-					</div>
-				</header>
-				<div class="content dark style2">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<section class="method-block">
-									<h3>The 5 P&rsquo;s of Prompting</h3>
-									<p>A framework I developed for corporate AI workshops. For non-technical teams to consistently get useful output from AI tools:</p>
-									<ul class="method-list">
-										<li><strong>Premise</strong> &mdash; what&rsquo;s the situation? Audience, goal, constraints.</li>
-										<li><strong>Persona</strong> &mdash; what role should the AI take?</li>
-										<li><strong>Pattern</strong> &mdash; what does good look like? Show one or two examples.</li>
-										<li><strong>Purpose</strong> &mdash; what specifically should it produce?</li>
-										<li><strong>Presentation</strong> &mdash; what format and length?</li>
-									</ul>
-									<p style="margin-top: 1em;">Used as the spine of the <a href="consulting.html">corporate AI workshops</a>.</p>
-								</section>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<section class="method-block">
-									<h3>The AI Sweet Spot</h3>
-									<p>A rubric for deciding whether a task is worth automating with AI. Four properties:</p>
-									<ul class="method-list">
-										<li><strong>High repetition</strong> &mdash; you do this often (weekly or daily).</li>
-										<li><strong>Language-heavy</strong> &mdash; primarily reading, writing, or transforming text.</li>
-										<li><strong>Low-to-medium stakes</strong> &mdash; mistakes are recoverable.</li>
-										<li><strong>Privacy-safe</strong> &mdash; no PII, regulated data, confidential strategy.</li>
-									</ul>
-									<p style="margin-top: 1em;">When all four apply, AI gives outsized leverage. When two or fewer apply, AI is probably more friction than help.</p>
-								</section>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<section class="method-block">
-									<h3>The AI Opportunity Map</h3>
-									<p>For audit engagements, every identified task is plotted on an Impact &times; Suitability matrix. The quadrants determine the recommendation:</p>
-									<div class="quadrant-grid">
-										<div class="quadrant quadrant-q1">
-											<h4>Quick Wins</h4>
-											<p><em>High impact &middot; high suitability</em></p>
-											<p>Immediate engagement candidates.</p>
-										</div>
-										<div class="quadrant quadrant-q2">
-											<h4>Worth Exploring</h4>
-											<p><em>Lower impact &middot; high suitability</em></p>
-											<p>Pilot territory.</p>
-										</div>
-										<div class="quadrant quadrant-q3">
-											<h4>Process Improvement First</h4>
-											<p><em>High impact &middot; low suitability</em></p>
-											<p>Fix the process before adding AI.</p>
-										</div>
-										<div class="quadrant quadrant-q4">
-											<h4>Leave Alone</h4>
-											<p><em>Lower impact &middot; low suitability</em></p>
-											<p>No leverage.</p>
-										</div>
-									</div>
-									<p style="margin-top: 1.5em;">The Opportunity Map is part of the <a href="consulting.html">AI Opportunity Audit deliverables</a>.</p>
-								</section>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<footer>
-									<a href="consulting.html" class="button">See how this maps to engagements</a>
-								</footer>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<!-- Basic Elements -->
-		<!--
-			<section class="main">
-				<header>
-					<div class="container">
-						<h2>A Whole Lotta Elements</h2>
-						<p>General purpose elements for every general purpose. Or something like that.</p>
-					</div>
-				</header>
-				<div class="content style1 dark">
-					<div class="container">
-						<section>
-							<header>
-								<h3>Paragraph</h3>
-								<p>This is a byline</p>
-							</header>
-							<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-							habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-							leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-							amet risus elit.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Blockquote</h3>
-							</header>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-							tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
-							tempus ante ipsum primis in faucibus orci luctus et ultrices.</blockquote>
-						</section>
-						<section>
-							<header>
-								<h3>Divider</h3>
-							</header>
-							<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-							<hr />
-							<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Unordered List</h3>
-							</header>
-							<ul class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ul>
-						</section>
-						<section>
-							<header>
-								<h3>Ordered List</h3>
-							</header>
-							<ol class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ol>
-						</section>
-						<section>
-							<header>
-								<h3>Table</h3>
-							</header>
-							<div class="table-wrapper">
-								<table class="default">
-									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>00001</td>
-											<td>Lorem ipsum dolor</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00002</td>
-											<td>Sit amet nullam</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00003</td>
-											<td>Feugiat felis viverra</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00004</td>
-											<td>Sagittis enim felis</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00005</td>
-											<td>Nullam sed vestibulum</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="3"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-						<section>
-							<header>
-								<h3>Form</h3>
-							</header>
-							<form method="post" action="#">
-								<div class="row gtr-50">
-									<div class="col-6 col-12-narrow">
-										<input type="text" name="name" id="name" value="" placeholder="John Doe" />
-									</div>
-									<div class="col-6 col-12-narrow">
-										<input type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-									</div>
-									<div class="col-12">
-										<div class="select" tabindex="-1">
-											<select name="department" id="department">
-												<option value="">Choose a department</option>
-												<option value="1">Manufacturing</option>
-												<option value="2">Administration</option>
-												<option value="3">Support</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Enter your message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" class="button" value="Send Message" /></li>
-											<li><input type="reset" class="button alt" value="Clear Form" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-					</div>
-				</div>
-			</section>
-		-->
-
-		<!-- Insights -->
-			<section id="insights" class="main">
-				<header>
-					<div class="container">
-						<h2>Insights</h2>
-						<p>Field notes on AI adoption, the 5 P&rsquo;s of Prompting, and what works inside real companies. Articles drop here as they&rsquo;re written.</p>
-					</div>
-				</header>
-				<div class="content dark style1">
-					<div class="container">
-						<div class="row">
-							<div class="col-4 col-12-narrow">
-								<a class="insight-card" href="blog/the-5-ps-of-prompting/">
-									<h3>The 5 P&rsquo;s of Prompting: A framework for non-technical teams</h3>
-									<p class="insight-excerpt">Most prompt engineering frameworks were built by engineers for engineers. The 5 P&rsquo;s is the methodology I built for non-technical business teams.</p>
-									<span class="insight-meta">6 min read &middot; Read article &rarr;</span>
-								</a>
-							</div>
-							<div class="col-4 col-12-narrow">
-								<a class="insight-card" href="blog/the-ai-sweet-spot/">
-									<h3>The AI Sweet Spot: How to identify which tasks are worth automating</h3>
-									<p class="insight-excerpt">Most AI initiatives fail because someone tried to AI-ify the wrong task. The AI Sweet Spot is a rubric for finding the tasks actually worth automating.</p>
-									<span class="insight-meta">6 min read &middot; Read article &rarr;</span>
-								</a>
-							</div>
-							<div class="col-4 col-12-narrow">
-								<a class="insight-card" href="blog/why-corporate-ai-training-fails-by-friday/">
-									<h3>Why most corporate AI training fails by Friday</h3>
-									<p class="insight-excerpt">AI workshops land well but teams revert to old workflows by Friday. The reasons are structural, not motivational, and the fix is unglamorous but real.</p>
-									<span class="insight-meta">6 min read &middot; Read article &rarr;</span>
-								</a>
 							</div>
 						</div>
 					</div>

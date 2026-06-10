@@ -272,6 +272,45 @@
 			/* Override template's `p { text-align: justify }` */
 			body p, body li { text-align: left; }
 			header p, .section-intro { text-align: center; }
+
+				/* Top-of-post CTA (light, under the byline) */
+				.post-byline-cta {
+					margin: 1.1em 0 0;
+					font-size: 0.92em;
+					color: #cbd5e1;
+					font-weight: 300;
+					text-align: left;
+				}
+				.post-byline-cta a {
+					color: #ffffff;
+					border-bottom: 1px solid rgba(255,255,255,0.5);
+				}
+				.post-byline-cta a:hover { border-bottom-color: #ffffff; }
+
+				/* Sticky Book-a-call button (bottom-left, clear of the discovery widget) */
+				.sticky-cta {
+					position: fixed;
+					bottom: 24px;
+					left: 24px;
+					z-index: 9998;
+					background: var(--accent-primary);
+					color: #ffffff !important;
+					padding: 0.7em 1.2em;
+					border-radius: 30px;
+					font-weight: 600;
+					font-size: 0.9em;
+					text-decoration: none;
+					box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+					border-bottom: none !important;
+					transition: background 0.2s ease, transform 0.2s ease;
+				}
+				.sticky-cta:hover {
+					background: var(--accent-primary-hover);
+					transform: translateY(-2px);
+				}
+				@media screen and (max-width: 736px) {
+					.sticky-cta { bottom: 16px; left: 16px; padding: 0.6em 1em; font-size: 0.82em; }
+				}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -287,8 +326,6 @@
 					<li><a href="../../consulting.html">Consulting</a></li>
 					<li><a href="../../index.html#platforms">Platforms</a></li>
 					<li><a href="../../index.html#projects">Projects</a></li>
-					<li><a href="../../index.html#methodology">Methodology</a></li>
-					<li><a href="../../index.html#insights">Insights</a></li>
 					<li><a href="../../index.html#contact">Contact</a></li>
 				</ul>
 			</div>
@@ -297,9 +334,10 @@
 		<!-- Article Hero -->
 		<section id="post-hero">
 			<div class="container">
-				<a class="back-link" href="../../index.html#insights">&larr; Back to Insights</a>
+				<a class="back-link" href="../../consulting.html#consulting-insights">&larr; Back to Insights</a>
 				<h1>The 5 P&rsquo;s of Prompting: A Framework Built for Non-Technical Teams</h1>
 				<p class="post-meta">Published May 20, 2026 <span class="sep">&middot;</span> 6 minute read</p>
+					<p class="post-byline-cta">I&rsquo;m Jose, an AI consultant in Zurich. If you&rsquo;d rather talk it through, <a href="../../consulting.html#consulting-cta">book a discovery call</a>.</p>
 			</div>
 		</section>
 
@@ -446,6 +484,9 @@
 
 		<!-- Augself Discovery Assistant Widget -->
 		<script src="https://augself.ai/widget.js" data-twin="discovery" data-position="right" data-color="#0F766E" async></script>
+
+		<!-- Sticky Book-a-call CTA -->
+		<a href="../../consulting.html#consulting-cta" class="sticky-cta">Book a call</a>
 
 	</body>
 </html>
