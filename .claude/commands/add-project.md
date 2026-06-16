@@ -23,6 +23,6 @@ Add a new project card to the AI Agent Projects section in `index.html`.
 
 4. If adding a card that would be alone in its row, center it with `justify-content: center` on the row div.
 
-5. Start the dev server (`python3 -m http.server 8000`) and ask the user to review.
+5. Start the dev server (`python3 -m http.server 8001`) and ask the user to review.
 
 6. After approval, commit, merge to `main`, and push.

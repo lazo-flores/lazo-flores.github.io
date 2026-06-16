@@ -24,6 +24,6 @@ Make content updates to the website following the branch-review-merge workflow.
    - Navigation: search for `id="nav"`
    - Custom styles: inline `<style>` block at the top of the file
 
-4. Start the dev server (`python3 -m http.server 8000`) and ask the user to review.
+4. Start the dev server (`python3 -m http.server 8001`) and ask the user to review.
 
 5. After approval, commit, merge to `main`, and push.

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(jq -r '.tool_input.file_path // \"\"'); case \"$file\" in *.html) if grep -qE '—|&mdash;' \"$file\" 2>/dev/null; then echo '{\"systemMessage\":\"⚠️  Em-dash in the file you just edited. The site style rule is zero em-dashes.\",\"hookSpecificOutput\":{\"hookEventName\":\"PostToolUse\",\"additionalContext\":\"The .html file just edited contains an em-dash (the long dash U+2014) or the &mdash; entity. Per the site-wide style rule, rendered output must contain zero em-dashes. Rewrite any prose em-dash so the sentence does not need one (do not just swap it for a colon, comma, or parenthesis), and turn em-dashes inside CSS or HTML comments into hyphens. Re-check the file and confirm zero before committing.\"}}'; fi ;; esac; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

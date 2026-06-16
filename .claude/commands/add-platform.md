@@ -21,6 +21,6 @@ Add a new platform card to the AI Platforms & Ventures section in `index.html`.
 
 5. If a Professional Experience entry is requested, add it at the top of the Experience section (`id="experience"`), before existing entries, with the role title, date range, and description.
 
-6. Start the dev server (`python3 -m http.server 8000`) and ask the user to review.
+6. Start the dev server (`python3 -m http.server 8001`) and ask the user to review.
 
 7. After approval, commit, merge to `main`, and push.
