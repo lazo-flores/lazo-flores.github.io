@@ -414,40 +414,6 @@
 				margin-bottom: 0;
 			}
 
-			/* Insights cards */
-			.insight-card {
-				background: rgba(255, 255, 255, 0.04);
-				border: 1px solid rgba(255, 255, 255, 0.08);
-				border-left: 3px solid var(--accent-primary);
-				border-radius: 6px;
-				padding: 1.5em;
-				height: 100%;
-				display: flex;
-				flex-direction: column;
-				gap: 0.75em;
-			}
-
-			.insight-card h3 {
-				color: #ffffff;
-				margin: 0;
-				font-size: 1.1em;
-				line-height: 1.35;
-			}
-
-			.insight-badge {
-				display: inline-block;
-				background: rgba(15, 118, 110, 0.15);
-				color: var(--accent-primary);
-				border: 1px solid rgba(15, 118, 110, 0.4);
-				padding: 0.25em 0.7em;
-				border-radius: 999px;
-				font-size: 0.75em;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 0.05em;
-				align-self: flex-start;
-			}
-
 			/* Workshop card icon banner (stand-in for project image) */
 			.workshop-banner {
 				width: 100%;
@@ -466,100 +432,6 @@
 				.workshop-banner {
 					height: 250px;
 					font-size: 4.5em;
-				}
-			}
-
-			/* Methodology section */
-			.method-block {
-				margin-bottom: 2em;
-			}
-
-			.method-block h3 {
-				color: #ffffff;
-				margin-bottom: 0.5em;
-			}
-
-			.method-list {
-				list-style: none;
-				padding: 0;
-				margin: 1em 0;
-			}
-
-			.method-list li {
-				padding: 0.5em 0;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-			}
-
-			.method-list li:last-child {
-				border-bottom: none;
-			}
-
-			.method-list strong {
-				color: var(--accent-primary);
-				display: inline-block;
-				min-width: 9em;
-			}
-
-			.quadrant-grid {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 1em;
-				margin: 1.25em 0;
-			}
-
-			.quadrant {
-				background: #ffffff;
-				border: 1px solid #e5e7eb;
-				border-radius: 10px;
-				padding: 1.6em 1.4em;
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-				transition: box-shadow 0.2s ease, transform 0.2s ease;
-			}
-
-			.quadrant:hover {
-				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-				transform: translateY(-2px);
-			}
-
-			.quadrant h4 {
-				color: #1f2937;
-				margin: 0 0 0.5em 0;
-				font-size: 1.1em;
-				font-weight: 600;
-			}
-
-			.quadrant p {
-				color: #4b5563;
-				margin: 0.2em 0;
-				font-size: 0.95em;
-				line-height: 1.5;
-			}
-
-			.quadrant.quadrant-q1 {
-				border-top: 4px solid var(--accent-primary);
-			}
-
-			.quadrant.quadrant-q2 {
-				border-top: 4px solid var(--accent-secondary);
-			}
-
-			.quadrant.quadrant-q3 {
-				border-top: 4px solid #B45309;
-			}
-
-			.quadrant.quadrant-q4 {
-				border-top: 4px solid #9ca3af;
-			}
-
-			@media screen and (max-width: 736px) {
-				.quadrant-grid {
-					grid-template-columns: 1fr;
-				}
-
-				.method-list strong {
-					min-width: 0;
-					display: block;
-					margin-bottom: 0.2em;
 				}
 			}
 
@@ -818,98 +690,6 @@
 				color: var(--accent-primary);
 			}
 
-			/* Round 3 - Methodology and Insights: white surfaces matching
-			   the rest of the home page's content rhythm. Round 2 deferred
-			   these. Same override pattern as About/Experience/Projects. */
-			#methodology .content,
-			#insights .content {
-				background: #ffffff !important;
-				color: #4b5563;
-			}
-
-			#methodology h2,
-			#methodology h3,
-			#insights h2,
-			#insights h3 {
-				color: #1f2937;
-			}
-
-			#methodology p,
-			#insights p {
-				color: #4b5563;
-			}
-
-			#methodology p strong,
-			#insights p strong {
-				color: #1f2937;
-			}
-
-			#methodology .content a:not(.button),
-			#insights .content a:not(.button) {
-				color: var(--accent-primary);
-			}
-
-			#methodology .content a:not(.button):hover,
-			#insights .content a:not(.button):hover {
-				color: var(--accent-primary-hover);
-			}
-
-			/* Flip round-1 dark-mode helpers in Methodology to light equivalents */
-			#methodology .method-list li {
-				border-bottom: 1px solid #e5e7eb;
-			}
-
-			#methodology .method-list li:last-child {
-				border-bottom: none;
-			}
-
-			/* Flip round-1 dark insight-card styling to light cards */
-			#insights .insight-card {
-				background: #ffffff;
-				border: 1px solid #e5e7eb;
-				border-left: 3px solid var(--accent-primary);
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-			}
-
-			#insights .insight-card h3 {
-				color: #1f2937;
-			}
-
-			/* Round 4 - Methodology vertical rhythm.
-			   Each subsection lives in its own <section class="method-block">
-			   wrapper, so :first-of-type on h3 doesn't work (each is the
-			   first-of-type within its own parent). Target the wrapper
-			   instead: gap + hairline divider above every block after the
-			   first, breathing room above the first one. */
-			#methodology .method-block {
-				margin-bottom: 0;
-				padding-top: 3em;
-				margin-top: 3em;
-				border-top: 1px solid #e5e7eb;
-			}
-
-			#methodology .method-block:first-of-type {
-				padding-top: 1em;
-				margin-top: 1em;
-				border-top: none;
-			}
-
-			#methodology .method-block h3 {
-				margin-top: 0;
-				margin-bottom: 0.6em;
-				font-size: 1.4em;
-				font-weight: 600;
-			}
-
-			#methodology .method-block h3 + p {
-				margin-top: 0;
-			}
-
-			#methodology .method-block p {
-				margin-bottom: 1em;
-				line-height: 1.6;
-			}
-
 			/* Round 4 - Standardize section padding for consistent vertical
 			   rhythm. The template applies .main > .content { padding: 6em 0 }
 			   but special-cases .style4 to padding-top: 0 (main.css:2264),
@@ -920,8 +700,6 @@
 			#experience > .content,
 			#platforms > .content,
 			#projects > .content,
-			#methodology > .content,
-			#insights > .content,
 			#contact > .content {
 				padding-top: 5em;
 				padding-bottom: 5em;
@@ -932,8 +710,6 @@
 				#experience > .content,
 				#platforms > .content,
 				#projects > .content,
-				#methodology > .content,
-				#insights > .content,
 				#contact > .content {
 					padding-top: 3em;
 					padding-bottom: 3em;
@@ -943,8 +719,6 @@
 				#experience > header,
 				#platforms > header,
 				#projects > header,
-				#methodology > header,
-				#insights > header,
 				#contact > header {
 					padding-top: 3em;
 					padding-bottom: 2em;
@@ -957,10 +731,8 @@
 			   header intros, the Contact CTA copy, final-CTA copy). */
 			body p,
 			body li,
-			.quadrant p,
 			.service-card p,
-			.platform-card p,
-			.insight-card p {
+			.platform-card p {
 				text-align: left;
 			}
 
